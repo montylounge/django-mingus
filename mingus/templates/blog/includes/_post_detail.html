@@ -1,0 +1,13 @@
+{% load blog tagging_tags inlines oembed_tags %}
+
+<div class="post clearfix">
+	<div class="date">{{ post.publish|date:"M d" }}</div>
+	<h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+	<p class="teaser">{{ post.tease_markup|safe }}</p>
+  	<div class="body">
+	{% oembed %}
+    {{ post.body_markup|render_inlines }}
+	{% endoembed %}
+  	</div>
+</div>
+<!-- post -->

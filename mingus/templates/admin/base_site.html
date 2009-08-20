@@ -1,0 +1,19 @@
+{% extends "admin/base.html" %}
+{% load i18n adminmedia %}
+
+{% block title %}{{ title }} | {% trans 'Mingus site admin' %}{% endblock %}
+
+{% block extrastyle %}
+<style>
+#header{ background-color: #333940; border-bottom: solid 3px #999; }
+#branding h1{ color: #fff; }
+.module h2, .module caption, .inline-group h2 { background:#ccc url({% admin_media_prefix %}img/admin/nav-bg.gif) bottom left repeat-x; color: #333940; }
+a.section:link, a.section:visited { color: #666666; }
+</style>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% trans 'Mingus Blog Engine' %}</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

@@ -1,0 +1,27 @@
+BeautifulSoup==3.1.0.1
+http://effbot.org/downloads/Imaging-1.1.6.tar.gz
+python-dateutil==1.4.1
+django==1.1
+django-debug-toolbar==0.7
+
+-e git+git://github.com/montylounge/django-elsewhere.git#egg=elsewhere
+-e git+git://github.com/zerok/django-flatblocks.git#egg=flatblocks
+-e git+git://github.com/montylounge/django-disqus.git#egg=disqus
+-e svn+http://django-navbar.googlecode.com/svn/trunk#egg=navbar
+-e svn+http://django-db-log.googlecode.com/svn/trunk#egg=djangodblog
+-e svn+http://django-tagging.googlecode.com/svn/trunk#egg=django_tagging
+-e git+git://github.com/montylounge/django-basic-apps.git#egg=basic
+-e git+git://github.com/django-extensions/django-extensions.git#egg=django_extensions
+-e svn+http://svn.aeracode.org/svn/south/trunk#egg=south
+-e hg+https://sorl-thumbnail.googlecode.com/hg/#egg=sorl
+-e git+git://github.com/brosner/django-oembed.git#egg=oembded
+-e svn+http://django-template-utils.googlecode.com/svn/trunk#egg=template_utils
+-e hg+https://bitbucket.org/montylounge/django-proxy/#egg=django_proxy
+
+-e hg+https://bitbucket.org/jezdez/django-robots/#egg=robots
+-e git+git://github.com/mintchaos/django_compressor.git#egg=compressor
+-e git+git://github.com/bartTC/django-markup.git#egg=django_markup
+-e git+git://github.com/montylounge/django-google-analytics.git#egg=google_analytics
+-e hg+https://bitbucket.org/kmike/django-view-cache-utils/#egg=view_cache_utils
+-e hg+https://bitbucket.org/ubernostrum/django-contact-form/#egg=contact_form
+-e git+git://github.com/sunlightlabs/django-honeypot.git#egg=honeypot

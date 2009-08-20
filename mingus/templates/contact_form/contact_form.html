@@ -1,0 +1,43 @@
+{% extends "blog/base_blog.html" %}
+{% load honeypot %}
+
+{% block content %}
+
+<h2>Contact me</h2>
+
+<p>Get in touch.</p>
+
+<form method="POST" action="."> 
+	
+	{% if form.errors %}
+	<div id="form-error">
+		<p>Woops, looks like you forgot some information.</p>
+		<ul>
+		{% for field in form %}
+		{% if field.errors %}<li>{{ field.label }} - {{ field.errors|striptags }}</li>{% endif %}
+		{% endfor %}
+		</ul>
+	</div>
+	{% endif %}
+	
+<p>
+<label for="form.name.label">{{ form.name.label }}</label>
+{{ form.name }}
+</p>
+
+<p>
+<label for="form.email.label">{{ form.email.label }}</label>
+{{ form.email }}
+</p>
+
+<p>
+<label for="form.body.label">{{ form.body.label }}</label>
+{{ form.body }}
+</p>
+
+{% render_honeypot_field %}
+
+<input type="submit" name="submit">
+</form>
+
+{% endblock %}

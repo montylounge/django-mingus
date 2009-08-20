@@ -1,0 +1,26 @@
+
+body {
+    color: #000;
+    background: #fff;
+}
+
+/* LAYOUT */
+.post .date, .quote .date, .bookmark .date {
+	float: left;
+	padding: .3em .4em .3em 1.2em;
+	background: #000;
+	color: #fff;
+	margin: 0.3em 0  0 -6.0em;
+	width: 3.8em;
+}
+
+.post .teaser{ border-bottom: solid 1.0em #000;}
+
+/* LINKS */
+a:link, a:visited {
+    color: #000;
+}
+a:hover { color: #999; }
+h2 a:link, h2 a:visited{ color: #000;}
+h2 a:hover { color: #999;}
+

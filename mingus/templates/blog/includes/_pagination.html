@@ -1,0 +1,12 @@
+<div id="pagination">
+  {% if has_next %}
+	<p class="older">
+  <a class="older" href="?page={{ next }}">Older posts &raquo;</a>
+	</p>
+  {% endif %}
+  {% if has_previous %}
+	<p class="newew">
+  <a class="newer" href="?page={{ previous }}">&laquo; Newer posts</a>
+	</p>
+  {% endif %}
+</div>

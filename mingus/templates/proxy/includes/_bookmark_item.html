@@ -1,0 +1,10 @@
+
+<div class="bookmark clearfix">
+	<div class="date">{{ object.pub_date|date:"M d" }}</div>
+	<h2><a href="{{ object.content_object.get_absolute_url }}">{{ object.title }}</a></h2>
+  	<div class="body">
+    {{ object.description|safe }}
+	<p>Visit: <a href="{{ object.content_object.get_absolute_url }}" title="{{ object.title }}">{{ object.content_object.get_absolute_url }}</a></p>
+  	</div>
+</div>
+<!-- post -->

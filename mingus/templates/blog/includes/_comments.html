@@ -1,0 +1,8 @@
+{% load disqus_tags cache %}
+<div id="comments">
+{% cache 3600 "disqus_show_comments" %
+{% with BLOG_SETTINGS.disqus_shortname as shortname %}
+{% disqus_show_comments "" "" "" shortname %}
+{% endwith %}
+{% endcache %}
+</div>

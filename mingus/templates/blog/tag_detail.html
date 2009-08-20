@@ -1,0 +1,19 @@
+{% extends "blog/base_blog.html" %}
+{% load cache %}
+
+{% block title %}Posts for {{ tag.name }} | {{ block.super }}{% endblock %}
+{% block body_class %}{{ block.super }} tag_detail{% endblock %}
+{% block body_id %}tag_{{ tag.id }}{% endblock %}
+
+{% block content %}
+
+<h2 class="filter-title">Posts tagged: {{ tag.name }}</h2>
+
+  <div class="post_list">
+	{% cache 3600 "blog.tag_detail.object_list" tag.name %}
+    {% for post in object_list %}
+	{% include "blog/includes/_post_list.html" %}
+    {% endfor %}
+	{% endcache %}
+  </div>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "blog/base_blog.html" %}
+{% load blog tagging_tags inlines cache %}
+
+{% block title %}{{ object.title }} | {{ block.super }}{% endblock %}
+
+{% block meta %}
+<meta name="keywords" content="{{ object.get_meta_keywords }}">
+<meta name="description" content="{{ object.get_meta_description }}">
+<meta name="author" content="{{ post.author.full_name }}" />
+{% endblock %}
+
+{% block body_class %}{{ block.super }} post_detail{% endblock %}
+{% block body_id %}post_{{ object.id }}{% endblock %}
+
+{% comment 'previous and next posts' %}
+{% block content_title %}
+  <p class="other_posts">
+    {% if object.get_previous_by_publish %}
+    <a class="previous" href="{{ object.get_previous_post.get_absolute_url }}">&laquo; {{ object.get_previous_post }}</a>
+    {% endif %}
+    {% if object.get_next_by_publish %}
+    | <a class="next" href="{{ object.get_next_post.get_absolute_url }}">{{ object.get_next_post }} &raquo;</a> 
+    {% endif %}
+  </p>
+{% endblock %}
+{% endcomment %}
+
+{% block content %}
+
+	<div class="post clearfix">
+		<div class="date">{{ object.publish|date:"M d" }}</div>
+		<h2>{{ object.title }}</h2>
+		<p class="teaser">{{ object.tease_markup }}</p>
+	  	<div class="body">
+	    {{ object.body_markup|render_inlines|safe }}
+	  	</div>
+	</div>
+	
+  {% cache 300 "blog.post_detail.tag_list" object.pk %}
+  {% tags_for_object object as tag_list %}
+  {% if tag_list %}
+  <p class="inline_tag_list"><strong>Related tags:</strong>
+    {% for tag in tag_list %}
+    <a href="/tags/{{ tag }}">{{ tag }}</a>{% if not forloop.last %}, {% endif %}
+    {% endfor %}
+  </p>
+  {% endif %}
+  {% endcache %}
+
+	<div class="subscribe clearfix">
+		<ul>
+			<li><a href="http://twitter.com/?status=reading: {{ object.title }} - {{ SITE_URL }}{{ object.get_absolute_url }}" target="_blank">Twitter this</a></li>
+			<li><a href="http://www.reddit.com/r/programming/submit">Reddit this</a></li>
+			<li><a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;">Add to Delicious</a></li>
+			<li><a href="{{ FEED_SUBSCRIBE_RSS }}">Subscribe RSS</a></li>
+		</ul>
+	</div>
+	<!-- post -->
+ 
+{% include "blog/includes/_comments.html" %}
+
+{% endblock %}

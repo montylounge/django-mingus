@@ -1,0 +1,36 @@
+
+body {
+    color: #fff;
+    background: #000;
+}
+
+/* LAYOUT */
+.post .date, .quote .date, .bookmark .date {
+	float: left;
+	padding: .3em .4em .3em 1.2em;
+	background: #1b1c1e;
+	margin: 0.3em 0  0 -6.0em;
+	width: 3.8em;
+}
+.post .teaser{ border-bottom: solid 1.0em #1b1c1e;}
+
+/* TYPE */
+h4{ color: #8d3e44;}
+#right-rail p, #right-rail ul{ color: #ccc;}
+
+/* LINKS */
+a:link, a:visited {
+    color: #fff;
+}
+a:hover { color: #ada745; }
+h2 a:link, h2 a:visited{ color: #8d3e44;}
+h2 a:hover { color: #fff;}
+
+pre{ background-color: #ccc;}
+
+ul.recent-posts li
+{
+    color: #fff;
+}
+
+.post li{ color: #fff;}

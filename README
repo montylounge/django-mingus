@@ -1,0 +1,33 @@
+
+A Django blog engine leveraging only existing reusable apps, and django-snippets. The project itself defines no models (db schemas).
+
+More details to come soon, tutorials, etc. There are some hidden "features" (ex. api support for Django-springsteen out of the box meaning easy plugin to findjango.com, and some others stuff the community has provided.)
+
+*This was an initial project for a Django-NYC presentation, thrown together with some concepts for a personal blog engine I've had in notes laying around..
+
+Quickstart (VirtualENV/PIP Version)
+------------------------------------
+
+> mkvirtualenv myblog
+> easy_install pip
+> hg clone https://montylounge@bitbucket.org/montylounge/django-mingus/
+#I do the next two steps below because I'm not familiar enough with HG to retrieve a subdir of a repository
+> mv django-mingus/mingus .
+> rm -rf django-mingus
+> cd mingus
+> pip install -r requirements
+... wait a bit
+> mv local_settings.py.template local_settings.py
+> ./manage.py syncdb
+> ./manage.py runserver
+
+By default the theme is set to the Basic theme.
+
+Django-Mingus also comes with 4 additional themes: Django(green), Minimal (black/white), Dark (black), Basic (beige/red), JeffCroft (brown/pink)
+
+To switch "themes" just change this line in templates/base.html:
+
+<link rel="stylesheet" href="{{ STATIC_URL }}css/themes/basic.css" type="text/css" media="all" charset="utf-8">
+
+You'll notice the themes/basic.css text - change that to one of the existing themes, or edit away on your own!
+

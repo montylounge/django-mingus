@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block title %}{{ block.super }}{% endblock %}
+{% block body_class %}{{ block.super }} post_list{% endblock %}
+
+{% block content_title %}{% endblock %}
+
+{% block content %}
+  <div class="post_list">
+    {% for object in object_list %}
+		{% ifequal object.content_type.name "post" %}
+			{% include "proxy/includes/_post_item.html" %}
+		{% endifequal %}
+		{% ifequal object.content_type.name "quote" %}
+			{% include "proxy/includes/_quote_item.html" %}
+		{% endifequal %}
+		{% ifequal object.content_type.name "bookmark" %}
+			{% include "proxy/includes/_bookmark_item.html" %}
+		{% endifequal %}
+    {% endfor %}
+  </div>
+  
+  {% if is_paginated %}
+		{% include "blog/includes/_pagination.html" %}
+  {% endif %}
+{% endblock %}
