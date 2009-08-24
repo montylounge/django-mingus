@@ -10,7 +10,7 @@ django-tagging==0.3
 
 -e git+git://github.com/montylounge/django-basic-apps.git#egg=basic
 -e git+git://github.com/zerok/django-flatblocks.git#egg=flatblocks
--e git+git://github.com/arthurk/django-disqus.git#egg=disqus
+-e git+git://github.com/montylounge/django-disqus.git#egg=disqus
 -e svn+http://django-navbar.googlecode.com/svn/trunk#egg=navbar
 -e svn+http://django-db-log.googlecode.com/svn/trunk#egg=djangodblog
 -e hg+https://sorl-thumbnail.googlecode.com/hg/#egg=sorl
