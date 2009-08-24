@@ -30,7 +30,7 @@
 	<div class="post clearfix">
 		<div class="date">{{ object.publish|date:"M d" }}</div>
 		<h2>{{ object.title }}</h2>
-		<p class="teaser">{{ object.tease_markup }}</p>
+		<p class="teaser">{{ object.tease|safe }}</p>
 	  	<div class="body">
 	    {{ object.body_markup|render_inlines|safe }}
 	  	</div>
