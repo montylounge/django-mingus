@@ -11,10 +11,7 @@ Quickstart (VirtualENV/PIP Version)
 > mkvirtualenv myblog
 > easy_install pip
 > git clone git://github.com/montylounge/django-mingus.git
-#I do the next two steps below because I'm not familiar enough with HG to retrieve a subdir of a repository
-> mv django-mingus/mingus .
-> rm -rf django-mingus
-> cd mingus
+> cd django-mingus/mingus
 > pip install -r requirements
 ... wait a bit
 > mv local_settings.py.template local_settings.py
