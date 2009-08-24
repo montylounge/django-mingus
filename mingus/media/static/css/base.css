@@ -53,14 +53,35 @@ body {
 	width: 3.8em;
 }
 
-#comments{ margin-top: 1.8em; border-top: solid 1px #CCC; padding-top: .6em;}
-.post .teaser{ border-bottom: solid 1.0em #333940; padding: .1em .1em .8em .1em; margin-bottom: .9em;}
-#right-rail p {font-size: .8em; margin-bottom: 1.8em;}
-.post_list .post, #header, .post_list .quote, .post_list .bookmark { padding-bottom: 1.2em; border-bottom: 1px solid #ccc;}
-.post_detail .subscribe { margin-top: 1.2em; } 
+#comments{ 
+    margin-top: 1.8em; 
+    border-top: solid 1px #CCC; 
+    padding-top: .6em;
+}
+.post .teaser{ 
+    border-bottom: solid 1.0em #333940; 
+    padding: .1em .1em .8em .1em; 
+    margin-bottom: .9em;
+}
+#right-rail p {
+    font-size: .8em; 
+    margin-bottom: 1.8em;
+}
+.post_list .post, #header, .post_list .quote, .post_list .bookmark { 
+    padding-bottom: 1.2em; 
+    border-bottom: 1px solid #ccc;
+}
+.post_detail .subscribe { 
+    margin-top: 1.2em;
+} 
 
 #right-rail ul{ margin-left: 0em;}
-.filter-title{ margin-bottom: 1.2em; background-color: #ccc; padding: .3em;}
+
+.filter-title{ 
+    margin-bottom: 1.2em; 
+    background-color: #ccc; 
+    padding: .3em;
+}
 .post-img { 
     margin: 1.2em 0em 1.2em 1.2em; 
     padding: .8em .8em 0em 1.6em; 
@@ -68,7 +89,10 @@ body {
     width: 564px; 
     border-left: solid 1.0em #dedede;
 }
-.post-img p { margin-left: .2em; line-height: 1.4em;}
+.post-img p { 
+    margin-left: .2em; 
+    line-height: 1.4em;
+}
 .post-img {
 	float: left;
 	margin: 0.3em 0  0 -6.0em;
@@ -168,7 +192,10 @@ h4 { font-size: 0.875em; }
 p, li { font-size: .9em; line-height: 1.4em;}
 
 /* TYPE SPECIFIC */
-.post .teaser{ font-size: 1.1em; line-height: 1.2em;}
+.post .teaser{ 
+    font-size: 1.1em; 
+    line-height: 1.2em;
+}
 #right-rail p, #right-rail ul {font-size: .8em;}
 .post .date, .bookmark .date, .quote .date  { color: #fff; }
 ul.navbar-one li
