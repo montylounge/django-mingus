@@ -2,9 +2,11 @@
 LOCAL_DEV = True
 DEBUG = True 
 TEMPLATE_DEBUG = DEBUG
+
 #sorl-thumbnail
 THUMBNAIL_DEBUG = True 
 
+#django-contact-form
 DEFAULT_FROM_EMAIL = 'contactform@foo'
 
 MANAGERS = (
