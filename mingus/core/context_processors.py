@@ -17,17 +17,8 @@ def site_info(request):
             "mingus.core.context_processors.site_info",
         )
     """
-    
-    site_id = settings.SITE_ID    
-    key = 'basic.blog.settings:%s' % site_id
-    blog_settings = cache.get(key, None)
-    if blog_settings is None:
-        blog_settings = Settings.get_current()
-        cache.set(key, blog_settings)
-        
     STATIC_URL = getattr(settings,'STATIC_URL', '')
         
     return {
-        'BLOG_SETTINGS': blog_settings,
         'STATIC_URL': STATIC_URL,
     }
