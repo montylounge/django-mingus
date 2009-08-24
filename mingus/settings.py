@@ -41,6 +41,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 "django.core.context_processors.debug",
 "django.core.context_processors.i18n",
 "django.core.context_processors.media",
+"basic.blog.context_processors.blog_settings",
 "mingus.core.context_processors.site_info",
 "navbar.context_processors.navbars",
 )
