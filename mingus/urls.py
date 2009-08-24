@@ -49,9 +49,6 @@ urlpatterns += patterns('',
         { 'template': 'contact_form/contact_form_sent.html' },
         name='contact_form_sent'),
 
-    (r'bookmarks/', include('basic.people.urls')),
-    (r'people/', include('basic.people.urls')),
-
     url(r'^page/(?P<page>\w)/$',
         view=home_list,
         name='home_paginated'),
