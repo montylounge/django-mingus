@@ -83,6 +83,7 @@ INSTALLED_APPS = (
   'debug_toolbar',
   'contact_form',
   'honeypot',
+  'sugar',
 )
 
 try:
