@@ -25,4 +25,4 @@ django-tagging==0.3
 -e hg+https://bitbucket.org/kmike/django-view-cache-utils/#egg=view_cache_utils
 -e hg+https://bitbucket.org/ubernostrum/django-contact-form/#egg=contact_form
 -e git+git://github.com/sunlightlabs/django-honeypot.git#egg=honeypot
--e git+git@github.com:montylounge/django-sugar.git#egg=sugar
+-e git+git://github.com:montylounge/django-sugar.git#egg=sugar
