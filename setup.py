@@ -2,7 +2,7 @@ from distutils.core import setup
  
 setup(
     name='django-mingus',
-    version='0.1.8',
+    version='0.1.9',
     description='A django blog engine.',
     author='Kevin Fricovsky',
     author_email='kfricovsky@gmail.com',
