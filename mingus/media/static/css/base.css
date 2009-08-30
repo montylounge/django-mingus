@@ -44,7 +44,9 @@ body {
 
 /* LAYOUT */
 #body-container{ padding-top: 22px; }
+
 .post, .bookmark, .quote { margin-bottom: 1.2em; }
+
 .post .date, .bookmark .date, .quote .date {
 	float: left;
 	padding: .3em .4em .3em 1.2em;
@@ -58,15 +60,18 @@ body {
     border-top: solid 1px #CCC; 
     padding-top: .6em;
 }
+
 .post .teaser{ 
     border-bottom: solid 1.0em #333940; 
     padding: .1em .1em .8em .1em; 
     margin-bottom: .9em;
 }
+
 #right-rail p {
     font-size: .8em; 
     margin-bottom: 1.8em;
 }
+
 .post_list .post, #header, .post_list .quote, .post_list .bookmark { 
     padding-bottom: 1.2em; 
     border-bottom: 1px solid #ccc;
@@ -82,6 +87,7 @@ body {
     background-color: #ccc; 
     padding: .3em;
 }
+
 .post-img { 
     margin: 1.2em 0em 1.2em 1.2em; 
     padding: .8em .8em 0em 1.6em; 
@@ -89,14 +95,17 @@ body {
     width: 564px; 
     border-left: solid 1.0em #dedede;
 }
+
 .post-img p { 
     margin-left: .2em; 
     line-height: 1.4em;
 }
+
 .post-img {
 	float: left;
 	margin: 0.3em 0  0 -6.0em;
 }
+
 .video
 {
     background-color: #000;
@@ -132,7 +141,7 @@ label
 
 
 /* CODE */
-pre
+pre 
 {
 	overflow: auto;
 	overflow: auto;
@@ -140,9 +149,14 @@ pre
 	background-color: #fff;
 	padding: .6em 0em .6em .6em;
 	display: block;
-	width: 100%;
+	width: 99%;
 	border: 0px solid #ccc;
 	margin: 1.0em 0em 1.0em 0em;
+}
+
+pre.prettyprint { 
+	padding: .6em 0em .6em .6em;
+    border: none; 
 }
 
 /* HEADER/NAV */
@@ -153,16 +167,31 @@ pre
 	margin-bottom: 30px;
     padding-bottom: 1.0em;
 }
+
 #logo { float: left; }
-.navbar-one { margin-top: 10px; float: right; margin-top: .6em;}
-#search { margin-top: 10px; margin-top: 1.6em; margin-bottom: 1.8em; float: right;}
+
+.navbar-one { 
+    margin-top: 10px; 
+    float: right; 
+    margin-top: .6em;
+}
+
+#search { 
+    margin-top: 10px; 
+    margin-top: 1.6em; 
+    margin-bottom: 1.8em; 
+    float: right;
+}
+
 ul.navbar-one li
 {
 	float:left;
 	list-style: none;
 	margin-right: 20px;
 }
+
 #nav{ float: right; }
+
 .button{ margin-left: .6em;}
 
 .subscribe li
@@ -174,21 +203,31 @@ ul.navbar-one li
 
 /* PAGINATION */
 #pagination .older{ float: right; }
+
 #pagination .newew{ float: left; }
 
 /* FOOTER */
 #footer{ margin-top: 2.8em; }
+
 #footer p{ margin-left: 1.6em; padding-bottom: 1.8em; } 
 
 /* TYPE BASE */              
 p, ul, ol, pre { font-size: 1em; margin: 0 0 0.6em; }
+
 ul, ol { margin-left: 1.4em; }
+
 ul ul { margin-bottom: 0; }
+
 h1{ font-size: 2.0em; }
+
 h2, h3, h4, h5 { margin: 1em 0 0.2em; font-weight: bold; }
+
 h2 { margin: 0.25em 0 .2em; font-size: 1.8em; letter-spacing: -0.025em; line-height: 1.2em; font-weight: 100; }
+
 h3 { font-size: 1em; margin-bottom: 0.25em; }
+
 h4 { font-size: 0.875em; }
+
 p, li { font-size: .9em; line-height: 1.4em;}
 
 /* TYPE SPECIFIC */
@@ -196,18 +235,26 @@ p, li { font-size: .9em; line-height: 1.4em;}
     font-size: 1.1em; 
     line-height: 1.2em;
 }
+
 #right-rail p, #right-rail ul {font-size: .8em;}
+
 .post .date, .bookmark .date, .quote .date  { color: #fff; }
+
 ul.navbar-one li
 {
 	font-size: .9em;
 	text-decoration: none; 
 	color: #999ca0;
 }
+
 pre{ color: #333940; }
+
 #footer p{ font-size: .8em; }
+
 .filter-title{ font-size: 1.4em; }
+
 .list-tease { font-size: .9em; }
+
 .subscribe ul{ font-size: .9em;}
 
 /* LINKS */
@@ -217,9 +264,13 @@ a:link, a:visited {
     text-decoration: none;
     font-weight: bold;
 }
+
 a:hover { color: #3c94bc; }
+
 h2 a:link, h2 a:visited{ font-weight: 100; color: #333940;}
+
 h2 a:hover { font-weight: 100; color: #3c94bc;}
+
 #nav ul li a
 {
 	text-decoration: none;
