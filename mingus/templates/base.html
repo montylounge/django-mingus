@@ -1,162 +1,163 @@
-{% load disqus_tags flatblock_tags cache navbar generic_content blog compress analytics elsewhere %}
+{% load disqus_tags flatblock_tags cache navbar generic_content blog compress analytics elsewhere feeds %}
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
    "http://www.w3.org/TR/html4/strict.dtd">
 
 <html lang="en">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>{% block title %}{{ BLOG_SETTINGS.site_name }}{% endblock %}</title>
-		
-		{% block meta %}
-		<meta name="keywords" content="{{ BLOG_SETTINGS.meta_keywords }}">
-		<meta name="description" content="{{ BLOG_SETTINGS.meta_description }}">
-    	<meta name="author" content="{{ BLOG_SETTINGS.author }}" />
-		{% endblock %}
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{% block title %}{{ BLOG_SETTINGS.site_name }}{% endblock %}</title>
 
-	    <meta name="copyright" content="{{ BLOG_SETTINGS.copyright }}" />
-		<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ BLOG_SETTINGS.rss_url }}" />
-		<link rel="shortcut icon" href="{{ STATIC_URL }}imgs/favicon.ico" type="image/x-icon"/>
-				
-		{% compress css %}
-		<link rel="stylesheet" href="{{ STATIC_URL }}prettify/prettify.css" type="text/css" />
-		<link rel="stylesheet" href="{{ STATIC_URL }}css/960.css" type="text/css" media="all" charset="utf-8">
-		<link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" media="all" charset="utf-8">
-		<link rel="stylesheet" href="{{ STATIC_URL }}css/themes/basic.css" type="text/css" media="all" charset="utf-8">
-		{% endcompress %}
-		
-		{% compress js %}
-		<script type="text/javascript" src="{{ STATIC_URL }}prettify/prettify.js"></script>
-		{% endcompress %}
+    {% block meta %}
+    <meta name="keywords" content="{{ BLOG_SETTINGS.meta_keywords }}">
+    <meta name="description" content="{{ BLOG_SETTINGS.meta_description }}">
+      <meta name="author" content="{{ BLOG_SETTINGS.author }}" />
+    {% endblock %}
 
-		<!--[if IE 6]>
-		<script src="{{ STATIC_URL }}js/DD_belatedPNG_0.0.7a-min.js"></script>
-		<script>
-		  DD_belatedPNG.fix('#bleeder, .logo');
-		</script>
-		<![endif]-->
-		
-		{% disqus_dev %}
-		{% block extra_head %}{% endblock %}
-	</head>
+      <meta name="copyright" content="{{ BLOG_SETTINGS.copyright }}" />
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ BLOG_SETTINGS.rss_url }}" />
+    <link rel="shortcut icon" href="{{ STATIC_URL }}imgs/favicon.ico" type="image/x-icon"/>
+
+    {% compress css %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}prettify/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/960.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/pygments.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/themes/basic.css" type="text/css" media="all" charset="utf-8">
+    {% endcompress %}
+
+    {% compress js %}
+    <script type="text/javascript" src="{{ STATIC_URL }}prettify/prettify.js"></script>
+    {% endcompress %}
+
+    <!--[if IE 6]>
+    <script src="{{ STATIC_URL }}js/DD_belatedPNG_0.0.7a-min.js"></script>
+    <script>
+      DD_belatedPNG.fix('#bleeder, .logo');
+    </script>
+    <![endif]-->
+
+    {% disqus_dev %}
+    {% block extra_head %}{% endblock %}
+  </head>
 
 <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}blog{% endblock %}" onload="prettyPrint()">
 <div id="bleeder"></div>
 
-	<div id="body-container" class="clearfix">
+  <div id="body-container" class="clearfix">
     {% block body %}
-	{% block content_title %}<h1 class="hide">{{ BLOG_SETTINGS.site_name }}</h1>{% endblock %}
+  {% block content_title %}<h1 class="hide">{{ BLOG_SETTINGS.site_name }}</h1>{% endblock %}
 
-	<div id="header" class="clearfix">
-		<div id="logo">
-			<h1><a href="/" title="{{ BLOG_SETTINGS.site_name }}}">{{ BLOG_SETTINGS.site_name }}</a></h1>
-			<!-- a href="{{ SITE_URL }}" title="Monty Lounge Industries Blog"><img class="logo" src="{{ STATIC_URL }}imgs/logo-blog-color-trans2.png" alt="Monty Lounge Industries"></a -->
-		</div>
-		<!-- /logo -->
-		
-		<div id="nav">
-			{% cache 3600 "base.navbars" %}
-			{% navbars %}
-			{% endcache %}
-			<form action="/search/" method="GET"><input type="text" name="q" value="{{ search_term }}"><input type="submit" class="button" value="Search"></form>
-		</div>
-		<!-- /nav -->
+  <div id="header" class="clearfix">
+    <div id="logo">
+      <h1><a href="/" title="{{ BLOG_SETTINGS.site_name }}}">{{ BLOG_SETTINGS.site_name }}</a></h1>
+      <!-- a href="{{ SITE_URL }}" title="Monty Lounge Industries Blog"><img class="logo" src="{{ STATIC_URL }}imgs/logo-blog-color-trans2.png" alt="Monty Lounge Industries"></a -->
+    </div>
+    <!-- /logo -->
 
-	</div>
-	<!-- /header -->
-	
-	<div class="container_16">
-		<div class="grid_9 suffix_1">
-			<div class="content">
-		        {% block content %}{% endblock %}
-			</div>
-			<!-- /content -->
+    <div id="nav">
+      {% cache 3600 "base.navbars" %}
+      {% navbars %}
+      {% endcache %}
+      <form action="/search/" method="GET"><input type="text" name="q" value="{{ search_term }}"><input type="submit" class="button" value="Search"></form>
+    </div>
+    <!-- /nav -->
 
-		</div>
-		<!-- /grid_9 -->
+  </div>
+  <!-- /header -->
 
-		<div id="right-rail" class="grid_6">
-			
-			<h4>About</h4>
-			<p>{{ BLOG_SETTINGS.about }}</p>
+  <div class="container_16">
+    <div class="grid_9 suffix_1">
+      <div class="content">
+            {% block content %}{% endblock %}
+      </div>
+      <!-- /content -->
 
-			<h4>Subscribe</h4>
-			<ul>
-				<li><a href="{{ BLOG_SETTINGS.twitter_url }}" title="Follow me on Twitter">Twitter</a></li>
-				<li><a href="{{ BLOG_SETTINGS.rss_url }}" title"Subscribe via RSS">RSS</a></li>
-				<li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title="Subscribe via Email">Email</a></li>
-			</ul>
-			
-			<h4>Elsewhere</h4>
-			<ul>
-				{% cache 3600 "base.profiles" %}
-				{% get_elsewhere_profiles as profiles %}
-				{% for item in profiles %}				
-				<li><a href="{{ item.url }}">{{ item.name }}</a></li>
-				{% endfor %}
-			</ul>
-			{% endcache %}
-			
-			<h4>Categories</h4>
-			<ul>
-			{% cache 3600 "base.category_list" %}
-				{% get_blog_categories as category_list %}
-				{% for category in category_list %}
-				<li><a href="{% url basic.blog.views.category_detail category.slug %}" title="{{ category.title }}">{{ category.title }}</a></li>
-				{% endfor %}
-			</ul>
-			{% endcache %}
+    </div>
+    <!-- /grid_9 -->
 
-			{% cache 3600 "base.post_list" %}
-			{% get_latest_posts 10 as post_list %}
-			<h4>Recent Posts</h4>
-			<ul class="recent-posts">
-			{% for post in post_list %}
-			<li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-			{% endfor %}
-			</ul>
-			{% endcache %}
+    <div id="right-rail" class="grid_6">
 
-			{% cache 3600 "base.blogroll" %}
-			{% get_blogroll 10 as blogroll %}
-			<h4>BlogRoll</h4>
-			<ul class="recent-posts">
-			{% for item in blogroll %}
-			<li><a href="{{ item.get_absolute_url }}">{{ item.name }}</a></li>
-			{% endfor %}
-			</ul>
-			{% endcache %}
+      <h4>About</h4>
+      <p>{{ BLOG_SETTINGS.about }}</p>
 
-		</div>
-		<!-- /grid_6 -->
-	</div>
-	<!-- /container_16 -->
-	
-	{% endblock %}
-	</div>
-	<!-- /body-container -->
-		
-	<div id="footer">
-		<p>
-			{% cache 3600 "base.footer" %}
-			{% flatblock "footer" 3600 "flatblocks/bare.html" %}
-			{% endcache %}
-		</p>
-	</div>
-	<!-- /footer -->
-	
-	<!-- disqus "Code Snippet #2" -->
-	
-	{% cache 3600 "disqus_num_replies" %}
-	{% with BLOG_SETTINGS.disqus_shortname as shortname %}
-	{% disqus_num_replies shortname %}
-	{% endwith %}
-	{% endcache %}
-	
-	<!-- google analtyics -->
-	{% cache 7200 "base.analytics" %}
-	{% analytics %}
-	{% endcache %}
+      <h4>Subscribe</h4>
+      <ul>
+        <li><a href="{{ BLOG_SETTINGS.twitter_url }}" title="Follow me on Twitter">Twitter</a></li>
+        <li><a href="{{ BLOG_SETTINGS.rss_url }}" title"Subscribe via RSS">RSS</a></li>
+        <li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title="Subscribe via Email">Email</a></li>
+      </ul>
+
+      <h4>Elsewhere</h4>
+      <ul>
+        {% cache 3600 "base.profiles" %}
+        {% get_elsewhere_profiles as profiles %}
+        {% for item in profiles %}
+        <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endcache %}
+
+      <h4>Categories</h4>
+      <ul>
+      {% cache 3600 "base.category_list" %}
+        {% get_blog_categories as category_list %}
+        {% for category in category_list %}
+        <li><a href="{% url basic.blog.views.category_detail category.slug %}" title="{{ category.title }}">{{ category.title }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endcache %}
+
+      {% cache 3600 "base.post_list" %}
+      {% get_latest_posts 10 as post_list %}
+      <h4>Recent Posts</h4>
+      <ul class="recent-posts">
+      {% for post in post_list %}
+      <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+      {% endfor %}
+      </ul>
+      {% endcache %}
+
+      {% cache 3600 "base.blogroll" %}
+      {% get_blogroll 10 as blogroll %}
+      <h4>BlogRoll</h4>
+      <ul class="recent-posts">
+      {% for item in blogroll %}
+      <li><a href="{{ item.get_absolute_url }}">{{ item.name }}</a></li>
+      {% endfor %}
+      </ul>
+      {% endcache %}
+
+    </div>
+    <!-- /grid_6 -->
+  </div>
+  <!-- /container_16 -->
+
+  {% endblock %}
+  </div>
+  <!-- /body-container -->
+
+  <div id="footer">
+    <p>
+      {% cache 3600 "base.footer" %}
+      {% flatblock "footer" 3600 "flatblocks/bare.html" %}
+      {% endcache %}
+    </p>
+  </div>
+  <!-- /footer -->
+
+  <!-- disqus "Code Snippet #2" -->
+
+  {% cache 3600 "disqus_num_replies" %}
+  {% with BLOG_SETTINGS.disqus_shortname as shortname %}
+  {% disqus_num_replies shortname %}
+  {% endwith %}
+  {% endcache %}
+
+  <!-- google analtyics -->
+  {% cache 7200 "base.analytics" %}
+  {% analytics %}
+  {% endcache %}
 
 </body>
 </html>

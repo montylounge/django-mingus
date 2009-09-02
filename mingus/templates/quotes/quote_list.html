@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load cache %}
+
+{% block content %}
+
+<h2>Quotes</h2>
+
+A little side note, my favorite author is {{ favorite_jazz_album }}.
+
+{% cache 180 "quote.quote_list" %}
+{% for object in object_list %}
+
+{% include "quotes/includes/_quote.html" %}
+
+{% endfor %}
+{% endcache %}
+
+{% endblock %}

@@ -24,12 +24,12 @@ def post_result_item(post):
         'url': settings.SITE_URL + post.get_absolute_url(),
         'text': post.body,
         }
-        
+
 def springsteen_results(request):
     '''
-    Creates the django-springsteen compliant JSON results for only for findjango 
+    Creates the django-springsteen compliant JSON results for only for findjango
     integration.
-    
+
     Results:
         Published Post objects.
     '''
@@ -37,11 +37,11 @@ def springsteen_results(request):
     results = [ post_result_item(item) for item in Post.objects.published()[:50] ]
     response_dict = { 'total_results': Post.objects.published().count(), 'results': results, }
     return HttpResponse(simplejson.dumps(response_dict), mimetype='application/javascript')
-    
-    
+
+
 def server_error(request, template_name='500.html'):
     '''Handles displaying 500 server error page along with application MEDIA.'''
-    
+
     t = loader.get_template(template_name)
     return http.HttpResponseServerError(t.render(Context({
         "MEDIA_URL": settings.MEDIA_URL,
@@ -51,35 +51,35 @@ def server_error(request, template_name='500.html'):
 
 def springsteen_firehose(request):
     '''Generates django-springsteen compliant JSON results of proxy models for findjango integration.'''
-    
+
     def result_item(proxy):
         '''Generates the item result object.'''
-        
+
         if proxy.content_type.name == 'bookmark':
             url = proxy.content_object.get_absolute_url()
         else:
             url = settings.SITE_URL + proxy.content_object.get_absolute_url()
-        
+
         return {
             'title': proxy.title,
             'url': url,
             'text': proxy.description,
             }
-    
+
     posts = Proxy.objects.published()[:50].order_by('-pub_date')
     results = [ result_item(item) for item in posts ]
     response_dict = { 'total_results': Proxy.objects.published().count(), 'results': results, }
     return HttpResponse(simplejson.dumps(response_dict), mimetype='application/javascript')
-    
+
 def springsteen_category(request, slug):
     '''
-    Creates the django-springsteen compliant JSON results for only for findjango 
+    Creates the django-springsteen compliant JSON results for only for findjango
     integration.
-    
+
     Results:
         Published Post objects by category.
     '''
-    
+
     category = get_object_or_404(Category, slug__iexact=slug)
     posts = category.post_set.published()[:50]
     results = [ post_result_item(item) for item in posts ]
@@ -91,17 +91,17 @@ def springsteen_category(request, slug):
 def home_list(request, page=0, template_name='proxy/proxy_list.html', **kwargs):
     '''
     Homepage.
-    
+
     Template: ``proxy/proxy_list.html``
     Context:
         object_list
             Aggregated list of Proxy instances (post, quote, bookmark).
-        
+
     '''
-        
-    posts = Proxy.objects.published().order_by('-pub_date')    
+
+    posts = Proxy.objects.published().order_by('-pub_date')
     pagesize = Settings.get_current().page_size or 20
-    
+
     return list_detail.object_list(
         request,
         queryset = posts,
@@ -110,8 +110,40 @@ def home_list(request, page=0, template_name='proxy/proxy_list.html', **kwargs):
         template_name = template_name,
         **kwargs
     )
-    
-    
+
+
+def quote_list(request, template_name='quotes/quote_list.html', **kwargs):
+    '''
+    A basic cxample of overriding a reusable apps view to customize.
+
+    Displays quote list view. No paging added, but can be on your own.
+    '''
+
+    from quoteme.views import quote_list
+    favorite_jazz_album = getattr(settings, 'FAVORITE_JAZZ_ALBUM', 'Money Jungle')
+    extra = {
+        'favorite_jazz_album': favorite_jazz_album,
+    }
+
+    return quote_list(request, template_name=template_name, extra_context=extra, **kwargs)
+
+
+def quote_detail(request, template_name='quotes/quote_detail.html', **kwargs):
+    '''
+    A basic cxample of overriding a reusable apps view to customize.
+
+    Displays quote detail view.
+    '''
+
+    from quoteme.views import quote_detail
+    favorite_food = getattr(settings, 'FAVORITE_FOOD', 'Pizza')
+    extra = {
+        'favorite_food': favorite_food,
+    }
+
+    return quote_detail(request, template_name=template_name, extra_context=extra, **kwargs)
+
+
 @check_honeypot
 def contact_form(request, form_class=ContactForm,
                  template_name='contact_form/contact_form.html'):

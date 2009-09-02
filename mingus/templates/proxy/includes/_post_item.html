@@ -1,4 +1,4 @@
-{% load blog tagging_tags inlines oembed_tags %}
+{% load blog tagging_tags inlines oembed_tags pygment_tags %}
 
 <div class="post clearfix">
 	<div class="date">{{ object.pub_date|date:"M d" }}</div>
@@ -6,7 +6,7 @@
 	<p class="teaser">{{ object.content_object.tease|safe }}</p>
   	<div class="body">
 	{% oembed %}
-    {{ object.description|render_inlines|safe }}
+    {{ object.description|render_inlines|pygmentize|safe }}
 	{% endoembed %}
   	</div>
 </div>

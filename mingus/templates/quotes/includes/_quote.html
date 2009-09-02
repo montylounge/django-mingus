@@ -1,0 +1,18 @@
+<div>
+    <h3><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></h3>
+    <div>
+        {% if object.quote %}
+            <blockquote>{{ object.quote }}</blockquote>
+        {% endif %}
+    </div>
+    <div>
+      {% if object.author %}
+      {% if object.url_source %}
+            <span>- <a href="{{ object.url_source }}">{{ object.author }}</a></span>
+      {% else %}
+      <span>- {{ object.author }} {% if object.circa %}, {{ object.circa }}{% endif %}</span>
+      {% endif %}
+
+        {% endif %}
+    </div>
+</div>

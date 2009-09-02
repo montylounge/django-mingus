@@ -4,6 +4,7 @@ python-dateutil==1.4.1
 django==1.1
 django-debug-toolbar==0.7
 django-tagging==0.3
+Pygments==1.0
 
 -e git+git://github.com/django-extensions/django-extensions.git#egg=django_extensions
 -e svn+http://svn.aeracode.org/svn/south/trunk#egg=south
@@ -26,3 +27,5 @@ django-tagging==0.3
 -e hg+https://bitbucket.org/ubernostrum/django-contact-form/#egg=contact_form
 -e git+git://github.com/sunlightlabs/django-honeypot.git#egg=honeypot
 -e git+git://github.com/montylounge/django-sugar.git#egg=sugar
+-e git+git://github.com/chrisdrackett/python-textile.git#egg=textile
+-e git+git://github.com/montylounge/django-quoteme.git#egg=quoteme

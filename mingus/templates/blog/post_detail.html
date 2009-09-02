@@ -1,5 +1,5 @@
 {% extends "blog/base_blog.html" %}
-{% load blog tagging_tags inlines cache %}
+{% load blog tagging_tags inlines cache pygment_tags %}
 
 {% block title %}{{ object.title }} | {{ block.super }}{% endblock %}
 
@@ -32,7 +32,7 @@
 		<h2>{{ object.title }}</h2>
 		<p class="teaser">{{ object.tease|safe }}</p>
 	  	<div class="body">
-	    {{ object.body_markup|render_inlines|safe }}
+	    {{ object.body_markup|render_inlines|pygmentize|safe }}
 	  	</div>
 	</div>
 	

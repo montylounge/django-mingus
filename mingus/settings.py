@@ -7,7 +7,7 @@ MEDIA_ROOT = join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
 STATIC_ROOT = join(MEDIA_ROOT, 'static')
 STATIC_URL = '/media/static/'
-ADMIN_MEDIA_PREFIX = '/admin_media/' 
+ADMIN_MEDIA_PREFIX = '/admin_media/'
 
 SITE_ID=1
 ROOT_URLCONF = 'mingus.urls'
@@ -21,7 +21,7 @@ MANAGERS = (
 )
 
 TEMPLATE_DIRS = (
-	[os.path.join(PROJECT_ROOT, "templates")]
+  [os.path.join(PROJECT_ROOT, "templates")]
 )
 
 MIDDLEWARE_CLASSES = (
@@ -30,7 +30,7 @@ MIDDLEWARE_CLASSES = (
 'django.contrib.auth.middleware.AuthenticationMiddleware',
 'django.middleware.doc.XViewMiddleware',
 'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
-'mingus.core.middleware.UserBasedExceptionMiddleware',
+'sugar.middleware.debugging.UserBasedExceptionMiddleware',
 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 'djangodblog.DBLogMiddleware',
 'debug_toolbar.middleware.DebugToolbarMiddleware',
@@ -55,7 +55,7 @@ INSTALLED_APPS = (
   'django.contrib.sitemaps',
   'django.contrib.flatpages',
   'django.contrib.redirects',
-  
+
   'django_extensions',
   'tagging',
   'djangodblog',
@@ -63,10 +63,7 @@ INSTALLED_APPS = (
   'basic.inlines',
   'basic.blog',
   'basic.bookmarks',
-  'basic.events',
   'basic.media',
-  'basic.people',
-  'basic.places',
   'oembed',
   'flatblocks',
   'south',
@@ -84,6 +81,7 @@ INSTALLED_APPS = (
   'contact_form',
   'honeypot',
   'sugar',
+  'quoteme',
 )
 
 try:

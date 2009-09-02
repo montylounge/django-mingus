@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load cache %}
+
+{% block content %}
+
+<p>Quick fact, my favorite food is {{ favorite_food }}.</p>
+
+<h2>{{ object.title }}</h2>
+
+{% cache 180 "quote.quote_detail" object.pk %}
+<div>
+    <div>
+        {% if object.quote %}
+            <blockquote>{{ object.quote }}</blockquote>
+        {% endif %}
+    </div>
+    <div>
+        {% if object.author %}
+      {% if object.url_source %}
+            <span>- <a href="{{ object.url_source }}">{{ object.author }}</a></span>
+      {% else %}
+      <span>- {{ object.author }} {% if object.circa %}, {{ object.circa }}{% endif %}</span>
+      {% endif %}
+
+       {% endif %}
+    </div>
+</div>
+{% endcache %}
+
+{% include "blog/includes/_comments.html" %}
+
+{% endblock %}
