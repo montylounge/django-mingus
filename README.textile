@@ -1,0 +1,11 @@
+
+h1. Introduction
+
+A Django blog engine leveraging only existing reusable apps, and django-snippets. The project itself defines no models (db schemas).
+
+The project was conceptualized for a Django-NYC lightening talk, with the goal of introducing Django developers to the concepts behind integrating existing reusable apps in their project, as well as leveraging virtualenv and pip into the workflow.
+
+Please submit issues, bugs, ideas, suggestion, etc., on the "project issues":http://github.com/montylounge/django-mingus/issues page.
+
+View the wiki to "learn more":http://wiki.github.com/montylounge/django-mingus.
+
