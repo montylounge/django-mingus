@@ -1,11 +1,47 @@
 
-h1. Introduction
+h1. Information
 
 A Django blog engine leveraging only existing reusable apps, and django-snippets. The project itself defines no models (db schemas).
 
 The project was conceptualized for a Django-NYC lightening talk, with the goal of introducing Django developers to the concepts behind integrating existing reusable apps in their project, as well as leveraging virtualenv and pip into the workflow.
 
+It also comes with 5 default themes to choose from (really just varying color schemes). They are Basic, Dark, Django, Minimal, and JeffCroft. You can view them "here":http://www.flickr.com/photos/37875916@N07/tags/mingustheme/
+
 Please submit issues, bugs, ideas, suggestion, etc., on the "project issues":http://github.com/montylounge/django-mingus/issues page.
 
-View the wiki to "learn more":http://wiki.github.com/montylounge/django-mingus.
+
+h2. Real World Examples
+
+To see it live in action, view:
+
+"http://blog.montylounge.com":http://blog.montylounge.com
+"http://mathematism.com/":http://mathematism.com/
+"http://libby.tuzig.com/":http://libby.tuzig.com/
+"http://oswco.org/":http://oswco.org/
+"http://serotoninstorm.com/blog/":http://serotoninstorm.com/blog/
+
+
+h2. Quickstart (VirtualENV/PIP Version)
+
+> mkvirtualenv myblog
+> easy_install pip
+> git clone git://github.com/montylounge/django-mingus.git
+#I do the next two steps below because I'm not familiar enough with HG to retrieve a subdir of a repository
+> cd django-mingus/mingus
+> pip install -r requirements
+... wait a bit
+> mv local_settings.py.template local_settings.py
+> ./manage.py syncdb
+> ./manage.py runserver
+
+By default the theme is set to the Basic theme.
+
+Django-Mingus also comes with 4 additional themes: Django(green), Minimal (black/white), Dark (black), Basic
+(beige/red), JeffCroft (brown/pink)
+
+To switch "themes" just change this line in templates/base.html:
+
+<link rel="stylesheet" href="{{ STATIC_URL }}css/themes/basic.css" type="text/css" media="all" charset="utf-8">
+
+You'll notice the themes/basic.css text - change that to one of the existing themes, or edit away on your own!
 
