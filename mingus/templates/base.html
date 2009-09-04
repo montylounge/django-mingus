@@ -11,23 +11,18 @@
     {% block meta %}
     <meta name="keywords" content="{{ BLOG_SETTINGS.meta_keywords }}">
     <meta name="description" content="{{ BLOG_SETTINGS.meta_description }}">
-      <meta name="author" content="{{ BLOG_SETTINGS.author }}" />
+    <meta name="author" content="{{ BLOG_SETTINGS.author }}" />
     {% endblock %}
 
-      <meta name="copyright" content="{{ BLOG_SETTINGS.copyright }}" />
+     <meta name="copyright" content="{{ BLOG_SETTINGS.copyright }}" />
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ BLOG_SETTINGS.rss_url }}" />
     <link rel="shortcut icon" href="{{ STATIC_URL }}imgs/favicon.ico" type="image/x-icon"/>
 
     {% compress css %}
-    <link rel="stylesheet" href="{{ STATIC_URL }}prettify/prettify.css" type="text/css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}css/960.css" type="text/css" media="all" charset="utf-8">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/pygments.css" type="text/css" media="all" charset="utf-8">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" media="all" charset="utf-8">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/themes/basic.css" type="text/css" media="all" charset="utf-8">
-    {% endcompress %}
-
-    {% compress js %}
-    <script type="text/javascript" src="{{ STATIC_URL }}prettify/prettify.js"></script>
     {% endcompress %}
 
     <!--[if IE 6]>
@@ -127,6 +122,17 @@
       {% endfor %}
       </ul>
       {% endcache %}
+
+      <h4>Django Popular</h4>
+      {% cache 1800 "delicious.popular" %}
+      {% parse_feed 'http://feeds.delicious.com/v2/rss/tag/django?count=15' as items %}
+      <h4>Django Community</h4>
+      <ul class="recent-posts">
+      {% for item in items.entries %}
+      <li><a href="{{ item.link }}" title="{{ item.title }}">{{ item.title }}</a></li>
+      {% endfor %}
+      </ul>
+    {% endcache %}
 
     </div>
     <!-- /grid_6 -->
