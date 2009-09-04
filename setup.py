@@ -6,7 +6,19 @@ setup(
     description='A django blog engine.',
     author='Kevin Fricovsky',
     author_email='kfricovsky@gmail.com',
+    license='BSD',
     url='http://github.com/montylounge/django-mingus/tree',
-    packages=['mingus'],
+    packages=[
+        'mingus',
+        'mingus.core',
+    ],
+    classifiers=[
+        'Development Status :: 3 - Alpha',
+        'Environment :: Web Environment',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Framework :: Django',
+    ],
 )
-
