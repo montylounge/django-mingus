@@ -8,7 +8,7 @@ Pygments==1.0
 feedparser==4.1
 Markdown==2.0.1
 textile==2.1.3
-django-markup==0.3.1dev
+django-markup==0.3
 
 -e git://github.com/django-extensions/django-extensions.git@664ca825578c5c13f0817eba0578fbda4bac62cf#egg=django_extensions-0.4.2_pre-py2.5-664ca825578c5c13f0817eba0578fbda4bac62cf
 -e svn+http://django-template-utils.googlecode.com/svn/trunk@109#egg=template_utils-0.4p2-py2.5-dev
