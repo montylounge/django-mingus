@@ -23,12 +23,11 @@ To see it live in action, view:
 
 h2. Quickstart (VirtualENV/PIP Version)
 
-> mkvirtualenv myblog
+> virtualenv myblog
 > easy_install pip
 > git clone git://github.com/montylounge/django-mingus.git
-#I do the next two steps below because I'm not familiar enough with HG to retrieve a subdir of a repository
 > cd django-mingus/mingus
-> pip install -r requirements
+> pip install -r stable-requirements.txt
 ... wait a bit
 > mv local_settings.py.template local_settings.py
 > ./manage.py syncdb
