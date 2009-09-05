@@ -123,10 +123,9 @@
       </ul>
       {% endcache %}
 
-      <h4>Django Popular</h4>
       {% cache 1800 "delicious.popular" %}
       {% parse_feed 'http://feeds.delicious.com/v2/rss/tag/django?count=15' as items %}
-      <h4>Django Community</h4>
+      <h4>Django Popular</h4>
       <ul class="recent-posts">
       {% for item in items.entries %}
       <li><a href="{{ item.link }}" title="{{ item.title }}">{{ item.title }}</a></li>
