@@ -23,7 +23,8 @@ To see it live in action, view:
 
 h2. Quickstart (VirtualENV/PIP Version)
 
-> virtualenv myblog
+> mkvirtualenv myblog
+> cd myblog
 > easy_install pip
 > git clone git://github.com/montylounge/django-mingus.git
 > cd django-mingus/mingus
