@@ -9,12 +9,13 @@ feedparser==4.1
 Markdown==2.0.1
 textile==2.1.3
 django-markup==0.3
+http://www.aeracode.org/releases/south/south-0.6.1.tar.gz
 
 -e git://github.com/django-extensions/django-extensions.git@664ca825578c5c13f0817eba0578fbda4bac62cf#egg=django_extensions-0.4.2_pre-py2.5-664ca825578c5c13f0817eba0578fbda4bac62cf
 -e svn+http://django-template-utils.googlecode.com/svn/trunk@109#egg=template_utils-0.4p2-py2.5-dev
 -e hg+https://bitbucket.org/montylounge/django-proxy/@tip#egg=django_proxy-tip
 -e git://github.com/montylounge/django-google-analytics.git@6b7aa6dba851dd59dca0a20bc7eefe70754384e4#egg=google_analytics-0.1-py2.5-6b7aa6dba851dd59dca0a20bc7eefe70754384e4
--e svn+http://svn.aeracode.org/svn/south/trunk@261#egg=South-0.5.1-py2.5-dev
+
 -e git://github.com/montylounge/django-basic-apps.git@d87b8dae029f73fc9fb7f1301711ed955ea2d941#egg=django_basic_apps-0.6-py2.5-d87b8dae029f73fc9fb7f1301711ed955ea2d941
 -e git://github.com/mintchaos/django_compressor.git@d5d28eb57323a7e88356071c8c4af5792d2b837d#egg=django_compressor-0.5-py2.5-d5d28eb57323a7e88356071c8c4af5792d2b837d
 -e hg+https://bitbucket.org/ubernostrum/django-contact-form/@tip#egg=django_contact_form-tip
@@ -26,6 +27,6 @@ django-markup==0.3
 -e git://github.com/brosner/django-oembed.git@0b09321a6042c490534e5940083136f712da57b0#egg=django_oembed-0.1.0-py2.5-0b09321a6042c490534e5940083136f712da57b0
 -e git://github.com/montylounge/django-quoteme.git@4b86aaeb702e9ab534fe8fb7181153689f2ab4d8#egg=django_quoteme-0.1-py2.5-4b86aaeb702e9ab534fe8fb7181153689f2ab4d8
 -e hg+https://bitbucket.org/jezdez/django-robots/@tip#egg=django_robots-tip
--e git://github.com/montylounge/django-sugar.git@174bdb934bcc7f79c4bbd55fa4424d16b5be5b9e#egg=django_sugar-0.1-py2.5-174bdb934bcc7f79c4bbd55fa4424d16b5be5b9e
+-e git://github.com/montylounge/django-sugar.git@9a10d89d7431daf989d44d8c470229dec230ffc1#egg=django_sugar-0.1-py2.5-9a10d89d7431daf989d44d8c470229dec230ffc1
 -e hg+https://bitbucket.org/kmike/django-view-cache-utils/@tip#egg=django_view_cache_utils-tip
 -e hg+https://sorl-thumbnail.googlecode.com/hg/@tip#egg=sorl_thumbnail-tip
