@@ -8,9 +8,9 @@ Pygments==1.0
 FeedParser==4.1
 Markdown==2.0.1
 textile==2.1.3
+http://www.aeracode.org/releases/south/south-0.6.1.tar.gz
 
 -e git+git://github.com/django-extensions/django-extensions.git#egg=django_extensions
--e svn+http://svn.aeracode.org/svn/south/trunk#egg=south
 
 -e git+git://github.com/montylounge/django-basic-apps.git#egg=basic
 -e git+git://github.com/zerok/django-flatblocks.git#egg=flatblocks
