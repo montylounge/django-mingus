@@ -7,7 +7,6 @@ from django import http
 from django.template import loader, Context
 from django_proxy.models import Proxy
 from django.views.generic import list_detail
-from django.core.cache import cache
 from basic.blog.models import Settings
 from view_cache_utils import cache_page_with_prefix
 from contact_form.views import contact_form as django_contact_form
@@ -15,13 +14,20 @@ from contact_form.forms import ContactForm
 from honeypot.decorators import check_honeypot
 
 def page_key_prefix(request):
+    '''Used by cache_page_with_prefix to create a cache key prefix.'''
     return request.GET.get('page','')
+
+
+def build_url(domainname):
+    '''Given a domain name (ex mywebsite.com) it returns the full url.'''
+    return 'http://%s' % domainname
+
 
 def post_result_item(post):
     '''Generates the item result object for django-springsteen integration.'''
     return {
         'title': post.title,
-        'url': settings.SITE_URL + post.get_absolute_url(),
+        'url': build_url(Settings.get_current().site.domain) + post.get_absolute_url(),
         'text': post.body,
         }
 
@@ -48,7 +54,6 @@ def server_error(request, template_name='500.html'):
         "STATIC_URL": settings.STATIC_URL,
     })))
 
-
 def springsteen_firehose(request):
     '''Generates django-springsteen compliant JSON results of proxy models for findjango integration.'''
 
@@ -58,7 +63,7 @@ def springsteen_firehose(request):
         if proxy.content_type.name == 'bookmark':
             url = proxy.content_object.get_absolute_url()
         else:
-            url = settings.SITE_URL + proxy.content_object.get_absolute_url()
+            url = build_url(Settings.get_current().site.domain) + proxy.content_object.get_absolute_url()
 
         return {
             'title': proxy.title,
@@ -66,7 +71,7 @@ def springsteen_firehose(request):
             'text': proxy.description,
             }
 
-    posts = Proxy.objects.published()[:50].order_by('-pub_date')
+    posts = Proxy.objects.published().order_by('-pub_date')[:50]
     results = [ result_item(item) for item in posts ]
     response_dict = { 'total_results': Proxy.objects.published().count(), 'results': results, }
     return HttpResponse(simplejson.dumps(response_dict), mimetype='application/javascript')
@@ -148,5 +153,16 @@ def quote_detail(request, template_name='quotes/quote_detail.html', **kwargs):
 def contact_form(request, form_class=ContactForm,
                  template_name='contact_form/contact_form.html'):
 
+    '''
+    Handles the contact form view. Leverages django-contact-form.
+
+    This is an example of overriding another reusable apps view. This particular
+    view also contains a form. For this example we are just doing the basic
+    implementation by wrapping the view function and simply passing the
+    arguments along.
+
+    This view is also leveraging another reusable app, django-honeypot. The
+    decorator you see being applied is used to protect your app from spam.
+    '''
     return django_contact_form(request, form_class=form_class,
                  template_name=template_name)

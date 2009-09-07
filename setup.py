@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='django-mingus',
-    version='0.3.2',
+    version='0.4',
     description='A django blog engine.',
     author='Kevin Fricovsky',
     author_email='kfricovsky@gmail.com',
@@ -13,7 +13,7 @@ setup(
         'mingus.core',
     ],
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',

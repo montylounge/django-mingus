@@ -1,25 +1,25 @@
 {% extends "blog/base_blog.html" %}
-{% load cache %}
+{% load cache i18n %}
 
 
-{% block title %}Search results for: {{ search_term }} | {{ block.super }}{% endblock %}
+{% block title %}{% trans "Search results for:" %} {{ search_term }} | {{ block.super }}{% endblock %}
 {% block body_class %}{{ block.super }} post_search{% endblock %}
 
 
 {% block content %}
-  <h2 class="filter-title">Search results for: {{ search_term }}</h2>
+  <h2 class="filter-title">{% trans "Search results for:" %} {{ search_term }}</h2>
 
   {% if message %}
   <p class="message">{{ message }}</p>
   {% endif %}
-  
+
   {% if object_list %}
   <div class="post_list">
-	{% cache 3600 "blog.post_search.object_list" search_term %}
+  {% cache 3600 "blog.post_search.object_list" search_term %}
     {% for post in object_list %}
-	{% include "blog/includes/_post_detail.html" %}
+  {% include "blog/includes/post_detail.html" %}
     {% endfor %}
-	{% endcache %}
+  {% endcache %}
   </div>
   {% endif %}
 {% endblock %}

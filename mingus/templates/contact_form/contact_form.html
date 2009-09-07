@@ -1,25 +1,25 @@
 {% extends "blog/base_blog.html" %}
-{% load honeypot %}
+{% load honeypot i18n %}
 
 {% block content %}
 
-<h2>Contact me</h2>
+<h2>{% "Contact me" %}</h2>
 
-<p>Get in touch.</p>
+<p>{% trans "Get in touch." %}</p>
 
-<form method="POST" action="."> 
-	
-	{% if form.errors %}
-	<div id="form-error">
-		<p>Woops, looks like you forgot some information.</p>
-		<ul>
-		{% for field in form %}
-		{% if field.errors %}<li>{{ field.label }} - {{ field.errors|striptags }}</li>{% endif %}
-		{% endfor %}
-		</ul>
-	</div>
-	{% endif %}
-	
+<form method="POST" action=".">
+
+  {% if form.errors %}
+  <div id="form-error">
+    <p>{% trans "Woops, looks like you forgot some information." %}</p>
+    <ul>
+    {% for field in form %}
+    {% if field.errors %}<li>{{ field.label }} - {{ field.errors|striptags }}</li>{% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
 <p>
 <label for="form.name.label">{{ form.name.label }}</label>
 {{ form.name }}

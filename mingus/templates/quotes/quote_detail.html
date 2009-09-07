@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-{% load cache %}
+{% load cache i18n %}
 
 {% block content %}
 
-<p>Quick fact, my favorite food is {{ favorite_food }}.</p>
+<p>{% trans "Quick fact, my favorite food is" %} {{ favorite_food }}.</p>
 
 <h2>{{ object.title }}</h2>
 
@@ -27,6 +27,6 @@
 </div>
 {% endcache %}
 
-{% include "blog/includes/_comments.html" %}
+{% include "blog/includes/comments.html" %}
 
 {% endblock %}

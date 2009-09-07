@@ -1,11 +1,11 @@
 {% extends "base.html" %}
-{% load cache %}
+{% load cache i18n %}
 
 {% block content %}
 
-<h2>Quotes</h2>
+<h2>{% trans "Quotes" %}</h2>
 
-A little side note, my favorite jazz album is {{ favorite_jazz_album }}.
+{% trans "A little side note, my favorite jazz album is" %} {{ favorite_jazz_album }}.
 
 {% cache 180 "quote.quote_list" %}
 {% for object in object_list %}

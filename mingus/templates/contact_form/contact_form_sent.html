@@ -1,14 +1,14 @@
 {% extends "blog/base_blog.html" %}
-{% load blog %}
+{% load blog i18n %}
 
 {% block content %}
 
-<h2>Contact me</h2>
+<h2>{% trans "Contact me" %}</h2>
 
-<p>Thanks! I'll make sure to responsd shortly. In the meantime, check out some of my latest and greatest posts.</p>
+<p>{% trans "Thanks! I'll make sure to responsd shortly. In the meantime, check out some of my latest and greatest posts." %}</p>
 
 {% get_latest_posts 10 as post_list %}
-<h4>Recent Posts</h4>
+<h4>{% trans "Recent Posts" %}</h4>
 <ul class="recent-posts">
 {% for post in post_list %}
 <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
