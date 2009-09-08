@@ -1,9 +1,9 @@
 
-h1. Information
+h1. Introduction
 
 A Django blog engine leveraging only existing reusable apps, and django-snippets. The project itself defines no models (db schemas).
 
-The project was conceptualized for a Django-NYC lightening talk, with the goal of introducing Django developers to the concepts behind integrating existing reusable apps in their project, as well as leveraging virtualenv and pip into the workflow.
+The project was conceptualized for a Django-NYC lightening talk, with the goal of introducing Django developers to the concepts behind integrating existing reusable apps in their project, as well as leveraging virtualenv, virtualenv wrapper, and pip into the workflow.
 
 It also comes with 5 default themes to choose from (really just varying color schemes). They are Basic, Dark, Django, Minimal, and JeffCroft. You can view them "here":http://www.flickr.com/photos/37875916@N07/tags/mingustheme/
 
@@ -21,27 +21,9 @@ To see it live in action, view:
 "http://serotoninstorm.com/blog/":http://serotoninstorm.com/blog/
 
 
-h2. Quickstart (VirtualENV/PIP Version)
+h2. Getting Started
 
-> mkvirtualenv myblog
-> cd myblog
-> easy_install pip
-> git clone git://github.com/montylounge/django-mingus.git
-> cd django-mingus/mingus
-> pip install -r stable-requirements.txt
-... wait a bit
-> mv local_settings.py.template local_settings.py
-> ./manage.py syncdb
-> ./manage.py runserver
+I'm beginning to add docs now. They are located in the docs directory. Currently the docs include a quick-start to get you going.
 
-By default the theme is set to the Basic theme.
 
-Django-Mingus also comes with 4 additional themes: Django(green), Minimal (black/white), Dark (black), Basic
-(beige/red), JeffCroft (brown/pink)
-
-To switch "themes" just change this line in templates/base.html:
-
-<link rel="stylesheet" href="{{ STATIC_URL }}css/themes/basic.css" type="text/css" media="all" charset="utf-8">
-
-You'll notice the themes/basic.css text - change that to one of the existing themes, or edit away on your own!
 
