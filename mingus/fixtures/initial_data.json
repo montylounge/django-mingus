@@ -24,6 +24,8 @@
 
 {"pk": 2, "model": "navbar.navbarentry", "fields": {"name": "contact", "parent": null, "title": "contact", "url": "/contact/", "user_type": "E", "groups": [], "path_type": "A", "order": 1}},
 
+{"pk": 3, "model": "navbar.navbarentry", "fields": {"name": "subscribe", "parent": null, "title": "subscribe", "url": "/feeds/latest/", "user_type": "E", "groups": [], "path_type": "A", "order": 2}},
+
 {"pk": 1, "model": "robots.url", "fields": {"pattern": "/*"}}, {"pk": 1, "model": "robots.rule", "fields": {"sites": [1], "crawl_delay": null, "robot": "*", "disallowed": [], "allowed": [1]}},
 
 {"pk": 1, "model": "flatpages.flatpage", "fields": {"registration_required": false, "title": "About", "url": "/about/", "template_name": "", "sites": [1], "content": "A little about yourself here.", "enable_comments": false}},

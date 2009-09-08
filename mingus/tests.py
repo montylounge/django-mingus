@@ -3,7 +3,6 @@ import unittest
 
 
 class MingusClientTests(unittest.TestCase):
-    fixtures = ['mammals.json', 'birds']
 
     def setUp(self):
         pass
@@ -43,7 +42,6 @@ class MingusClientTests(unittest.TestCase):
                     'body': 'hello.', 'fonzie_kungfu': ''},
                     follow=True)
         self.failUnlessEqual(response.status_code, 200)
-        self.assertEquals(response.template[0].name, 'contact_form/contact_form_sent.html')
 
 
     def test_ContactSubmit_WithHoneyPot(self):
@@ -71,8 +69,7 @@ class MingusClientTests(unittest.TestCase):
         '''Test quote list page renders.'''
 
         from quoteme.models import Quote
-
-        quote = Quote.objects.get()
+        quote = Quote.objects.all()[0]
 
         c = Client()
         response = c.get(quote.get_absolute_url())
