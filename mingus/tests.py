@@ -17,6 +17,35 @@ class MingusClientTests(unittest.TestCase):
         response = c.get('/')
         self.failUnlessEqual(response.status_code, 200)
 
+    def test_Homepage_Paging(self):
+        '''
+        Test paging the homepage list.
+
+        '''
+
+        #need to update blog Settings page size, it defaults to 20 but we
+        #don't have 20 records to page. So we'll set it to 1 and we should be ok.
+        from basic.blog.models import Settings
+        settings = Settings.get_current()
+        settings.page_size = 1
+        settings.save()
+
+        c = Client()
+        response = c.get('/', {'page': 2},)
+        self.failUnlessEqual(response.status_code, 200)
+
+    def test_Search(self):
+        '''Test search view.'''
+
+        c = Client()
+        response = c.get('/search/', {'q':'django'})
+
+        #test success request
+        self.failUnlessEqual(response.status_code, 200)
+
+        #test result as expected
+        self.assertEquals(response.context['object_list'][0].title, 'User Based Debug your Django App')
+
     def test_About(self):
         'Test if the about page renders.'
         c = Client()
@@ -31,18 +60,20 @@ class MingusClientTests(unittest.TestCase):
         self.failUnlessEqual(response.status_code, 200)
 
     def test_ContactSubmit(self):
-        '''Test submitting the contact form. Expect to return to the form sent template.
+        '''
+        Test submitting the contact form. Expect to return to the form sent
+        template.
 
         The field 'fonzie_kungfu' is the honeypot field to protect you from
         spam. This feature is provided by django-honeypot.
 
         '''
         c = Client()
-        response = c.post('/contact/', {'name': 'charles', 'email': 'foo@foo.com',
-                    'body': 'hello.', 'fonzie_kungfu': ''},
+        response = c.post('/contact/', {'name': 'charles',
+                    'email': 'foo@foo.com', 'body': 'hello.',
+                    'fonzie_kungfu': ''},
                     follow=True)
         self.failUnlessEqual(response.status_code, 200)
-
 
     def test_ContactSubmit_WithHoneyPot(self):
         '''Test the @honeypot decorator which exists to reduce spam.
@@ -83,11 +114,26 @@ class MingusClientTests(unittest.TestCase):
         response = c.get('/feeds/latest/')
         self.failUnlessEqual(response.status_code, 200)
 
-    def test_SpringsteenFeed(self):
-        '''Test the latest springsteen feed for findjango integration displays.'''
+    def test_SpringsteenFeed_Posts(self):
+        '''
+        Test the latest Post springsteen feed for findjango integration
+        displays.
+        '''
 
         c = Client()
         response = c.get('/api/springsteen/posts/')
+        self.failUnlessEqual(response.status_code, 200)
+
+
+    def test_SpringsteenFeed_Posts_ByCategory(self):
+        '''
+        Test the latest Post By Category springsteen feed for findjango
+        integration displays.
+
+        '''
+
+        c = Client()
+        response = c.get('/api/springsteen/category/django/')
         self.failUnlessEqual(response.status_code, 200)
 
 
