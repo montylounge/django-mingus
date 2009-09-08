@@ -28,7 +28,7 @@
 
 {"pk": 1, "model": "flatpages.flatpage", "fields": {"registration_required": false, "title": "About", "url": "/about/", "template_name": "", "sites": [1], "content": "A little about yourself here.", "enable_comments": false}},
 
-{"pk": 1, "model": "google_analytics.analytics", "fields": {"analytics_code": "PUTYOURCODEHERE", "site": 1}},
+{"pk": 1, "model": "google_analytics.analytics", "fields": {"analytics_code": "PUTYOURCODEHERE", "site": 1}}
 
 ]
 
