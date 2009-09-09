@@ -158,6 +158,15 @@ def quote_detail(request, template_name='quotes/quote_detail.html', **kwargs):
                         extra_context=extra, **kwargs)
 
 
+def oops(request):
+    '''
+    An view that exists soley to provide an example of using django-db-log.
+
+    View log: /admin/djangodblog/error/
+    '''
+    doh = 1/0
+
+
 @check_honeypot
 def contact_form(request, form_class=ContactForm,
                  template_name='contact_form/contact_form.html'):
