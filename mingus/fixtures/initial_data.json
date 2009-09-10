@@ -32,7 +32,7 @@
 
 {"pk": 1, "model": "google_analytics.analytics", "fields": {"analytics_code": "PUTYOURCODEHERE", "site": 1}},
 
-{"pk": 1, "model": "redirects.redirect", "fields": {"new_path": "http://github.com/montylounge/django-mingus/tree/master", "site": 1, "old_path": "/mingus/"}}, {"pk": 2, "model": "redirects.redirect", "fields": {"new_path": "/2009/sep/3/user-based-debug-your-django-app/", "site": 1, "old_path": "/user-based-testing/"}},
+{"pk": 1, "model": "redirects.redirect", "fields": {"new_path": "http://github.com/montylounge/django-mingus/tree/master", "site": 1, "old_path": "/mingus/"}}, {"pk": 2, "model": "redirects.redirect", "fields": {"new_path": "/2009/sep/3/user-based-debug-your-django-app/", "site": 1, "old_path": "/user-based-testing/"}}
 
 ]
 
