@@ -1,10 +1,10 @@
 
 LOCAL_DEV = True
-DEBUG = True 
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 #sorl-thumbnail
-THUMBNAIL_DEBUG = True 
+THUMBNAIL_DEBUG = True
 
 #django-contact-form
 DEFAULT_FROM_EMAIL = 'contactform@foo'
@@ -53,5 +53,5 @@ DEBUG_TOOLBAR_PANELS = (
 MARKUP_CHOICES = (
     'none',
     'markdown',
-	'textile',
+  'textile',
 )

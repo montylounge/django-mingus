@@ -50,9 +50,12 @@ def server_error(request, template_name='500.html'):
     '''Handles displaying 500 server error page along with application MEDIA.'''
 
     t = loader.get_template(template_name)
+    blog_settings = Settings.get_current()
+
     return http.HttpResponseServerError(t.render(Context({
         "MEDIA_URL": settings.MEDIA_URL,
         "STATIC_URL": settings.STATIC_URL,
+        "BLOG_SETTINGS": blog_settings,
     })))
 
 def springsteen_firehose(request):
@@ -159,12 +162,8 @@ def quote_detail(request, template_name='quotes/quote_detail.html', **kwargs):
 
 
 def oops(request):
-    '''
-    An view that exists soley to provide an example of using django-db-log.
-
-    View log: /admin/djangodblog/error/
-    '''
-    doh = 1/0
+    '''An view that exists soley to provide an example of using django-db-log.'''
+    foo = 1/0
 
 
 @check_honeypot
