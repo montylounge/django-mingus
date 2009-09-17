@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import os, os.path, sys
 from os.path import join, dirname, normpath
 import re

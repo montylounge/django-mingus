@@ -2,7 +2,7 @@ BeautifulSoup==3.1.0.1
 http://dist.repoze.org/PIL-1.1.6.tar.gz
 python-dateutil==1.4.1
 django==1.1
-django-debug-toolbar==0.7
+django-debug-toolbar==0.8
 django-tagging==0.3
 Pygments==1.0
 FeedParser==4.1
