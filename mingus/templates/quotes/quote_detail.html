@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load cache i18n %}
+{% load cache i18n tagging_tags %}
 
 {% block content %}
 
@@ -24,6 +24,17 @@
 
        {% endif %}
     </div>
+
+    {% tags_for_object object as tag_list %}
+    {% if tag_list %}
+    <br/>
+    <p class="inline_tag_list"><strong>Related tags:</strong>
+    {% for tag in tag_list %}
+    <a href="/tags/{{ tag }}">{{ tag }}</a>{% if not forloop.last %}, {% endif %}
+    {% endfor %}
+    </p>
+    {% endif %}
+
 </div>
 {% endcache %}
 
