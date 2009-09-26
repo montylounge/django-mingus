@@ -12,6 +12,7 @@ from view_cache_utils import cache_page_with_prefix
 from contact_form.views import contact_form as django_contact_form
 from contact_form.forms import ContactForm
 from honeypot.decorators import check_honeypot
+from tagging.models import Tag
 
 def page_key_prefix(request):
     '''Used by cache_page_with_prefix to create a cache key prefix.'''
@@ -165,6 +166,23 @@ def oops(request):
     '''An view that exists soley to provide an example of using django-db-log.'''
     foo = 1/0
 
+
+def tag_detail(request, slug, template_name = 'proxy/tag_detail.html', **kwargs):
+    '''
+
+    Display objects for all content types supported:  Post and Quotes.
+
+    '''
+
+    tag = get_object_or_404(Tag, name__iexact=slug)
+
+    return list_detail.object_list(
+        request,
+        queryset = Proxy.objects.published().filter(tags__icontains=tag.name).order_by('-pub_date'),
+        extra_context = {'tag': tag},
+        template_name = template_name,
+        **kwargs
+    )
 
 @check_honeypot
 def contact_form(request, form_class=ContactForm,
