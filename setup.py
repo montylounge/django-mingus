@@ -1,9 +1,14 @@
+import os
 from distutils.core import setup
+
+def read(fname):
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
     name='django-mingus',
     version='0.4.5',
     description='A django blog engine.',
+    long_description=read('README.textile'),
     author='Kevin Fricovsky',
     author_email='kfricovsky@gmail.com',
     license='BSD',
@@ -11,6 +16,7 @@ setup(
     packages=[
         'mingus',
         'mingus.core',
+        'mingus.templatetags'
     ],
     classifiers=[
         'Development Status :: 4 - Beta',
@@ -21,4 +27,12 @@ setup(
         'Programming Language :: Python',
         'Framework :: Django',
     ],
+    package_data = {
+            'mingus': [
+                'media/static/css/*.css',
+                'media/static/imgs/*.png',
+                'media/static/js/*.js',
+            ]
+        },
+    zip_safe=False, # required to convince setuptools/easy_install to unzip the package data
 )
