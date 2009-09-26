@@ -1,0 +1,27 @@
+{% extends "blog/base_blog.html" %}
+{% load cache i18n smart_if %}
+
+{% block title %}{% trans "Entries for" %} {{ tag.name }} | {{ block.super }}{% endblock %}
+{% block body_class %}{{ block.super }} tag_detail{% endblock %}
+{% block body_id %}tag_{{ tag.id }}{% endblock %}
+
+{% block content %}
+
+<h2 class="filter-title">{% trans "Entries tagged:" %} {{ tag.name }}</h2>
+
+  <div class="post_list">
+  {% cache 3600 "mingus.core.tag_detail.object_list" tag.name %}
+  {% for object in object_list %}
+    {% if object.content_type.name == "post" %}
+      {% include "proxy/includes/post_list.html" %}
+    {% endif %}
+    {% if object.content_type.name == "quote" %}
+      {% include "proxy/includes/quote_list.html" %}
+    {% endif %}
+    {% if object.content_type.name == "bookmark" %}
+      {% include "proxy/includes/bookmark_list.html" %}
+    {% endif %}
+  {% endfor %}
+  {% endcache %}
+  </div>
+{% endblock %}

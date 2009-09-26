@@ -1,0 +1,6 @@
+<div class="bookmark clearfix">
+  <div class="date">{{ object.pub_date|date:"M d" }}</div>
+  <h3><a href="{{ object.content_object.get_absolute_url }}">{{ object.title }}</a></h3>
+  <p class="list-tease">Visit: <a href="{{ object.content_object.get_absolute_url }}" title="{{ object.title }}">{{ object.content_object.get_absolute_url }}</a></p>
+</div>
+
