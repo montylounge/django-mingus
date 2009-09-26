@@ -5,10 +5,11 @@ A Django blog engine leveraging only existing reusable apps, and django-snippets
 
 The project was conceptualized for a Django-NYC lightening talk, with the goal of introducing Django developers to the concepts behind integrating existing reusable apps in their project, as well as leveraging virtualenv, virtualenv wrapper, and pip into the workflow.
 
+To read more about all the reusable apps that Mingus employs, read "The apps that power Django-Mingus":http://blog.montylounge.com/2009/sep/24/apps-that-power-django-mingus/.
+
 It also comes with 5 default themes to choose from (really just varying color schemes). They are Basic, Dark, Django, Minimal, and JeffCroft. You can view them "here":http://www.flickr.com/photos/37875916@N07/tags/mingustheme/
 
 Please submit issues, bugs, ideas, suggestion, etc., on the "project issues":http://github.com/montylounge/django-mingus/issues page.
-
 
 h2. Real World Examples
 
@@ -16,6 +17,7 @@ To see it live in action, view:
 
 "http://blog.montylounge.com":http://blog.montylounge.com
 "http://mathematism.com/":http://mathematism.com/
+"http://baratrion.org/":http://baratrion.org/
 "http://libby.tuzig.com/":http://libby.tuzig.com/
 "http://oswco.org/":http://oswco.org/
 "http://serotoninstorm.com/blog/":http://serotoninstorm.com/blog/
