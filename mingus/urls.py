@@ -8,12 +8,13 @@ from basic.blog.sitemap import BlogSitemap
 from mingus.core.views import springsteen_results, springsteen_firehose, \
                             home_list, springsteen_category, contact_form
 from robots.views import rules_list
+from mingus.core.feeds import AllEntries
 
 admin.autodiscover()
 
 feeds = {
     'latest': BlogPostsFeed,
-    'categories': BlogPostsByCategory,
+    'all': AllEntries,
 }
 #ex: /feeds/latest/
 #ex: /feeds/categories/django/
@@ -47,6 +48,7 @@ urlpatterns += patterns('',
     url(r'^contact/$',
         contact_form,
         name='contact_form'),
+
     url(r'^contact/sent/$',
         direct_to_template,
         { 'template': 'contact_form/contact_form_sent.html' },
@@ -59,6 +61,9 @@ urlpatterns += patterns('',
     url(r'^$',
         view=home_list,
         name='home_index'),
+
+    url(r'^tags/(?P<slug>[-\w]+)/$', 'mingus.core.views.tag_detail',
+            name='blog_tag_detail'),
 
     (r'', include('basic.blog.urls')),
 )
