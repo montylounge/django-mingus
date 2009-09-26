@@ -1,8 +1,8 @@
 {% load thumbnail %}
 
 <div class="post-img clearfix">
-<img src="{% thumbnail object.photo 580x500 crop %}" />
+<img src="{% thumbnail object.photo 580x500 crop %}" alt="{{ object.title }}" title="{{ object.title }}">
 <p>
-	{{ object.description }}
+  {{ object.description }}
 </p>
 </div>

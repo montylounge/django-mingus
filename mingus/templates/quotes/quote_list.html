@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load cache i18n %}
 
+{% block title %}{% trans "Quotes" %} | {{ block.super }}{% endblock %}
+
 {% block content %}
 
 <h2>{% trans "Quotes" %}</h2>

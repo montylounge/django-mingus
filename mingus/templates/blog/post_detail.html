@@ -1,12 +1,12 @@
 {% extends "blog/base_blog.html" %}
-{% load blog tagging_tags inlines cache pygment_tags oembed_tags i18n %}
+{% load blog tagging_tags inlines cache pygment_tags oembed_tags i18n tagging_related %}
 
 {% block title %}{{ object.title }} | {{ block.super }}{% endblock %}
 
 {% block meta %}
 <meta name="keywords" content="{{ object.get_meta_keywords }}">
 <meta name="description" content="{{ object.get_meta_description }}">
-<meta name="author" content="{{ post.author.full_name }}" />
+<meta name="author" content="{{ object.author.get_full_name }}" />
 {% endblock %}
 
 {% block body_class %}{{ block.super }} post_detail{% endblock %}
@@ -41,7 +41,7 @@
   {% cache 300 "blog.post_detail.tag_list" object.pk %}
   {% tags_for_object object as tag_list %}
   {% if tag_list %}
-  <p class="inline_tag_list"><strong>Related tags:</strong>
+  <p class="inline_tag_list"><strong>Tags:</strong>
     {% for tag in tag_list %}
     <a href="/tags/{{ tag }}">{{ tag }}</a>{% if not forloop.last %}, {% endif %}
     {% endfor %}
@@ -49,10 +49,24 @@
   {% endif %}
   {% endcache %}
 
+  {% cache 1800 "blog.post_detail.related_list" object.pk %}
+  {% tagged_get_related object in blog.Post as post_list with num=3 %}
+  {% if post_list %}
+  <div class="related-posts">
+  <p class="inline_tag_list"><strong>Related posts:</strong></p>
+  <ol>
+  {% for post in post_list %}
+  <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+  {% endfor %}
+  </ol>
+  </div>
+  {% endif %}
+  {% endcache %}
+
   <div class="subscribe clearfix">
     <ul>
       <li><a href="http://twitter.com/?status=reading: {{ object.title }} - {{ SITE_URL }}{{ object.get_absolute_url }}" target="_blank">{% trans "Twitter this" %}</a></li>
-      <li><a href="http://www.reddit.com/r/programming/submit">{% trans "Reddit this" %}</a></li>
+      <li><a href="http://www.reddit.com/submit?title={{ object.title }}&url=http://{{ BLOG_SETTINGS.site.domain }}{{ object.get_absolute_url }}" target="_blank">{% trans "Reddit this" %}</a></li>
       <li><a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;">{% trans "Add to Delicious" %}</a></li>
       <li><a href="{{ FEED_SUBSCRIBE_RSS }}">{% trans "Subscribe RSS" %}</a></li>
     </ul>
