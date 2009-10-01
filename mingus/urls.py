@@ -15,8 +15,10 @@ admin.autodiscover()
 feeds = {
     'latest': BlogPostsFeed,
     'all': AllEntries,
+    'categories': BlogPostsByCategory,
 }
 #ex: /feeds/latest/
+#ex: /feeds/all/
 #ex: /feeds/categories/django/
 
 sitemaps = {
