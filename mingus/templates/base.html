@@ -138,6 +138,16 @@
       </ul>
       {% endcache %}
 
+      {% cache 3600 "bas.popular-posts" %}
+      <h4>{% trans "Popular Posts" %}</h4>
+      <ul class="recent-posts">
+      {% get_popular_posts 10 as popular_post_list %}
+      {% for item in popular_post_list %}
+      <li><a href="{{ item.get_absolute_url }}" title="{{ item.title }}">{{ item.title }}</a></li>
+      {% endfor %}
+      </ul>
+      {% endcache %}
+
       {% cache 3600 "delicious.popular" %}
       {% parse_feed 'http://feeds.delicious.com/v2/rss/tag/django?count=15' as items %}
       <h4>{% trans "Django Popular" %}</h4>
