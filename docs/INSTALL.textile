@@ -3,7 +3,7 @@ h2. Quick Start
 
 The quick start assumes basic familiarity with vitualenv, virtualenv wrapper.
 
-* mkvirtualenv myblog
+* mkvirtualenv myblog --no-site-packages
 * cd myblog
 * easy_install pip
 * git clone git://github.com/montylounge/django-mingus.git
