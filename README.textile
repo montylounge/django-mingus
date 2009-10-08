@@ -1,4 +1,8 @@
 
+h1. Important
+
+Mingus version 0.7 and previous are stable with pip 0.4 - with the recent update to pip 0.5 there have been install issues reported.
+
 h1. Introduction
 
 A Django blog engine leveraging only existing reusable apps, and django-snippets. The project itself defines no models (db schemas).

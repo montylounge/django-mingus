@@ -1,4 +1,8 @@
 
+h1. Important
+
+Mingus version 0.7 and previous are stable with pip 0.4 - with the recent update to pip 0.5 there have been install issues reported.
+
 h2. Quick Start
 
 The quick start assumes basic familiarity with vitualenv, virtualenv wrapper.
