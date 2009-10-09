@@ -1,7 +1,7 @@
 
 h1. Important
 
-Mingus version 0.7 and previous are stable with pip 0.4 - with the recent update to pip 0.5 there have been install issues reported.
+Mingus is currently stable with pip 0.4 - with the recent update to pip 0.5 there have been install issues reported related to pulling from git repos.
 
 h1. Introduction
 
