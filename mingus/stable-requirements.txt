@@ -15,7 +15,7 @@ http://www.aeracode.org/releases/south/south-0.6.1.tar.gz
 -e svn+http://django-template-utils.googlecode.com/svn/trunk@109#egg=template_utils-0.4p2-py2.5-dev
 -e hg+https://bitbucket.org/montylounge/django-proxy/@tip#egg=django_proxy-tip
 -e git://github.com/montylounge/django-google-analytics.git@6b7aa6dba851dd59dca0a20bc7eefe70754384e4#egg=google_analytics
--e git://github.com/montylounge/django-basic-apps.git@7ca235498800b64e7e9df206528536194e2bcb6d#egg=django_basic_apps
+-e git://github.com/montylounge/django-basic-apps.git@e39b6cd1400176f3635f4bed53ebc97724ef2a3b#egg=django_basic_apps
 -e git://github.com/mintchaos/django_compressor.git@d5d28eb57323a7e88356071c8c4af5792d2b837d#egg=django_compressor
 -e hg+https://bitbucket.org/ubernostrum/django-contact-form/@tip#egg=django_contact_form-tip
 -e svn+http://django-db-log.googlecode.com/svn/trunk@13#egg=django_db_log-1.0.1-py2.5-dev
