@@ -44,7 +44,7 @@ class MingusClientTests(unittest.TestCase):
         self.failUnlessEqual(response.status_code, 200)
 
         #test result as expected
-        self.assertEquals(response.context['object_list'][0].title, 'User Based Debug your Django App')
+        self.assertEquals(response.context['object_list'][0].title, 'Django Community')
 
     def test_About(self):
         'Test if the about page renders.'
