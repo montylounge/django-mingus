@@ -8,28 +8,28 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center, dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 body { line-height: 1; }
 ol, ul { list-style: none; }
 blockquote, q { quotes: none; }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 :focus { outline: 0; }
 ins { text-decoration: none; }
 del { text-decoration: line-through; }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 /* END RESET */
 
@@ -48,62 +48,62 @@ body {
 .post, .bookmark, .quote { margin-bottom: 1.2em; }
 
 .post .date, .bookmark .date, .quote .date {
-	float: left;
-	padding: .3em .4em .3em 1.2em;
-	background: #76d5ff; /* c14040 */
-	margin: 0.3em 0  0 -6.0em;
-	width: 3.8em;
+  float: left;
+  padding: .3em .4em .3em 1.2em;
+  background: #76d5ff; /* c14040 */
+  margin: 0.3em 0  0 -6.0em;
+  width: 3.8em;
 }
 
-#comments{ 
-    margin-top: 1.8em; 
-    border-top: solid 1px #CCC; 
+#comments{
+    margin-top: 1.8em;
+    border-top: solid 1px #CCC;
     padding-top: .6em;
 }
 
-.post .teaser{ 
-    border-bottom: solid 1.0em #333940; 
-    padding: .1em .1em .8em .1em; 
+.post .teaser{
+    border-bottom: solid 1.0em #333940;
+    padding: .1em .1em .8em .1em;
     margin-bottom: .9em;
 }
 
 #right-rail p {
-    font-size: .8em; 
+    font-size: .8em;
     margin-bottom: 1.8em;
 }
 
-.post_list .post, #header, .post_list .quote, .post_list .bookmark { 
-    padding-bottom: 1.2em; 
+.post_list .post, #header, .post_list .quote, .post_list .bookmark {
+    padding-bottom: 1.2em;
     border-bottom: 1px solid #ccc;
 }
-.post_detail .subscribe { 
+.post_detail .subscribe {
     margin-top: 1.2em;
-} 
+}
 
 #right-rail ul{ margin-left: 0em;}
 
-.filter-title{ 
-    margin-bottom: 1.2em; 
-    background-color: #ccc; 
+.filter-title{
+    margin-bottom: 1.2em;
+    background-color: #ccc;
     padding: .3em;
 }
 
-.post-img { 
-    margin: 1.2em 0em 1.2em 1.2em; 
-    padding: .8em .8em 0em 1.6em; 
-    background-color: #e4e4e4; 
-    width: 564px; 
+.post-img {
+    margin: 1.2em 0em 1.2em 1.2em;
+    padding: .8em .8em 0em 1.6em;
+    background-color: #e4e4e4;
+    width: 564px;
     border-left: solid 1.0em #dedede;
 }
 
-.post-img p { 
-    margin-left: .2em; 
+.post-img p {
+    margin-left: .2em;
     line-height: 1.4em;
 }
 
 .post-img {
-	float: left;
-	margin: 0.3em 0  0 -6.0em;
+  float: left;
+  margin: 0.3em 0  0 -6.0em;
 }
 
 .video
@@ -141,53 +141,53 @@ label
 
 
 /* CODE */
-pre 
+pre
 {
-	overflow: auto;
-	overflow: auto;
-	z-index: 0;
-	background-color: #fff;
-	padding: .6em 0em .6em .6em;
-	display: block;
-	width: 99%;
-	border: 0px solid #ccc;
-	margin: 1.0em 0em 1.0em 0em;
+  overflow: auto;
+  overflow: auto;
+  z-index: 0;
+  background-color: #fff;
+  padding: .6em 0em .6em .6em;
+  display: block;
+  width: 99%;
+  border: 0px solid #ccc;
+  margin: 1.0em 0em 1.0em 0em;
 }
 
-pre.prettyprint { 
-	padding: .6em 0em .6em .6em;
-    border: none; 
+pre.prettyprint {
+  padding: .6em 0em .6em .6em;
+    border: none;
 }
 
 /* HEADER/NAV */
 #header
 {
-	margin-left: 80px;
-	width: 960px;
-	margin-bottom: 30px;
+  margin-left: 80px;
+  width: 960px;
+  margin-bottom: 30px;
     padding-bottom: 1.0em;
 }
 
 #logo { float: left; }
 
-.navbar-one { 
-    margin-top: 10px; 
-    float: right; 
+.navbar-one {
+    margin-top: 10px;
+    float: right;
     margin-top: .6em;
 }
 
-#search { 
-    margin-top: 10px; 
-    margin-top: 1.6em; 
-    margin-bottom: 1.8em; 
+#search {
+    margin-top: 10px;
+    margin-top: 1.6em;
+    margin-bottom: 1.8em;
     float: right;
 }
 
 ul.navbar-one li
 {
-	float:left;
-	list-style: none;
-	margin-right: 20px;
+  float:left;
+  list-style: none;
+  margin-right: 20px;
 }
 
 #nav{ float: right; }
@@ -196,9 +196,9 @@ ul.navbar-one li
 
 .subscribe li
 {
-	float:left;
-	list-style: square;
-	margin-left: 2.6em;
+  float:left;
+  list-style: square;
+  margin-left: 2.6em;
 }
 
 /* PAGINATION */
@@ -209,9 +209,9 @@ ul.navbar-one li
 /* FOOTER */
 #footer{ margin-top: 2.8em; }
 
-#footer p{ margin-left: 1.6em; padding-bottom: 1.8em; } 
+#footer p{ margin-left: 1.6em; padding-bottom: 1.8em; }
 
-/* TYPE BASE */              
+/* TYPE BASE */
 p, ul, ol, pre { font-size: 1em; margin: 0 0 0.6em; }
 
 ul, ol { margin-left: 1.4em; }
@@ -222,7 +222,7 @@ h1{ font-size: 2.0em; }
 
 h2, h3, h4, h5 { margin: 1em 0 0.2em; font-weight: bold; }
 
-h2 { margin: 0.25em 0 .2em; font-size: 1.8em; letter-spacing: -0.025em; line-height: 1.2em; font-weight: 100; }
+h2 { margin: 0.25em 0 .2em; font-size: 1.8em; letter-spacing: -0.025em; line-height: 1.2em; font-weight: 400; }
 
 h3 { font-size: 1em; margin-bottom: 0.25em; }
 
@@ -231,8 +231,8 @@ h4 { font-size: 0.875em; }
 p, li { font-size: .9em; line-height: 1.4em;}
 
 /* TYPE SPECIFIC */
-.post .teaser{ 
-    font-size: 1.1em; 
+.post .teaser{
+    font-size: 1.1em;
     line-height: 1.2em;
 }
 
@@ -242,9 +242,9 @@ p, li { font-size: .9em; line-height: 1.4em;}
 
 ul.navbar-one li
 {
-	font-size: .9em;
-	text-decoration: none; 
-	color: #999ca0;
+  font-size: .9em;
+  text-decoration: none;
+  color: #999ca0;
 }
 
 pre{ color: #333940; }
@@ -267,15 +267,15 @@ a:link, a:visited {
 
 a:hover { color: #3c94bc; }
 
-h2 a:link, h2 a:visited{ font-weight: 100; color: #333940;}
+h2 a:link, h2 a:visited{ font-weight: 400; color: #333940;}
 
-h2 a:hover { font-weight: 100; color: #3c94bc;}
+h2 a:hover { font-weight: 400; color: #3c94bc;}
 
 #nav ul li a
 {
-	text-decoration: none;
-	font-weight: 100;
-	font-size: 1.0em;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.0em;
 
 }
 
@@ -293,6 +293,6 @@ h2 a:hover { font-weight: 100; color: #3c94bc;}
 /* HELPERS */
 .hide
 {
-	display: none;
-	margin-left: -1000;
+  display: none;
+  margin-left: -1000;
 }
