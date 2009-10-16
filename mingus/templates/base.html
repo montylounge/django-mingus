@@ -93,7 +93,7 @@
         {% cache 3600 "base.profiles" %}
         {% get_elsewhere_profiles as profiles %}
         {% for item in profiles %}
-        <li><a href="{{ item.url }}" title="{{ item.name }}">{{ item.name }}</a></li>
+        <li><a href="{{ item.url }}" rel="me" title="{{ item.name }}">{{ item.name }}</a></li>
         {% endfor %}
       </ul>
       {% endcache %}
