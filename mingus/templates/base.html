@@ -177,5 +177,6 @@
     {% cache 7200 "base.analytics" %}
     {% analytics %}
     {% endcache %}
+    {% block extra_body %}{% endblock %}
   </body>
 </html>
