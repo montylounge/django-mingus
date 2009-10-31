@@ -85,9 +85,9 @@
             <li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title="Subscribe via Email">Email</a></li>
           </ul>
 
+          {% cache 3600 "base.profiles" %}
           <h4>{% trans "Elsewhere" %}</h4>
           <ul>
-            {% cache 3600 "base.profiles" %}
             {% get_elsewhere_profiles as profiles %}
             {% for item in profiles %}
             <li><a href="{{ item.url }}" rel="me" title="{{ item.name }}">{{ item.name }}</a></li>
@@ -95,9 +95,9 @@
           </ul>
           {% endcache %}
 
+          {% cache 3600 "base.category_list" %}
           <h4>{% trans "Categories" %}</h4>
           <ul>
-            {% cache 3600 "base.category_list" %}
             {% get_blog_categories as category_list %}
             {% for category in category_list %}
             <li><a href="{% url basic.blog.views.category_detail category.slug %}" title="{{ category.title }}">{{ category.title }}</a></li>
