@@ -4,6 +4,9 @@ import logging
 import os
 import sys
 
+DEBUG = False
+TEMPLATE_DEBUG = False
+
 PROJECT_ROOT        = os.path.dirname(__file__)
 MEDIA_ROOT          = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL           = '/media/'
@@ -107,9 +110,8 @@ logging.basicConfig(
 if DEBUG:
     try:
         import debug_toolbar
-
         INSTALLED_APPS += ('debug_toolbar',)
         MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
     except ImportError:
-        logging.info("Running debug mode without debug_toolbar: install it if you need it")
+        logging.warning("Running debug mode without debug_toolbar: install it if you need it")
 
