@@ -7,19 +7,19 @@
 
 
 {% block content %}
-  <h2 class="filter-title">{% trans "Search results for:" %} {{ search_term }}</h2>
+    <h2 class="filter-title">{% trans "Search results for:" %} {{ search_term }}</h2>
 
-  {% if message %}
-  <p class="message">{{ message }}</p>
-  {% endif %}
+    {% if message %}
+        <p class="message">{{ message }}</p>
+    {% endif %}
 
-  {% if object_list %}
-  <div class="post_list">
-  {% cache 3600 "blog.post_search.object_list" search_term %}
-    {% for post in object_list %}
-  {% include "blog/includes/post_detail.html" %}
-    {% endfor %}
-  {% endcache %}
-  </div>
-  {% endif %}
+    {% if object_list %}
+        <div class="post_list">
+            {% cache 3600 "blog.post_search.object_list" search_term %}
+                {% for post in object_list %}
+                    {% include "blog/includes/post_detail.html" %}
+                {% endfor %}
+            {% endcache %}
+        </div>
+    {% endif %}
 {% endblock %}
