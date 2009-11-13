@@ -30,7 +30,9 @@
   <div class="post clearfix">
     <div class="date">{{ object.publish|date:"M d" }}</div>
     <h2>{{ object.title }}</h2>
-    <p class="teaser">{{ object.tease|safe }}</p>
+    {% if object.tease %}
+        <p class="teaser">{{ object.tease|safe }}</p>
+    {% endif %}
       <div class="body">
   {% oembed %}
       {{ object.body_markup|render_inlines|pygmentize|safe }}
