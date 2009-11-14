@@ -8,16 +8,16 @@
 
 <h1 class="filter-title">{% trans "Posts for" %} {{ year }}</h1>
 
-    {% get_post_archive_months as months %}
-    <ul class="archive">
-      {% for date in months %}
-          <li><a href="{% url blog_archive_month date|date:"Y", date|date:"b" %}" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
-      {% endfor %}
-    </ul>
+{% get_post_archive_months as months %}
+<ul class="archive">
+    {% for date in months %}
+    <li><a href="{% url blog_archive_month date|date:"Y", date|date:"b" %}" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
+    {% endfor %}
+</ul>
 
-    <div class="post_list">
-        {% for post in object_list %}
-            {% include "blog/includes/post_list.html" %}
-        {% endfor %}
-    </div>
+<div class="post_list">
+    {% for post in object_list %}
+        {% include "blog/includes/post_list.html" %}
+    {% endfor %}
+</div>
 {% endblock %}
