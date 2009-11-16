@@ -3,7 +3,7 @@ include LICENSE
 include README.textile
 include mingus/requirements.txt
 include mingus/stable-requirements.txt
-include mingus/initial_data.json
+include mingus/fixtures/initial_data.json
 include mingus/local_settings.py.template
 recursive-include mingus/media *.js *.css *.png
 recursive-include mingus/templates *.html *.txt
