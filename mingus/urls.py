@@ -76,11 +76,8 @@ urlpatterns += patterns('',
 )
 
 
-if settings.LOCAL_DEV:
-    urlpatterns += patterns('django.views.static',
-        (r'^%s(?P<path>.*)' % settings.STATIC_URL[1:], 'serve',
-         {'document_root': settings.STATIC_ROOT}),
-        (r'^%s(?P<path>.*)' % settings.MEDIA_URL[1:], 'serve',
-         {'document_root': settings.MEDIA_ROOT}),
-    )
-
+from django.conf import settings
+    if settings.LOCAL_DEV:
+        urlpatterns += patterns('', 
+            (r'', include('staticfiles.urls')),
+        )

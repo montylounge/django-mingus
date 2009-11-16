@@ -281,7 +281,7 @@ h2 a:hover { font-weight: 400; color: #3c94bc;}
 
 /* STYLE/ACCENTS */
 #bleeder {
-    background: transparent url('/media/static/imgs/bg_trans.png') top left repeat-y;
+    background: transparent url('../img/bg_trans.png') top left repeat-y;
     width: 10px;
     position: fixed;
     z-index: 9999;

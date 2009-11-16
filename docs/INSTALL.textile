@@ -25,6 +25,6 @@ Django-Mingus also comes with 4 additional themes: Django(green), Minimal (black
 
 To switch "themes" just change this line in templates/base.html:
 
-<link rel="stylesheet" href="{{ STATIC_URL }}css/themes/basic.css" type="text/css" media="all" charset="utf-8">
+<link rel="stylesheet" href="{{ STATIC_URL }}mingus/css/themes/basic.css" type="text/css" media="all" charset="utf-8">
 
 You'll notice the themes/basic.css text - change that to one of the existing themes ('django', 'minimal', 'jeffcroft', 'dark'), or edit away on your own!

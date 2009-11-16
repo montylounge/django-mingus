@@ -15,7 +15,7 @@
     {% endblock %}
 
      <meta name="copyright" content="{{ BLOG_SETTINGS.copyright }}" />
-     <link rel="shortcut icon" href="{{ STATIC_URL }}imgs/favicon.ico" type="image/x-icon"/>
+     <link rel="shortcut icon" href="{{ STATIC_URL }}mingus/img/favicon.ico" type="image/x-icon"/>
 
   {% block rss %}
   <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} main rss feed" href="{{ BLOG_SETTINGS.rss_url }}">
@@ -25,10 +25,10 @@
 
 
     {% compress css %}
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/960.css" type="text/css" media="all" charset="utf-8">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/pygments.css" type="text/css" media="all" charset="utf-8">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" media="all" charset="utf-8">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/themes/basic.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}mingus/css/960.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}mingus/css/pygments.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}mingus/css/base.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}mingus/css/themes/basic.css" type="text/css" media="all" charset="utf-8">
     {% endcompress %}
 
     <!--[if IE 6]>
@@ -51,7 +51,7 @@
   <div id="header" class="clearfix">
     <div id="logo">
       <h1><a href="/" title="{{ BLOG_SETTINGS.site_name }}}">{{ BLOG_SETTINGS.site_name }}</a></h1>
-      <!-- a href="{{ SITE_URL }}" title="Monty Lounge Industries Blog"><img class="logo" src="{{ STATIC_URL }}imgs/logo-blog-color-trans2.png" alt="Monty Lounge Industries"></a -->
+      <!-- a href="{{ SITE_URL }}" title="Monty Lounge Industries Blog"><img class="logo" src="{{ STATIC_URL }}mingus/img/logo-blog-color-trans2.png" alt="Monty Lounge Industries"></a -->
     </div>
     <!-- /logo -->
 
