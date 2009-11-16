@@ -2,14 +2,14 @@
 import os
 
 PROJECT_ROOT = os.path.dirname(__file__)
-MEDIA_ROOT = join(PROJECT_ROOT, 'media')
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
-STATIC_ROOT = join(PROJECT_ROOT, 'static')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 STATICFILES_DIRS = (
-    join(PROJECT_ROOT, 'media', 'mingus')
+    os.path.join(PROJECT_ROOT, 'media', 'mingus'),
 )
 
 SITE_ID = 1
