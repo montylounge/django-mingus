@@ -69,6 +69,7 @@ INSTALLED_APPS = (
   'basic.media',
   'oembed',
   'flatblocks',
+  'dbtemplates',
   'south',
   'navbar',
   'sorl.thumbnail',
