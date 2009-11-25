@@ -21,4 +21,5 @@ def site_info(request):
 
     return {
         'STATIC_URL': STATIC_URL,
+        'DEBUG': settings.DEBUG
     }

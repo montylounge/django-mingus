@@ -10,7 +10,7 @@
 {% block content %}
   <div class="post_list">
     <form class="search" action="/search/" method="GET">
-        <input type="text" name="q" value="{{ search_term }}"><br/>
+        <input type="text" name="q" value="{{ search_term }}"><br>
         <input type="submit" class="button" value="Search">
     </form>
     {% for object in object_list %}

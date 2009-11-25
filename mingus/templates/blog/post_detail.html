@@ -6,7 +6,7 @@
 {% block meta %}
 <meta name="keywords" content="{{ object.get_meta_keywords }}">
 <meta name="description" content="{{ object.get_meta_description }}">
-<meta name="author" content="{{ object.author.get_full_name }}" />
+<meta name="author" content="{{ object.author.get_full_name }}">
 {% endblock %}
 
 {% block body_class %}{{ block.super }} post_detail{% endblock %}

@@ -30,7 +30,7 @@
     {% cache 1800 "quote.quote_detail.tag_list" object.pk %}
     {% tags_for_object object as tag_list %}
     {% if tag_list %}
-    <br/>
+    <br>
     <p class="inline_tag_list"><strong>Tags:</strong>
     {% for tag in tag_list %}
     <a href="/tags/{{ tag }}">{{ tag }}</a>{% if not forloop.last %}, {% endif %}
