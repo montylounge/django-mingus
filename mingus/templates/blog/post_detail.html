@@ -6,7 +6,7 @@
 {% block meta %}
 <meta name="keywords" content="{{ object.get_meta_keywords }}">
 <meta name="description" content="{{ object.get_meta_description }}">
-<meta name="author" content="{{ object.author.get_full_name }}" />
+<meta name="author" content="{{ object.author.get_full_name }}">
 {% endblock %}
 
 {% block body_class %}{{ block.super }} post_detail{% endblock %}
@@ -30,7 +30,9 @@
   <div class="post clearfix">
     <div class="date">{{ object.publish|date:"M d" }}</div>
     <h2>{{ object.title }}</h2>
-    <p class="teaser">{{ object.tease|safe }}</p>
+    {% if object.tease %}
+        <p class="teaser">{{ object.tease|safe }}</p>
+    {% endif %}
       <div class="body">
   {% oembed %}
       {{ object.body_markup|render_inlines|pygmentize|safe }}
