@@ -70,7 +70,7 @@
       <li><a href="http://twitter.com/?status=reading: {{ object.title }} - {{ SITE_URL }}{{ object.get_absolute_url }}" target="_blank">{% trans "Twitter this" %}</a></li>
       <li><a href="http://www.reddit.com/submit?title={{ object.title }}&url=http://{{ BLOG_SETTINGS.site.domain }}{{ object.get_absolute_url }}" target="_blank">{% trans "Reddit this" %}</a></li>
       <li><a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;">{% trans "Add to Delicious" %}</a></li>
-      <li><a href="{{ FEED_SUBSCRIBE_RSS }}">{% trans "Subscribe RSS" %}</a></li>
+      <li><a href="{{ BLOG_SETTINGS.rss_url }}">{% trans "Subscribe RSS" %}</a></li>
     </ul>
   </div>
   <!-- post -->
