@@ -26,41 +26,42 @@
 {% endcomment %}
 
 {% block content %}
-
   <div class="post clearfix">
     <div class="date">{{ object.publish|date:"M d" }}</div>
     <h2>{{ object.title }}</h2>
     {% if object.tease %}
-        <p class="teaser">{{ object.tease|safe }}</p>
+    <p class="teaser">{{ object.tease|safe }}</p>
     {% endif %}
-      <div class="body">
-  {% oembed %}
+    <div class="body">
+      {% oembed %}
       {{ object.body_markup|render_inlines|pygmentize|safe }}
-  {% endoembed %}
-      </div>
+      {% endoembed %}
+    </div>
   </div>
 
   {% cache 300 "blog.post_detail.tag_list" object.pk %}
   {% tags_for_object object as tag_list %}
   {% if tag_list %}
-  <p class="inline_tag_list"><strong>Tags:</strong>
-    {% for tag in tag_list %}
-    <a href="/tags/{{ tag }}">{{ tag }}</a>{% if not forloop.last %}, {% endif %}
-    {% endfor %}
-  </p>
+  <div class="tags"><strong>Tags:</strong>
+      <ul class="tag inline">
+          {% for tag in tag_list %}
+          <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+          {% endfor %}
+      </ul>
+  </div>
   {% endif %}
   {% endcache %}
 
   {% cache 1800 "blog.post_detail.related_list" object.pk %}
   {% tagged_get_related object in blog.Post as post_list with num=3 %}
   {% if post_list %}
-  <div class="related-posts">
-  <p class="inline_tag_list"><strong>Related posts:</strong></p>
-  <ol>
-  {% for post in post_list %}
-  <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-  {% endfor %}
-  </ol>
+  <div class="related">
+      <p><strong>Related posts:</strong></p>
+      <ol class="post inline">
+          {% for post in post_list %}
+          <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+      </ol>
   </div>
   {% endif %}
   {% endcache %}
