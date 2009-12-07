@@ -5,19 +5,19 @@
 
 {% block content %}
 
-<h2>{{ object.title }}</h2>
-
 {% cache 180 "quote.quote_detail" object.pk %}
-<div>
-    <div>
+<div class="quote clearfix">
+    <h2>{{ object.title }}</h2>
+
+    <div class="body">
         {% if object.quote %}
-            <blockquote>{{ object.quote }}</blockquote>
+            <blockquote cite="object.url_source">{{ object.quote }}</blockquote>
         {% endif %}
     </div>
-    <div>
+    <div class="source">
         {% if object.author %}
       {% if object.url_source %}
-            <span>- <a href="{{ object.url_source }}">{{ object.author }}</a></span>
+            <span>&mdash; <a href="{{ object.url_source }}">{{ object.author }}</a></span>
       {% else %}
       <span>- {{ object.author }} {% if object.circa %}, {{ object.circa }}{% endif %}</span>
       {% endif %}

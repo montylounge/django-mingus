@@ -5,9 +5,9 @@
     <div class="body">
         <blockquote cite="{{ object.content_object.get_absolute_url }}">
             {{ object.description|safe }}
-            {% if object.content_object.author %}
-            <p class="source">&mdash; {{ object.content_object.author }}<p>
-            {% endif %}
         </blockquote>
     </div>
+    {% if object.content_object.author %}
+    <p class="source">&mdash; {{ object.content_object.author }}<p>
+    {% endif %}
 </div>
