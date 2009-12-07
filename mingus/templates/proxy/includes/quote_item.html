@@ -1,11 +1,13 @@
 
 <div class="quote clearfix">
-  <div class="date">{{ object.pub_date|date:"M d" }}</div>
-  <h2><a href="{{ object.content_object.get_absolute_url }}">{{ object.title }}</a></h2>
-   <blockquote>
-     {{ object.description|safe }}
-    {% if object.content_object.author %}
-     <p class="source">&mdash; {{ object.content_object.author }}<p>
-    {% endif %}
-   </blockquote>
+    <div class="date">{{ object.pub_date|date:"M d" }}</div>
+    <h2><a href="{{ object.content_object.get_absolute_url }}">{{ object.title }}</a></h2>
+    <div class="body">
+        <blockquote cite="{{ object.content_object.get_absolute_url }}">
+            {{ object.description|safe }}
+            {% if object.content_object.author %}
+            <p class="source">&mdash; {{ object.content_object.author }}<p>
+            {% endif %}
+        </blockquote>
+    </div>
 </div>
