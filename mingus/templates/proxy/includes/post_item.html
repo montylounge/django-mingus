@@ -9,7 +9,7 @@
         {% endif %}
         <div class="body">
             {% oembed %}
-                {{ object.description|render_inlines|pygmentize|safe }}
+                {{ object.description|render_inlines|safe }}
             {% endoembed %}
         </div>
     {% endwith %}

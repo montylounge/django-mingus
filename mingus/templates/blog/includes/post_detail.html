@@ -6,7 +6,7 @@
   <p class="teaser">{{ post.tease|safe }}</p>
     <div class="body">
   {% oembed %}
-    {{ post.body_markup|render_inlines|pygmentize|safe }}
+    {{ post.body_markup|render_inlines|safe }}
   {% endoembed %}
     </div>
 </div>
