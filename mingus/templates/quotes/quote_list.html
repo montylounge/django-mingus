@@ -7,8 +7,6 @@
 
 <h2>{% trans "Quotes" %}</h2>
 
-{% trans "A little side note, my favorite jazz album is" %} {{ favorite_jazz_album }}.
-
 {% cache 180 "quote.quote_list" %}
 {% for object in object_list %}
 

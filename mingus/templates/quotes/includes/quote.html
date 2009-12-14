@@ -1,11 +1,11 @@
-<div>
+<div class="quote clearfix">
     <h3><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></h3>
-    <div>
+    <div class="body">
         {% if object.quote %}
             <blockquote>{{ object.quote }}</blockquote>
         {% endif %}
     </div>
-    <div>
+    <div class="source">
       {% if object.author %}
       {% if object.url_source %}
             <span>- <a href="{{ object.url_source }}">{{ object.author }}</a></span>
