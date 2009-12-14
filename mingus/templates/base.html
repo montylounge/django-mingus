@@ -14,8 +14,8 @@
     <meta name="author" content="{{ BLOG_SETTINGS.author_name }}">
     {% endblock %}
 
-    <meta name="copyright" content="{{ BLOG_SETTINGS.copyright }}">
-    <link rel="shortcut icon" href="{{ STATIC_URL }}imgs/favicon.ico" type="image/x-icon">
+     <meta name="copyright" content="{{ BLOG_SETTINGS.copyright }}" />
+     <link rel="shortcut icon" href="{{ STATIC_URL }}mingus/img/favicon.ico" type="image/x-icon"/>
 
     {% block rss %}
     <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} main rss feed" href="{{ BLOG_SETTINGS.rss_url }}">
@@ -25,10 +25,10 @@
 
 
     {% compress css %}
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/960.css" type="text/css" media="all" charset="utf-8">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/pygments.css" type="text/css" media="all" charset="utf-8">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" media="all" charset="utf-8">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/themes/basic.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}mingus/css/960.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}mingus/css/pygments.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}mingus/css/base.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}mingus/css/themes/basic.css" type="text/css" media="all" charset="utf-8">
     {% endcompress %}
 
     <!--[if IE 6]>
@@ -41,27 +41,30 @@
     {% disqus_dev %}
     {% block extra_head %}{% endblock %}
   </head>
-  <body id="{% block body_id %}page-{{ request.path|slugify|default:"root" }}{% endblock %}" class="{% block body_class %}blog{% endblock %}">
-    <div id="bleeder"></div>
-    <div id="body-container" class="clearfix">
-      {% block body %}
 
-      <div id="header" class="clearfix">
-        <div id="logo">
-          <h1><a href="/" title="{{ BLOG_SETTINGS.site_name }}}">{{ BLOG_SETTINGS.site_name }}</a></h1>
-        </div>
-        <!-- /logo -->
+<body id="{% block body_id %}{% endblock %}" class="{% block body_class %}blog{% endblock %}">
+<div id="bleeder"></div>
 
-        <div id="nav">
-          {% cache 3600 "base.navbars" %}
-          {% navbars %}
-          {% endcache %}
-          <form action="/search/" method="GET"><input type="text" name="q" value="{{ search_term }}"><input type="submit" class="button" value="Search"></form>
-        </div>
-        <!-- /nav -->
+  <div id="body-container" class="clearfix">
+    {% block body %}
 
-      </div>
-      <!-- /header -->
+  <div id="header" class="clearfix">
+    <div id="logo">
+      <h1><a href="/" title="{{ BLOG_SETTINGS.site_name }}}">{{ BLOG_SETTINGS.site_name }}</a></h1>
+      <!-- a href="{{ SITE_URL }}" title="Monty Lounge Industries Blog"><img class="logo" src="{{ STATIC_URL }}mingus/img/logo-blog-color-trans2.png" alt="Monty Lounge Industries"></a -->
+    </div>
+    <!-- /logo -->
+
+    <div id="nav">
+      {% cache 3600 "base.navbars" %}
+      {% navbars %}
+      {% endcache %}
+      <form action="/search/" method="GET"><input type="text" name="q" value="{{ search_term }}"><input type="submit" class="button" value="Search"></form>
+    </div>
+    <!-- /nav -->
+
+  </div>
+  <!-- /header -->
 
       <div class="container_16">
         <div class="grid_9 suffix_1">

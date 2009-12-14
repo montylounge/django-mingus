@@ -1,15 +1,18 @@
+--find-links=http://dist.repoze.org/
 BeautifulSoup==3.1.0.1
-http://dist.repoze.org/PIL-1.1.6.tar.gz
+PIL==1.1.6
 python-dateutil==1.4.1
 Django==1.1.1
-django-debug-toolbar==0.8.0
+django-debug-toolbar==0.8.1
 django-tagging==0.3
-Pygments==1.0
+Pygments==1.1.1
 feedparser==4.1
 Markdown==2.0.1
 textile==2.1.3
 django-markup==0.3
-http://www.aeracode.org/releases/south/south-0.6.1.tar.gz
+South==0.6.2
+django-robots==0.6.1
+django-dbtemplates==0.6.1
 
 -e git://github.com/django-extensions/django-extensions.git@664ca825578c5c13f0817eba0578fbda4bac62cf#egg=django_extensions
 -e svn+http://django-template-utils.googlecode.com/svn/trunk@109#egg=template_utils-0.4p2-py2.5-dev
@@ -25,7 +28,7 @@ http://www.aeracode.org/releases/south/south-0.6.1.tar.gz
 -e svn+http://django-navbar.googlecode.com/svn/trunk@13#egg=django_navbar-0.1.0-py2.5-dev
 -e git://github.com/brosner/django-oembed.git@0b09321a6042c490534e5940083136f712da57b0#egg=django_oembed
 -e git://github.com/montylounge/django-quoteme.git@c9ed8992a8b3e2ae6d19392ce865e53cbb1088a5#egg=django_quoteme
--e hg+https://bitbucket.org/jezdez/django-robots/@tip#egg=django_robots-tip
 -e git://github.com/montylounge/django-sugar.git@26bb6a8ab966707c53c817c9b16dbb0dee54d8e4#egg=django_sugar
 -e hg+https://bitbucket.org/kmike/django-view-cache-utils/@tip#egg=django_view_cache_utils-tip
 -e hg+https://sorl-thumbnail.googlecode.com/hg/@tip#egg=sorl_thumbnail-tip
+-e hg+http://bitbucket.org/jezdez/django-staticfiles/#egg=django-staticfiles

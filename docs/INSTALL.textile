@@ -1,15 +1,10 @@
 
-h1. Important
-
-Mingus is currently stable with pip 0.4 - with the recent update to pip 0.5 there have been install issues reported related to pulling from git repos.
-
 h2. Quick Start
 
 The quick start assumes basic familiarity with vitualenv, virtualenv wrapper.
 
 * mkvirtualenv myblog --no-site-packages
 * cd myblog
-* easy_install pip
 * git clone git://github.com/montylounge/django-mingus.git
 * cd django-mingus/mingus
 * pip install -r stable-requirements.txt
@@ -25,6 +20,6 @@ Django-Mingus also comes with 4 additional themes: Django(green), Minimal (black
 
 To switch "themes" just change this line in templates/base.html:
 
-<link rel="stylesheet" href="{{ STATIC_URL }}css/themes/basic.css" type="text/css" media="all" charset="utf-8">
+<link rel="stylesheet" href="{{ STATIC_URL }}mingus/css/themes/basic.css" type="text/css" media="all" charset="utf-8">
 
 You'll notice the themes/basic.css text - change that to one of the existing themes ('django', 'minimal', 'jeffcroft', 'dark'), or edit away on your own!

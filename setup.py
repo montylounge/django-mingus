@@ -29,9 +29,9 @@ setup(
     ],
     package_data = {
             'mingus': [
-                'media/static/css/*.css',
-                'media/static/imgs/*.png',
-                'media/static/js/*.js',
+                'media/mingus/css/*.css',
+                'media/mingus/img/*.png',
+                'media/mingus/js/*.js',
             ]
         },
     zip_safe=False, # required to convince setuptools/easy_install to unzip the package data
