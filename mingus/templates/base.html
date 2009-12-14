@@ -76,13 +76,13 @@
         <div id="right-rail" class="grid_6">
 
           <h4>{% trans "About" %}</h4>
-          <p>{{ BLOG_SETTINGS.about }}</p>
+          <p>{{ BLOG_SETTINGS.about|safe }}</p>
 
           <h4>Subscribe</h4>
           <ul>
-            <li><a href="{{ BLOG_SETTINGS.twitter_url }}" title="Follow me on Twitter">Twitter</a></li>
-            <li><a href="{{ BLOG_SETTINGS.rss_url }}" title"Subscribe via RSS">RSS</a></li>
-            <li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title="Subscribe via Email">Email</a></li>
+          {% if BLOG_SETTINGS.twitter_url %}<li><a href="{{ BLOG_SETTINGS.twitter_url }}" title="Follow me on Twitter">Twitter</a></li>{% endif %}
+          {% if BLOG_SETTINGS.rss_url %}<li><a href="{{ BLOG_SETTINGS.rss_url }}" title"Subscribe via RSS">RSS</a></li>{% endif %}
+          {% if BLOG_SETTINGS.email_subscribe_url %}<li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title="Subscribe via Email">Email</a></li>{% endif %}
           </ul>
 
           {% cache 3600 "base.profiles" %}
