@@ -10,7 +10,6 @@ feedparser==4.1
 Markdown==2.0.1
 textile==2.1.3
 django-markup==0.3
-South==0.6.2
 django-robots==0.6.1
 django-dbtemplates==0.6.1
 
