@@ -4,3 +4,4 @@
 local_settings.py
 pip-log.txt
 django_mingus.egg-info
+mingus/media/CACHE/
