@@ -15,7 +15,7 @@ django-dbtemplates==0.6.1
 
 -e git+git://github.com/django-extensions/django-extensions.git#egg=django_extensions
 
-#-e git+git://github.com/montylounge/django-basic-apps.git#egg=basic
+-e git+git://github.com/montylounge/django-basic-apps.git#egg=basic
 -e git+git://github.com/zerok/django-flatblocks.git#egg=flatblocks
 -e git+git://github.com/montylounge/django-disqus.git#egg=disqus
 -e svn+http://django-navbar.googlecode.com/svn/trunk#egg=navbar
