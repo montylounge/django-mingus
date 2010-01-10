@@ -1,5 +1,5 @@
 --find-links=http://dist.repoze.org/
-BeautifulSoup==3.1.0.1
+BeautifulSoup==3.0.8
 PIL==1.1.6
 python-dateutil==1.4.1
 django==1.1.1
@@ -39,6 +39,7 @@ django-dbtemplates==0.6.1
 -e git+git://github.com/skevy/django-twitter.git#egg=django-twitter
 -e hg+https://python-twitter.googlecode.com/hg/#egg=python-twitter
 -e svn+http://django-tinymce.googlecode.com/svn/trunk/#django-tinymce
+
 
 
 
