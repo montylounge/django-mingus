@@ -76,6 +76,9 @@
   </div>
   <!-- post -->
 
-{% include "blog/includes/comments.html" %}
-
+{% if object.allow_comments %}
+	{% include "blog/includes/comments.html" %}
+{% else %}
+    <div id="comments"><h4>Sorry, comments are disabled for this post.</h4></div>
+{% endif %}
 {% endblock %}

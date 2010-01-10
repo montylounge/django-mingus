@@ -3,6 +3,7 @@ from django.core.urlresolvers import reverse
 
 from basic.blog.models import Settings
 from django_proxy.models import Proxy
+from tagging.models import Tag, TaggedItem
 
 class AllEntries(Feed):
     _settings = None
@@ -36,3 +37,37 @@ class AllEntries(Feed):
 
     def item_categories(self, item):
         return item.tags.replace(',', '').split()
+
+
+class ByTag(AllEntries):
+    
+    @property
+    def settings(self):
+        if self._settings is None:
+            self._settings = Settings.get_current()
+        return self._settings
+        
+
+    def title(self):
+        return '%s all entries feed' % self.settings.site_name
+
+    def get_object(self, bits):
+        if len(bits) != 1:
+            raise ObjectDoesNotExist
+        return Tag.objects.get(name__exact=bits[0])
+
+    def link(self, obj):
+        if not obj:
+            raise FeedDoesNotExist
+        return reverse('blog_tag_detail', kwargs={'slug':obj.name})
+
+    def description(self, obj):
+        return "Posts recently tagged as %s" % obj.name
+
+    def item_link(self, item):
+        return item.content_object.get_absolute_url()
+
+    def items(self, obj):
+        return Proxy.objects.published().filter(
+            tags__icontains=obj.name
+        ).order_by('-pub_date')[:10]

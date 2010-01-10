@@ -54,5 +54,5 @@ DEBUG_TOOLBAR_PANELS = (
 MARKUP_CHOICES = (
     'none',
     'markdown',
-  'textile',
+    'textile',
 )

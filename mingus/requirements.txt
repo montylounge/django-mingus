@@ -15,7 +15,7 @@ django-dbtemplates==0.6.1
 
 -e git+git://github.com/django-extensions/django-extensions.git#egg=django_extensions
 
--e git+git://github.com/montylounge/django-basic-apps.git#egg=basic
+#-e git+git://github.com/montylounge/django-basic-apps.git#egg=basic
 -e git+git://github.com/zerok/django-flatblocks.git#egg=flatblocks
 -e git+git://github.com/montylounge/django-disqus.git#egg=disqus
 -e svn+http://django-navbar.googlecode.com/svn/trunk#egg=navbar
@@ -33,4 +33,13 @@ django-dbtemplates==0.6.1
 -e git+git://github.com/sunlightlabs/django-honeypot.git#egg=honeypot
 -e git+git://github.com/montylounge/django-sugar.git#egg=sugar
 -e git+git://github.com/montylounge/django-quoteme.git#egg=quoteme
+
 -e hg+http://bitbucket.org/jezdez/django-staticfiles/#egg=django-staticfiles
+-e hg+http://bitbucket.org/discovery/django-bitly/#egg=django-bitly
+-e git+git://github.com/skevy/django-twitter.git#egg=django-twitter
+-e hg+https://python-twitter.googlecode.com/hg/#egg=python-twitter
+-e svn+http://django-tinymce.googlecode.com/svn/trunk/#django-tinymce
+
+
+
+

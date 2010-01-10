@@ -15,20 +15,22 @@
     {% endblock %}
 
      <meta name="copyright" content="{{ BLOG_SETTINGS.copyright }}" />
-     <link rel="shortcut icon" href="{{ STATIC_URL }}mingus/img/favicon.ico" type="image/x-icon"/>
+     <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon"/>
 
     {% block rss %}
     <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} main rss feed" href="{{ BLOG_SETTINGS.rss_url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} all entries feed" href="/feeds/all/">
     <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} all posts feed" href="/feeds/latest/">
+
+  {% if category %}<link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} - {{ category }} posts" href="/feeds/categories/{{ category.title|lower }}">{% endif %}
+
     {% endblock %}
 
 
     {% compress css %}
-    <link rel="stylesheet" href="{{ STATIC_URL }}mingus/css/960.css" type="text/css" media="all" charset="utf-8">
-    <link rel="stylesheet" href="{{ STATIC_URL }}mingus/css/pygments.css" type="text/css" media="all" charset="utf-8">
-    <link rel="stylesheet" href="{{ STATIC_URL }}mingus/css/base.css" type="text/css" media="all" charset="utf-8">
-    <link rel="stylesheet" href="{{ STATIC_URL }}mingus/css/themes/basic.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/960.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/themes/basic.css" type="text/css" media="all" charset="utf-8">
     {% endcompress %}
 
     <!--[if IE 6]>
@@ -50,8 +52,7 @@
 
   <div id="header" class="clearfix">
     <div id="logo">
-      <h1><a href="/" title="{{ BLOG_SETTINGS.site_name }}}">{{ BLOG_SETTINGS.site_name }}</a></h1>
-      <!-- a href="{{ SITE_URL }}" title="Monty Lounge Industries Blog"><img class="logo" src="{{ STATIC_URL }}mingus/img/logo-blog-color-trans2.png" alt="Monty Lounge Industries"></a -->
+      <h1><a href="/" title="{{ BLOG_SETTINGS.site_name }}">{{ BLOG_SETTINGS.site_name }}</a></h1>
     </div>
     <!-- /logo -->
 
@@ -86,6 +87,11 @@
           {% if BLOG_SETTINGS.twitter_url %}<li><a href="{{ BLOG_SETTINGS.twitter_url }}" title="Follow me on Twitter">Twitter</a></li>{% endif %}
           {% if BLOG_SETTINGS.rss_url %}<li><a href="{{ BLOG_SETTINGS.rss_url }}" title"Subscribe via RSS">RSS</a></li>{% endif %}
           {% if BLOG_SETTINGS.email_subscribe_url %}<li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title="Subscribe via Email">Email</a></li>{% endif %}
+
+      {% if category %}<li><a href="/feeds/categories/{{ category.title|lower }}" title"Subscribe via RSS">RSS - {{ category }}</a></li>{% endif %}
+        {% if BLOG_SETTINGS_email_subscribe_url %}<li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title="Subscribe via Email">Email</a></li>{% endif %}
+       </ul>
+
           </ul>
 
           {% cache 3600 "base.profiles" %}

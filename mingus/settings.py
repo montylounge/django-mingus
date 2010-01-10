@@ -4,12 +4,13 @@ import os
 PROJECT_ROOT = os.path.dirname(__file__)
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
-STATIC_URL = '/static/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
+#staticfiles app values
+STATIC_URL = '/media/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'media'),
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'media', 'mingus'),
+    os.path.join(PROJECT_ROOT, 'media'),
 )
 
 SITE_ID = 1
@@ -83,7 +84,20 @@ INSTALLED_APPS = (
   'quoteme',
   'mingus',
   'debug_toolbar',
+  
+  'django_twitter',
+  'django_bitly',
+  'tinymce',
+  'staticfiles',
 )
+
+TINYMCE_COMPRESSOR = True
+TINYMCE_DEFAULT_CONFIG = {
+    'theme': "advanced",
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+    'theme_advanced_toolbar_location': "top",
+}
 
 try:
    from local_settings import *
