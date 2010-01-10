@@ -67,7 +67,6 @@ INSTALLED_APPS = (
   'oembed',
   'flatblocks',
   'dbtemplates',
-  'south',
   'navbar',
   'sorl.thumbnail',
   'template_utils',
