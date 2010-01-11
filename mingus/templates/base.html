@@ -130,17 +130,15 @@
           {% endif %}
           {% endcache %}
 
-          {% cache 7200 "base.archive" %}
-          {% get_post_archive as dates %}
-          {% if dates %}
-          <h4>{% trans "Archive" %}</h4>
-          <ul class="archive">
-            {% for date in dates %}
-            <li><a href="{% url blog_archive_month date|date:"Y", date|date:"b" %}" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-          {% endcache %}
+		{% cache 7200 "base.archive" %}
+		{% get_post_archive as dates %}
+		<h4>{% trans "Archive" %}</h4>
+		<ul class="archive">
+		{% for date in dates %}
+		<li><a href="{% url blog_archive_month date|date:"Y", date|date:"m" %}" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
+		{% endfor %}
+		</ul>
+		{% endcache %}
 
           {% cache 3600 "base.blogroll" %}
           {% get_blogroll 10 as blogroll %}

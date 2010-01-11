@@ -8,9 +8,9 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 #staticfiles app values
 STATIC_URL = '/media/'
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'media'),
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'media')
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'media'),
+    os.path.join(PROJECT_ROOT, 'media', 'mingus'),
 )
 
 SITE_ID = 1
@@ -86,10 +86,12 @@ INSTALLED_APPS = (
   
   'django_twitter',
   'django_bitly',
-  'tinymce',
   'staticfiles',
+  'tinymce',
+  'django_wysiwyg',
 )
 
+TINYMCE_JS_ROOT = STATIC_ROOT + '/mingus/js/tiny_mce/'
 TINYMCE_COMPRESSOR = True
 TINYMCE_DEFAULT_CONFIG = {
     'theme': "advanced",
@@ -97,6 +99,9 @@ TINYMCE_DEFAULT_CONFIG = {
     'custom_undo_redo_levels': 10,
     'theme_advanced_toolbar_location': "top",
 }
+
+DJANGO_WYSIWYG_MEDIA_URL = STATIC_URL + "mingus/js/ckeditor/"
+DJANGO_WYSIWYG_FLAVOR = "ckeditor"
 
 try:
    from local_settings import *

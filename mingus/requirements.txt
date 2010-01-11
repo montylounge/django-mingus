@@ -38,6 +38,9 @@ django-dbtemplates==0.6.1
 -e git+git://github.com/skevy/django-twitter.git#egg=django-twitter
 -e hg+https://python-twitter.googlecode.com/hg/#egg=python-twitter
 -e svn+http://django-tinymce.googlecode.com/svn/trunk/#django-tinymce
+-e git+git://github.com/pydanny/django-wysiwyg.git#egg=django-wysiwyg
+
+
 
 
 
