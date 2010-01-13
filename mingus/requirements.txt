@@ -22,7 +22,7 @@ django-dbtemplates==0.6.1
 -e hg+https://sorl-thumbnail.googlecode.com/hg/#egg=sorl
 -e git+git://github.com/brosner/django-oembed.git#egg=oembded
 -e svn+http://django-template-utils.googlecode.com/svn/trunk#egg=template_utils
--e hg+https://bitbucket.org/montylounge/django-proxy/#egg=django_proxy
+-e git+git://github.com/montylounge/django-proxy.git#egg=django_proxy
 
 -e git+git://github.com/mintchaos/django_compressor.git#egg=compressor
 -e git+git://github.com/bartTC/django-markup.git#egg=django_markup
