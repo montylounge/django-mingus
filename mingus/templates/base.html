@@ -23,9 +23,7 @@
     <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} all posts feed" href="/feeds/latest/">
 
   {% if category %}<link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} - {{ category }} posts" href="/feeds/categories/{{ category.title|lower }}">{% endif %}
-
     {% endblock %}
-
 
     {% compress css %}
     <link rel="stylesheet" href="{{ STATIC_URL }}css/960.css" type="text/css" media="all" charset="utf-8">
