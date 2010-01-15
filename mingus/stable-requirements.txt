@@ -1,5 +1,5 @@
-BeautifulSoup==3.1.0.1
-http://dist.repoze.org/PIL-1.1.6.tar.gz
+BeautifulSoup==3.0.8
+PIL
 python-dateutil==1.4.1
 Django==1.1.1
 django-debug-toolbar==0.8.0
@@ -9,7 +9,7 @@ feedparser==4.1
 Markdown==2.0.1
 textile==2.1.3
 django-markup==0.3
-http://www.aeracode.org/releases/south/south-0.6.1.tar.gz
+South==0.6.2
 
 -e git://github.com/django-extensions/django-extensions.git@664ca825578c5c13f0817eba0578fbda4bac62cf#egg=django_extensions
 -e svn+http://django-template-utils.googlecode.com/svn/trunk@109#egg=template_utils-0.4p2-py2.5-dev

@@ -2,4 +2,5 @@
 *.bak
 *.db
 local_settings.py
+mingus/media/CACHE
 pip-log.txt
