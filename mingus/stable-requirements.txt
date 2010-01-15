@@ -1,6 +1,5 @@
---find-links=http://dist.repoze.org/
-BeautifulSoup==3.1.0.1
-PIL==1.1.6
+BeautifulSoup==3.0.8
+PIL
 python-dateutil==1.4.1
 Django==1.1.1
 django-debug-toolbar==0.8.1
