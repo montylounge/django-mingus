@@ -27,9 +27,11 @@
 
     {% compress css %}
     <link rel="stylesheet" href="{{ STATIC_URL }}css/960.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/prettify.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/pygment.css" type="text/css" media="all" charset="utf-8">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" media="all" charset="utf-8">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/themes/basic.css" type="text/css" media="all" charset="utf-8">
-    {% endcompress %}
+   {% endcompress %}
 
     <!--[if IE 6]>
     <script src="{{ STATIC_URL }}js/DD_belatedPNG_0.0.7a-min.js"></script>
@@ -197,14 +199,12 @@
     {% analytics %}
     {% endcache %}
     {% block extra_body %}
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" charset="utf-8">
         jQuery(function($) {
-            $("head").append(unescape('%3Clink%20rel%3D%22stylesheet%22%20href%3D%22{{ STATIC_URL }}css%2Fprettify.css%22%20type%3D%22text%2Fcss%22%20media%3D%22screen%22%20title%3D%22no%20title%22%20charset%3D%22utf-8%22%3E'));
             $.getScript('{{ STATIC_URL }}js/prettify.js', function(){
                 prettyPrint();
             });
-
         });
         </script>
     {% endblock %}

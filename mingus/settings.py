@@ -33,6 +33,8 @@ MIDDLEWARE_CLASSES = (
     'sugar.middleware.debugging.UserBasedExceptionMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'djangodblog.DBLogMiddleware',
+    'slimmer.middleware.CompressHtmlMiddleware',
+    'request.middleware.RequestMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
@@ -89,6 +91,7 @@ INSTALLED_APPS = (
   'staticfiles',
   'tinymce',
   'django_wysiwyg',
+  'request',
 )
 
 TINYMCE_JS_ROOT = STATIC_ROOT + '/mingus/js/tiny_mce/'

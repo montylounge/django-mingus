@@ -1,5 +1,5 @@
 {% extends "blog/base_blog.html" %}
-{% load blog tagging_tags inlines cache pygment_tags oembed_tags i18n tagging_related %}
+{% load blog tagging_tags inlines cache pygment_tags oembed_tags i18n tagging_related pygment_tags %}
 
 {% block title %}{{ object.title }} | {{ block.super }}{% endblock %}
 
@@ -33,8 +33,9 @@
     <p class="teaser">{{ object.tease|safe }}</p>
     {% endif %}
     <div class="body">
+	{% load text_tags %}
       {% oembed %}
-      {{ object.body_markup|render_inlines|safe }}
+      {{ object.body_markup|render_inlines|safe}}
       {% endoembed %}
     </div>
   </div>
@@ -68,10 +69,14 @@
 
   <div class="subscribe clearfix">
     <ul>
-      <li><a href="http://twitter.com/?status=reading: {{ object.title }} - {{ SITE_URL }}{{ object.get_absolute_url }}" target="_blank">{% trans "Twitter this" %}</a></li>
+	  <li><a href="http://twitter.com/?status=reading: {{ object.title }} - http://{{ BLOG_SETTINGS.site.domain }}{{ object.get_absolute_url }}" target="_blank">{% trans "Twitter this" %}</a></li>
+	
+
       <li><a href="http://www.reddit.com/submit?title={{ object.title }}&url=http://{{ BLOG_SETTINGS.site.domain }}{{ object.get_absolute_url }}" target="_blank">{% trans "Reddit this" %}</a></li>
       <li><a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;">{% trans "Add to Delicious" %}</a></li>
+   	  {% if BLOG_SETTINGS.email_subscribe_url %}
       <li><a href="{{ BLOG_SETTINGS.rss_url }}">{% trans "Subscribe RSS" %}</a></li>
+	  {% endif %}
     </ul>
   </div>
   <!-- post -->

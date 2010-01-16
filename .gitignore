@@ -3,5 +3,6 @@
 *.db
 local_settings.py
 pip-log.txt
+mingus/media/photos/
 django_mingus.egg-info
 mingus/media/CACHE/

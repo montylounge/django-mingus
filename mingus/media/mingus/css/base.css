@@ -139,9 +139,8 @@ label
     list-style: disc;
 }
 
-
 /* CODE */
-code
+pre, pre.prettify
 {
   overflow: auto;
   z-index: 0;
@@ -149,16 +148,9 @@ code
   padding: .6em 0em .6em .6em;
   display: block;
   width: 99%;
-  border: 0px solid #ccc;
+  border: 1px solid red;
 }
 
-code.prettyprint {
-  margin: 0;
-  border: none;
-  background-color:#FFF;
-  overflow: auto;
- 
-}
 
 /* HEADER/NAV */
 #header
@@ -247,8 +239,6 @@ ul.navbar-one li
   text-decoration: none;
   color: #999ca0;
 }
-
-pre{ color: #333940; }
 
 #footer p{ font-size: .8em; }
 
