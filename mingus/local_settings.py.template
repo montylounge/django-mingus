@@ -52,7 +52,12 @@ DEBUG_TOOLBAR_PANELS = (
 
 ### django-markup
 MARKUP_CHOICES = (
-    'none',
-    'markdown',
-    'textile',
+	'none',	
+	'markdown',
+	'textile',
+	'restructuredtext',
 )
+
+BITLY_LOGIN = 'USERNAME'
+BITLY_API_KEY = 'APIKEYHERE'
+
