@@ -10,7 +10,10 @@ Markdown==2.0.1
 textile==2.1.3
 django-robots==0.6.1
 django-dbtemplates==0.6.1
-django-markup==0.3.1dev
+django-markup==0.3
+
+
+
 
 -e git://github.com/django-extensions/django-extensions.git@459276ded0edf1d1cf6d94b4865891a281445b95#egg=django_extensions-0.4.2_pre-py2.5-dev
 -e git://github.com/montylounge/django-basic-apps.git@261d7ab967e7e2231c3d0d824044572df42c4c33#egg=django_basic_apps-0.6-py2.5-dev
