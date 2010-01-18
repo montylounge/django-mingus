@@ -65,9 +65,10 @@ BITLY_API_KEY = 'APIKEYHERE'
 
 #django-request
 REQUEST_IGNORE_PATHS = (
-        r'^admin/(.*)$',
-        r'^media/(.*)$',
-        r'^favicon\.ico$|favicon\.ico/$',
+        r'^admin/(.*)',
+        r'^media/(.*)',
+        r'^favicon\.ico|favicon\.ico/$',
         r'^__debug__/',
+		r'^tinymce/(.*)',
 )
 
