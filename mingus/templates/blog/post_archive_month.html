@@ -6,12 +6,11 @@
 
 {% block content %}
 
-<h2 class="filter-title">{% trans "Posts for" %} {{ month|date:"F Y" }}</h2>
+<h1 class="filter-title">{% trans "Posts for" %} {{ month|date:"F Y" }}</h1>
 
-  <div class="post_list">
-    {% for post in object_list %}
-      {% include "blog/includes/post_list.html" %}
-    {% endfor %}
-
-  </div>
+<div class="post_list">
+{% for post in object_list %}
+    {% include "blog/includes/post_list.html" %}
+{% endfor %}
+</div>
 {% endblock %}

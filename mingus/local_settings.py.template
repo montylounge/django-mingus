@@ -32,13 +32,14 @@ CACHE_MIDDLEWARE_SECONDS = 60*5
 CACHE_MIDDLEWARE_KEY_PREFIX = 'mingus.'
 CACHE_MIDDLEWARE_ANONYMOUS_ONLY = True
 
+INTERNAL_IPS = ('127.0.0.1',)
+
 ### DEBUG-TOOLBAR SETTINGS
 DEBUG_TOOLBAR_CONFIG = {
 'INTERCEPT_REDIRECTS': False,
 }
 
-INTERNAL_IPS = ('127.0.0.1',)
-
+#django-degug-toolbar
 DEBUG_TOOLBAR_PANELS = (
     'debug_toolbar.panels.version.VersionDebugPanel',
     'debug_toolbar.panels.timer.TimerDebugPanel',
@@ -52,7 +53,22 @@ DEBUG_TOOLBAR_PANELS = (
 
 ### django-markup
 MARKUP_CHOICES = (
-    'none',
-    'markdown',
-  'textile',
+	'none',	
+	'markdown',
+	'textile',
+	'restructuredtext',
 )
+
+#django-bitly
+BITLY_LOGIN = 'USERNAME'
+BITLY_API_KEY = 'APIKEYHERE'
+
+#django-request
+REQUEST_IGNORE_PATHS = (
+        r'^admin/(.*)',
+        r'^media/(.*)',
+        r'^favicon\.ico|favicon\.ico/$',
+        r'^__debug__/',
+		r'^tinymce/(.*)',
+)
+

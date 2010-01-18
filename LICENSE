@@ -23,3 +23,23 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
 ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+External Licenses
+=================
+
+google-code-prettify is included without modification for convenience. Please
+consult http://code.google.com/p/google-code-prettify/ for documentation.
+
+The following files are distributed unmodified under the terms of the Apache
+License 2.0:
+    mingus/media/static/css/prettify.css
+    mingus/media/static/js/lang-css.js
+    mingus/media/static/js/lang-hs.js
+    mingus/media/static/js/lang-lisp.js
+    mingus/media/static/js/lang-lua.js
+    mingus/media/static/js/lang-ml.js
+    mingus/media/static/js/lang-proto.js
+    mingus/media/static/js/lang-sql.js
+    mingus/media/static/js/lang-vb.js
+    mingus/media/static/js/lang-wiki.js
+    mingus/media/static/js/prettify.js

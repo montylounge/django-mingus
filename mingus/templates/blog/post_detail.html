@@ -1,12 +1,12 @@
 {% extends "blog/base_blog.html" %}
-{% load blog tagging_tags inlines cache pygment_tags oembed_tags i18n tagging_related %}
+{% load blog tagging_tags inlines cache pygment_tags oembed_tags i18n tagging_related pygment_tags %}
 
 {% block title %}{{ object.title }} | {{ block.super }}{% endblock %}
 
 {% block meta %}
 <meta name="keywords" content="{{ object.get_meta_keywords }}">
 <meta name="description" content="{{ object.get_meta_description }}">
-<meta name="author" content="{{ object.author.get_full_name }}" />
+<meta name="author" content="{{ object.author.get_full_name }}">
 {% endblock %}
 
 {% block body_class %}{{ block.super }} post_detail{% endblock %}
@@ -26,53 +26,64 @@
 {% endcomment %}
 
 {% block content %}
-
   <div class="post clearfix">
     <div class="date">{{ object.publish|date:"M d" }}</div>
     <h2>{{ object.title }}</h2>
+    {% if object.tease %}
     <p class="teaser">{{ object.tease|safe }}</p>
-      <div class="body">
-  {% oembed %}
-      {{ object.body_markup|render_inlines|pygmentize|safe }}
-  {% endoembed %}
-      </div>
+    {% endif %}
+    <div class="body">
+	{% load text_tags %}
+      {% oembed %}
+      {{ object.body_markup|render_inlines|safe}}
+      {% endoembed %}
+    </div>
   </div>
 
   {% cache 300 "blog.post_detail.tag_list" object.pk %}
   {% tags_for_object object as tag_list %}
   {% if tag_list %}
-  <p class="inline_tag_list"><strong>Tags:</strong>
-    {% for tag in tag_list %}
-    <a href="/tags/{{ tag }}">{{ tag }}</a>{% if not forloop.last %}, {% endif %}
-    {% endfor %}
-  </p>
+  <div class="tags"><strong>Tags:</strong>
+      <ul class="tag inline">
+          {% for tag in tag_list %}
+          <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+          {% endfor %}
+      </ul>
+  </div>
   {% endif %}
   {% endcache %}
 
   {% cache 1800 "blog.post_detail.related_list" object.pk %}
   {% tagged_get_related object in blog.Post as post_list with num=3 %}
   {% if post_list %}
-  <div class="related-posts">
-  <p class="inline_tag_list"><strong>Related posts:</strong></p>
-  <ol>
-  {% for post in post_list %}
-  <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-  {% endfor %}
-  </ol>
+  <div class="related">
+      <p><strong>Related posts:</strong></p>
+      <ol class="post inline">
+          {% for post in post_list %}
+          <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+      </ol>
   </div>
   {% endif %}
   {% endcache %}
 
   <div class="subscribe clearfix">
     <ul>
-      <li><a href="http://twitter.com/?status=reading: {{ object.title }} - {{ SITE_URL }}{{ object.get_absolute_url }}" target="_blank">{% trans "Twitter this" %}</a></li>
+	  <li><a href="http://twitter.com/?status=reading: {{ object.title }} - http://{{ BLOG_SETTINGS.site.domain }}{{ object.get_absolute_url }}" target="_blank">{% trans "Twitter this" %}</a></li>
+	
+
       <li><a href="http://www.reddit.com/submit?title={{ object.title }}&url=http://{{ BLOG_SETTINGS.site.domain }}{{ object.get_absolute_url }}" target="_blank">{% trans "Reddit this" %}</a></li>
       <li><a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;">{% trans "Add to Delicious" %}</a></li>
-      <li><a href="{{ FEED_SUBSCRIBE_RSS }}">{% trans "Subscribe RSS" %}</a></li>
+   	  {% if BLOG_SETTINGS.email_subscribe_url %}
+      <li><a href="{{ BLOG_SETTINGS.rss_url }}">{% trans "Subscribe RSS" %}</a></li>
+	  {% endif %}
     </ul>
   </div>
   <!-- post -->
 
-{% include "blog/includes/comments.html" %}
-
+{% if object.allow_comments %}
+	{% include "blog/includes/comments.html" %}
+{% else %}
+    <div id="comments"><h4>Sorry, comments are disabled for this post.</h4></div>
+{% endif %}
 {% endblock %}

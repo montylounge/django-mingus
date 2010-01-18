@@ -1,13 +1,17 @@
 {% load blog tagging_tags inlines oembed_tags pygment_tags %}
 
 <div class="post clearfix">
-  <div class="date">{{ object.pub_date|date:"M d" }}</div>
-  <h2><a href="{{ object.content_object.get_absolute_url }}">{{ object.title }}</a></h2>
-  <p class="teaser">{{ object.content_object.tease|safe }}</p>
-    <div class="body">
-  {% oembed %}
-    {{ object.description|render_inlines|pygmentize|safe }}
-  {% endoembed %}
-    </div>
+    <div class="date">{{ object.pub_date|date:"M d" }}</div>
+    {% with object.content_object as post %}
+        <h2><a href="{{ post.get_absolute_url }}">{{ object.title }}</a></h2>
+        {% if post.tease %}
+            <p class="teaser">{{ post.tease|safe }}</p>
+        {% endif %}
+        <div class="body">
+            {% oembed %}
+                {{ object.description|render_inlines|safe }}
+            {% endoembed %}
+        </div>
+    {% endwith %}
 </div>
 <!-- post -->

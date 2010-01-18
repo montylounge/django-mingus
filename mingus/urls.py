@@ -9,7 +9,7 @@ from mingus.core.views import springsteen_results, springsteen_firehose, \
                             home_list, springsteen_category, contact_form, \
                             proxy_search
 from robots.views import rules_list
-from mingus.core.feeds import AllEntries
+from mingus.core.feeds import AllEntries, ByTag
 
 admin.autodiscover()
 
@@ -17,6 +17,7 @@ feeds = {
     'latest': BlogPostsFeed,
     'all': AllEntries,
     'categories': BlogPostsByCategory,
+    'tags': ByTag,
 }
 #ex: /feeds/latest/
 #ex: /feeds/all/
@@ -34,10 +35,11 @@ urlpatterns = patterns('',
     (r'^password_reset/done/$', 'django.contrib.auth.views.password_reset_done'),
     (r'^reset/(?P<uidb36>[0-9A-Za-z]+)-(?P<token>.+)/$', 'django.contrib.auth.views.password_reset_confirm'),
     (r'^reset/done/$', 'django.contrib.auth.views.password_reset_complete'),
-    (r'^admin/(.*)', admin.site.root),
+    (r'^admin/', include(admin.site.urls)),
 )
 
 urlpatterns += patterns('',
+    (r'^tinymce/', include('tinymce.urls')),
     url(r'^oops/$', 'mingus.core.views.oops', name='raise_exception'),
     url(r'^quotes/$', 'mingus.core.views.quote_list', name='quote_list'),
     url(r'^quotes/(?P<slug>[-\w]+)/$', 'mingus.core.views.quote_detail', name='quote_detail'),
@@ -76,11 +78,9 @@ urlpatterns += patterns('',
 )
 
 
-if settings.LOCAL_DEV:
-    urlpatterns += patterns('django.views.static',
-        (r'^%s(?P<path>.*)' % settings.STATIC_URL[1:], 'serve',
-         {'document_root': settings.STATIC_ROOT}),
-        (r'^%s(?P<path>.*)' % settings.MEDIA_URL[1:], 'serve',
-         {'document_root': settings.MEDIA_ROOT}),
+from django.conf import settings
+if settings.DEBUG:
+    urlpatterns += patterns('', 
+        (r'', include('staticfiles.urls')),
     )
 

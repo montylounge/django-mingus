@@ -18,3 +18,9 @@
   {% endcache %}
   </div>
 {% endblock %}
+
+{% block rss %}
+  {{ block.super }}
+  <link rel="alternate" type="application/rss+xml"title="{{ category.title }} posts feed" 
+    href="/feeds/categories/{{ category.slug }}" />
+{% endblock %}

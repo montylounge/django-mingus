@@ -5,21 +5,19 @@
 
 {% block content %}
 
-<p>{% trans "Quick fact, my favorite food is" %} {{ favorite_food }}.</p>
-
-<h2>{{ object.title }}</h2>
-
 {% cache 180 "quote.quote_detail" object.pk %}
-<div>
-    <div>
+<div class="quote clearfix">
+    <h2>{{ object.title }}</h2>
+
+    <div class="body">
         {% if object.quote %}
-            <blockquote>{{ object.quote }}</blockquote>
+            <blockquote cite="object.url_source">{{ object.quote }}</blockquote>
         {% endif %}
     </div>
-    <div>
+    <div class="source">
         {% if object.author %}
       {% if object.url_source %}
-            <span>- <a href="{{ object.url_source }}">{{ object.author }}</a></span>
+            <span>&mdash; <a href="{{ object.url_source }}">{{ object.author }}</a></span>
       {% else %}
       <span>- {{ object.author }} {% if object.circa %}, {{ object.circa }}{% endif %}</span>
       {% endif %}
@@ -30,25 +28,27 @@
     {% cache 1800 "quote.quote_detail.tag_list" object.pk %}
     {% tags_for_object object as tag_list %}
     {% if tag_list %}
-    <br/>
-    <p class="inline_tag_list"><strong>Tags:</strong>
-    {% for tag in tag_list %}
-    <a href="/tags/{{ tag }}">{{ tag }}</a>{% if not forloop.last %}, {% endif %}
-    {% endfor %}
-    </p>
+    <div class="tags">
+        <strong>Tags:</strong>
+        <ul class="tag inline">
+            {% for tag in tag_list %}
+            <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
     {% endif %}
   {% endcache %}
 
   {% cache 1800 "quoteme.quote_detail.related_list" object.pk %}
   {% tagged_get_related object in quoteme.Quote as quote_list with num=3 %}
   {% if quote_list %}
-  <div class="related-posts">
-  <p class="inline_tag_list"><strong>Related quotes:</strong></p>
-  <ol>
-  {% for quote in quote_list %}
-  <li><a href="{{ quote.get_absolute_url }}">{{ quote.title }}</a></li>
-  {% endfor %}
-  </ol>
+  <div class="related">
+      <strong>Related quotes:</strong>
+      <ol class="quote inline">
+          {% for quote in quote_list %}
+            <li><a href="{{ quote.get_absolute_url }}">{{ quote.title }}</a></li>
+          {% endfor %}
+      </ol>
   </div>
   {% endif %}
   {% endcache %}

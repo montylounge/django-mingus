@@ -1,0 +1,16 @@
+{% extends "blog/base_blog.html" %}
+{% load cache i18n %}
+
+{% block body_class %}{{ block.super }} category_detail{% endblock %}
+{% block body_id %}category_{{ category.id }}{% endblock %}
+
+{% block content %}
+
+<h1 class="filter-title">{% trans "Posts for" %} {{ day|date:"F jS, Y" }}</h1>
+
+<div class="post_list">
+{% for post in object_list %}
+    {% include "blog/includes/post_list.html" %}
+{% endfor %}
+</div>
+{% endblock %}

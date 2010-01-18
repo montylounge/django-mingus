@@ -6,11 +6,13 @@
 
 {% block content %}
 
-<h2 class="filter-title">{% trans "Posts categories" %}</h2>
+<h2 class="filter-title">{% trans "Post categories" %}</h2>
 
-  <div class="post_list">
-    {% for category in object_list %}
-    <li><a href="{{ category.get_absolute_url }}">{{ category }}</a></li>
-    {% endfor %}
-  </div>
+<div class="post_list">
+    <ul class="categories">
+        {% for category in object_list %}
+        <li><a href="{{ category.get_absolute_url }}">{{ category }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}

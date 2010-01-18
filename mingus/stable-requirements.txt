@@ -1,31 +1,40 @@
 BeautifulSoup==3.0.8
 PIL
 python-dateutil==1.4.1
-Django==1.1.1
-django-debug-toolbar==0.8.0
+django==1.1.1
+django-debug-toolbar==0.8.1
 django-tagging==0.3
-Pygments==1.0
-feedparser==4.1
+Pygments==1.1.1
+FeedParser==4.1
 Markdown==2.0.1
 textile==2.1.3
+django-robots==0.6.1
+django-dbtemplates==0.6.1
 django-markup==0.3
-South==0.6.2
 
--e git://github.com/django-extensions/django-extensions.git@664ca825578c5c13f0817eba0578fbda4bac62cf#egg=django_extensions
--e svn+http://django-template-utils.googlecode.com/svn/trunk@109#egg=template_utils-0.4p2-py2.5-dev
--e hg+https://bitbucket.org/montylounge/django-proxy/@tip#egg=django_proxy-tip
--e git://github.com/montylounge/django-google-analytics.git@6b7aa6dba851dd59dca0a20bc7eefe70754384e4#egg=google_analytics
--e git://github.com/montylounge/django-basic-apps.git@e39b6cd1400176f3635f4bed53ebc97724ef2a3b#egg=django_basic_apps
--e git://github.com/mintchaos/django_compressor.git@d5d28eb57323a7e88356071c8c4af5792d2b837d#egg=django_compressor
--e hg+https://bitbucket.org/ubernostrum/django-contact-form/@tip#egg=django_contact_form-tip
--e svn+http://django-db-log.googlecode.com/svn/trunk@13#egg=django_db_log-1.0.1-py2.5-dev
--e git://github.com/montylounge/django-disqus.git@35a022f28c50b9f7cdfcdd5deb4ae6f9150f4358#egg=django_disqus
--e git://github.com/zerok/django-flatblocks.git@588d49c69e290ba7429559c64105102f88fb6fcd#egg=django_flatblocks
--e git://github.com/sunlightlabs/django-honeypot.git@825c1cd0fc99491d5f30b976f511a97b56ca9978#egg=django_honeypot8
--e svn+http://django-navbar.googlecode.com/svn/trunk@13#egg=django_navbar-0.1.0-py2.5-dev
--e git://github.com/brosner/django-oembed.git@0b09321a6042c490534e5940083136f712da57b0#egg=django_oembed
--e git://github.com/montylounge/django-quoteme.git@c9ed8992a8b3e2ae6d19392ce865e53cbb1088a5#egg=django_quoteme
--e hg+https://bitbucket.org/jezdez/django-robots/@tip#egg=django_robots-tip
--e git://github.com/montylounge/django-sugar.git@26bb6a8ab966707c53c817c9b16dbb0dee54d8e4#egg=django_sugar
--e hg+https://bitbucket.org/kmike/django-view-cache-utils/@tip#egg=django_view_cache_utils-tip
--e hg+https://sorl-thumbnail.googlecode.com/hg/@tip#egg=sorl_thumbnail-tip
+-e git://github.com/django-extensions/django-extensions.git@459276ded0edf1d1cf6d94b4865891a281445b95#egg=django_extensions-0.4.2_pre-py2.5-dev
+-e git://github.com/montylounge/django-basic-apps.git@261d7ab967e7e2231c3d0d824044572df42c4c33#egg=django_basic_apps-0.6-py2.5-dev
+-e hg+http://bitbucket.org/discovery/django-bitly/@6c6b6fe662cbe48325b902775fcf1eaacfd08181#egg=django_bitly-tip
+-e git://github.com/mintchaos/django_compressor.git@7f314c513410a5be6379edf1abfc4f1730a36d09#egg=django_compressor-0.5.1-py2.5-dev
+-e hg+https://bitbucket.org/ubernostrum/django-contact-form/@1d3791fa4dfbb2375ba0d27e62283380c0ec74e6#egg=django_contact_form-tip
+-e svn+http://django-db-log.googlecode.com/svn/trunk@13#egg=django_db_log-1.0.1-py2.5-dev_r13
+-e git://github.com/montylounge/django-disqus.git@35a022f28c50b9f7cdfcdd5deb4ae6f9150f4358#egg=django_disqus-0.1-py2.5-dev
+-e git://github.com/zerok/django-flatblocks.git@77c310727d5ec5a0f69cdeda2b71bea8613503f0#egg=django_flatblocks-0.3.3-py2.5-dev
+-e git://github.com/sunlightlabs/django-honeypot.git@76f57f487f68825fb302269516bb2b3284b81801#egg=django_honeypot-0.2.1-py2.5-dev
+-e svn+http://django-navbar.googlecode.com/svn/trunk@20#egg=django_navbar-0.1.1rc1-py2.5-dev_r20
+-e git://github.com/brosner/django-oembed.git@0b09321a6042c490534e5940083136f712da57b0#egg=django_oembed-0.1.0-py2.5-dev
+-e git://github.com/montylounge/django-proxy.git@adbf2f369c46ed841540144529475028e3cd43c2#egg=django_proxy-0.1.0-py2.5-dev
+-e git://github.com/montylounge/django-quoteme.git@23d6fe0e43bb26f0d3fdb50f7c6d9679d2dc0011#egg=django_quoteme-0.2-py2.5-dev
+-e git://github.com/kylef/django-request.git@d5f90ac344adccc6e1257d46fd395e6fe60eff17#egg=django_request-0.2-py2.5-dev
+-e git://github.com/hbussell/django-slimmer.git@61deecdbc7650664c2a23f36ed806c043c70d65e#egg=django_slimmer-0.0.1-py2.5-dev
+-e hg+http://bitbucket.org/jezdez/django-staticfiles/@25e2c314aa665e855c4f242c374b2a27bd895542#egg=django_staticfiles-tip
+-e git://github.com/montylounge/django-sugar.git@fad43351d848da815159837d0a5f548b1fd2ef0f#egg=django_sugar-0.2-py2.5-dev
+-e svn+http://django-tinymce.googlecode.com/svn/trunk@96#egg=django_tinymce-trunk-py2.5-dev_r96
+-e git://github.com/skevy/django-twitter.git@887a017e0436b5e03aab96e5ba650696ab2d9b58#egg=django_twitter-0.1-py2.5-dev
+-e hg+https://bitbucket.org/kmike/django-view-cache-utils/@4408ad8f1751ee2fccb441d2a342c4ed710467a0#egg=django_view_cache_utils-tip
+-e git://github.com/pydanny/django-wysiwyg.git@b280e1b75326363dfe746d8c36425cfbed53b4ec#egg=django_wysiwyg-0.1.0-py2.5-dev
+-e git://github.com/montylounge/django-google-analytics.git@6b7aa6dba851dd59dca0a20bc7eefe70754384e4#egg=google_analytics-0.1-py2.5-dev
+-e hg+https://python-twitter.googlecode.com/hg/@7e5cb2db67352ac1fd7b40a3ec54fdef352f802f#egg=python_twitter-0.7_devel-py2.5-default
+-e hg+https://sorl-thumbnail.googlecode.com/hg/@caf69b5206329d89282b4b8246a72e5aa77cb578#egg=sorl_thumbnail-tip
+-e svn+http://django-template-utils.googlecode.com/svn/trunk@109#egg=template_utils-0.4p2-py2.5-dev_r109
+
