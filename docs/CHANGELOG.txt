@@ -46,6 +46,8 @@ versions of those repositories.
 * Moved /fixtures/initial_data.json to /fixtures/test_data.json to avoid syncdb
 related concerns regarding overwriting data.
 
+* removed /core/context_processors.py since django-static media handles this
+logic.
 
 
 
