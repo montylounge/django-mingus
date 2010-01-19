@@ -1,3 +1,51 @@
 
+Note: I neglected to keep a CHANGELOG until 0.9 release which is noted below.
 
-* added two field to basic.settings: active_editor,excerpt_length
+1.16.09
+--------
+
+* Basic-apps-blog added two field to Settings model: active_editor, 
+excerpt_length.
+	
+	* `active_editor` allows the user to flip which editor is active (text 
+	markup, tinymce, django-wyswiyg)
+	* `excerpt_lenght` allows the user to define the Post.body excerpt length. 
+	Currently only the RSS feed templates honor this setting but I could see 
+	a use for in on list views for addition of "read more..."
+
+* Integrated these external apps:
+	* django-staticfiles
+	* django-bitly
+	* django-twitter
+	* python-twitter
+	* django-tinymce
+	* django-wysiwyg
+	* django-slimmer
+	* django-request
+	
+* The above apps were mostly integrated to allow for configuring wysiwyg editor 
+in admin for Posts
+
+* Integrated a handful of community fork changes (thanks all!). Updates where to 
+some template tweaks mostly.
+
+* Integrated Google Code's prettify highlighting solution. User can easily 
+
+* Removed django-sugar pygmentize filter throughout templates since django-markup 
+runs pygmentize on markup when saving.
+
+* Support for restructured text (now automatically hide django-inline fields on 
+Post amin form when reSt is enabled because it raised syntax exceptions during 
+the translation.)
+
+* Some doc updates. *Need to add complete docs if we are to get to a 1.0 version
+
+* Pull from updated requirement project repositories and froze on the latest 
+versions of those repositories.
+
+* Moved /fixtures/initial_data.json to /fixtures/test_data.json to avoid syncdb
+related concerns regarding overwriting data.
+
+
+
+
