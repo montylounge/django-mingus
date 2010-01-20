@@ -1,7 +1,14 @@
 
 Note: I neglected to keep a CHANGELOG until 0.9 release which is noted below.
 
-1.16.09
+1.19.10
+-------
+
+* integration django-cropper into the project
+* added SQL directory to handle migrations
+* added migration SQL for 2 new basic.blog columns
+
+1.16.10
 --------
 
 * Basic-apps-blog added two field to Settings model: active_editor, 

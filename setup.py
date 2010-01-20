@@ -6,7 +6,7 @@ def read(fname):
 
 setup(
     name='django-mingus',
-    version='0.8.5',
+    version='0.9alpha',
     description='A django blog engine.',
     long_description=read('README.textile'),
     author='Kevin Fricovsky',
@@ -19,7 +19,7 @@ setup(
         'mingus.templatetags'
     ],
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
@@ -27,12 +27,5 @@ setup(
         'Programming Language :: Python',
         'Framework :: Django',
     ],
-    package_data = {
-            'mingus': [
-                'media/mingus/css/*.css',
-                'media/mingus/img/*.png',
-                'media/mingus/js/*.js',
-            ]
-        },
     zip_safe=False, # required to convince setuptools/easy_install to unzip the package data
 )

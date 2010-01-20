@@ -1,6 +1,9 @@
 include AUTHORS
 include LICENSE
+include LICENSE.prettify
 include README.textile
+include docs/CHANGELOG.txt
+include docs/INSTALL.textile
 include mingus/requirements.txt
 include mingus/stable-requirements.txt
 include mingus/fixtures/test_data.json

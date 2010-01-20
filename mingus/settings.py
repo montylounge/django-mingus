@@ -92,6 +92,7 @@ INSTALLED_APPS = (
   'tinymce',
   'django_wysiwyg',
   'request',
+  'cropper',
 )
 
 TINYMCE_JS_ROOT = STATIC_ROOT + '/mingus/js/tiny_mce/'
