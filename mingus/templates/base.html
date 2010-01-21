@@ -33,12 +33,17 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/themes/basic.css" type="text/css" media="all" charset="utf-8">
    {% endcompress %}
 
-    <!--[if IE 6]>
-    <script src="{{ STATIC_URL }}js/DD_belatedPNG_0.0.7a-min.js"></script>
-    <script>
-    DD_belatedPNG.fix('#bleeder, .logo');
-    </script>
-    <![endif]-->
+   <!--[if IE 6]>
+   <script src="{{ STATIC_URL }}js/DD_belatedPNG_0.0.7a-min.js"></script>
+   <script>
+   DD_belatedPNG.fix('#bleeder, .logo');
+   </script>
+   <style>
+       #bleeder{ display: none;}
+       #form-search{ width: auto; display: block; float: right; clear: both;}
+       .navbar-one{ float: right; clear: both;}
+   </style>
+   <![endif]-->
 
     {% disqus_dev %}
     {% block extra_head %}{% endblock %}

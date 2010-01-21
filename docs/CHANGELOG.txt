@@ -1,6 +1,17 @@
 
 Note: I neglected to keep a CHANGELOG until 0.9 release which is noted below.
 
+1.20.10
+-------
+
+* Fixed an IE6 display issue, but it's not pretty. For the most part the
+templates are provided 'as-is' since you'll most likely want to customize
+them anyway. But if not, I think the default should at least look decent 
+on IE6.
+
+* setup.py and MANIFEST.in updates
+
+
 1.19.10
 -------
 

@@ -6,20 +6,21 @@ def read(fname):
 
 setup(
     name='django-mingus',
-    version='0.9alpha',
+    version='0.9beta2',
     description='A django blog engine.',
     long_description=read('README.textile'),
     author='Kevin Fricovsky',
     author_email='kfricovsky@gmail.com',
     license='BSD',
-    url='http://github.com/montylounge/django-mingus/tree',
+    url='http://github.com/montylounge/django-mingus/',
+    keywords = ['blog', 'django',],
     packages=[
         'mingus',
         'mingus.core',
         'mingus.templatetags'
     ],
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
@@ -27,5 +28,6 @@ setup(
         'Programming Language :: Python',
         'Framework :: Django',
     ],
-    zip_safe=False, # required to convince setuptools/easy_install to unzip the package data
+    long_description=read('README.textile'),
+    zip_safe=False,
 )
