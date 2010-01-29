@@ -27,7 +27,7 @@ class AllEntries(Feed):
         return self.settings.copyright
 
     def link(self):
-        return 'http://%s' % self._settings.site.domain
+        return 'http://%s' % self.settings.site.domain
 
     def items(self):
         return Proxy.objects.published().order_by('-pub_date')[:10]

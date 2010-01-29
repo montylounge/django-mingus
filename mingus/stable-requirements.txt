@@ -23,7 +23,7 @@ django-markup==0.3
 -e git://github.com/sunlightlabs/django-honeypot.git@76f57f487f68825fb302269516bb2b3284b81801#egg=django_honeypot-0.2.1-py2.5-dev
 -e svn+http://django-navbar.googlecode.com/svn/trunk@20#egg=django_navbar-0.1.1rc1-py2.5-dev_r20
 -e git://github.com/brosner/django-oembed.git@0b09321a6042c490534e5940083136f712da57b0#egg=django_oembed-0.1.0-py2.5-dev
--e git://github.com/montylounge/django-proxy.git@adbf2f369c46ed841540144529475028e3cd43c2#egg=django_proxy-0.1.0-py2.5-dev
+-e git://github.com/montylounge/django-proxy.git@4f83cda087c7f98026bc622413a9ae7b1e1e22eb#egg=django_proxy-0.1.0-py2.5-dev
 -e git://github.com/montylounge/django-quoteme.git@23d6fe0e43bb26f0d3fdb50f7c6d9679d2dc0011#egg=django_quoteme-0.2-py2.5-dev
 -e git://github.com/hbussell/django-slimmer.git@61deecdbc7650664c2a23f36ed806c043c70d65e#egg=django_slimmer-0.0.1-py2.5-dev
 -e hg+http://bitbucket.org/jezdez/django-staticfiles/@25e2c314aa665e855c4f242c374b2a27bd895542#egg=django_staticfiles-tip
@@ -37,5 +37,7 @@ django-markup==0.3
 -e hg+https://sorl-thumbnail.googlecode.com/hg/@caf69b5206329d89282b4b8246a72e5aa77cb578#egg=sorl_thumbnail-tip
 -e svn+http://django-template-utils.googlecode.com/svn/trunk@109#egg=template_utils-0.4p2-py2.5-dev_r109
 -e git://github.com/montylounge/django_cropper.git@194e3c94b0abcb5ec2a9788ff1fe474779b3f67d#egg=django-cropper-0.1.5a-py2.5-dev
--e git://github.com/montylounge/django-request.git@62d2254bc12a821a0bdd04b8e13532e9302f1d77#egg=django_request-0.21-py2.5-dev
+-e git://github.com/kylef/django-request.git@62d2254bc12a821a0bdd04b8e13532e9302f1d77#egg=django_request-0.21-py2.5-dev
+
+
 
