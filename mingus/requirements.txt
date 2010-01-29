@@ -39,7 +39,7 @@ django-dbtemplates==0.6.1
 -e svn+http://django-tinymce.googlecode.com/svn/trunk/#django-tinymce
 -e git+git://github.com/pydanny/django-wysiwyg.git#egg=django-wysiwyg
 -e git+git://github.com/hbussell/django-slimmer.git#egg=django-slimmer
--e git+git://github.com/kylef/django-request.git#egg=django-request
+-e git+git://github.com/montylounge/django-request.git#egg=django_request
 -e git+git://github.com/montylounge/django_cropper.git#egg=django-cropper
 
 
