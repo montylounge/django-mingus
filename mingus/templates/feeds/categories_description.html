@@ -1,7 +1,7 @@
-{% load text_tags oembed_tags %}
+{% load oembed_tags %}
 
 {% with BLOG_SETTINGS.excerpt_length as excerpt_length %}
 {% oembed %}
-{{ obj.body_markup|safe|truncatehtml:excerpt_length }}
+{{ obj.body_markup|safe|truncatewords_html:excerpt_length }}
 {% endoembed %}
 {% endwith %}
