@@ -7,6 +7,8 @@ Note: I neglected to keep a CHANGELOG until 0.9 release which is noted below.
 * small change to loaddata instructions in docs
 * bumped django-proxy and django-quoteme versions
 * update to quoteme template
+* updated category feed template to use Django's truncatewords_html
+
 
 1.30.10
 -------
