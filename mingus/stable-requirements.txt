@@ -23,8 +23,8 @@ django-markup==0.3
 -e git://github.com/sunlightlabs/django-honeypot.git@76f57f487f68825fb302269516bb2b3284b81801#egg=django_honeypot-0.2.1-py2.5-dev
 -e svn+http://django-navbar.googlecode.com/svn/trunk@20#egg=django_navbar-0.1.1rc1-py2.5-dev_r20
 -e git://github.com/brosner/django-oembed.git@0b09321a6042c490534e5940083136f712da57b0#egg=django_oembed-0.1.0-py2.5-dev
--e git://github.com/montylounge/django-proxy.git@4f83cda087c7f98026bc622413a9ae7b1e1e22eb#egg=django_proxy-0.1.0-py2.5-dev
--e git://github.com/montylounge/django-quoteme.git@23d6fe0e43bb26f0d3fdb50f7c6d9679d2dc0011#egg=django_quoteme-0.2-py2.5-dev
+-e git://github.com/montylounge/django-proxy.git@37f5e24c4426aeec6fc20473d1213fafb6e5c489#egg=django_proxy-0.1.0-py2.5-dev
+-e git://github.com/montylounge/django-quoteme.git@d067a0da1756867250af9d836b8e0d47ff6c7c44#egg=django_quoteme-0.2-py2.5-dev
 -e git://github.com/hbussell/django-slimmer.git@61deecdbc7650664c2a23f36ed806c043c70d65e#egg=django_slimmer-0.0.1-py2.5-dev
 -e hg+http://bitbucket.org/jezdez/django-staticfiles/@25e2c314aa665e855c4f242c374b2a27bd895542#egg=django_staticfiles-tip
 -e git://github.com/montylounge/django-sugar.git@fad43351d848da815159837d0a5f548b1fd2ef0f#egg=django_sugar-0.2-py2.5-dev

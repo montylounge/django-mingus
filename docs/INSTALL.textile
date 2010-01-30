@@ -12,7 +12,7 @@ The quick start assumes basic familiarity with vitualenv, virtualenv wrapper.
 * ... wait a bit
 * mv local_settings.py.template local_settings.py
 * ./manage.py syncdb
-* .manage.py loaddata fixtures/test_data.json
+* .manage.py loaddata test_data.json
 * ./manage.py runserver
 
 By default the theme is set to the Basic theme.

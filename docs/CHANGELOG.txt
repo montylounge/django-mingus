@@ -1,6 +1,35 @@
 
 Note: I neglected to keep a CHANGELOG until 0.9 release which is noted below.
 
+1.30.10
+-------
+
+* small change to loaddata instructions in docs
+* bumped django-proxy and django-quoteme versions
+
+
+1.30.10
+-------
+* fixed the bug I introduced on 1.28.10 to the fixtures/test_data.json
+
+
+1.29.10
+-------
+
+* fixed reference to pygments.css, thanks pageworthy 
+* updated settings reference (thx dfairs) 
+* bumped proxy and request revisions (moved back to kylef django-request repo after he merged my commits)
+
+
+1.28.10
+-------
+
+* added a bug to fixtures/test_data.json (later fixed this bug)
+* bumped the basic-blog stable version
+* added some i18n love to forms (thanks pmarti for catching that)
+* migrated to montylounge fork of django-request to squash postgres syncdb related issue
+
+
 1.20.10
 -------
 
