@@ -3,21 +3,16 @@ Note: I neglected to keep a CHANGELOG until 0.9 release which is noted below.
 
 1.30.10
 -------
-
+* added django-memcached-status
 * small change to loaddata instructions in docs
 * bumped django-proxy and django-quoteme versions
-* update to quoteme template
-* updated category feed template to use Django's truncatewords_html
-
-
-1.30.10
--------
+* template updates
+* Fixed duplicate long description in setup.py 
 * fixed the bug I introduced on 1.28.10 to the fixtures/test_data.json
 
 
 1.29.10
 -------
-
 * fixed reference to pygments.css, thanks pageworthy 
 * updated settings reference (thx dfairs) 
 * bumped proxy and request revisions (moved back to kylef django-request repo after he merged my commits)

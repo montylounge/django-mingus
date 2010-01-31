@@ -36,7 +36,12 @@ class AllEntries(Feed):
         return item.content_object.get_absolute_url()
 
     def item_categories(self, item):
-        return item.tags.replace(',', '').split()
+        tags = item.tags
+        # Avoid problems with empty/null values:
+        if not tags:
+            return list()
+        else:
+            return tags.replace(',', '').split()
 
 
 class ByTag(AllEntries):

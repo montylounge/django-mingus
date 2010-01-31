@@ -28,6 +28,5 @@ setup(
         'Programming Language :: Python',
         'Framework :: Django',
     ],
-    long_description=read('README.textile'),
     zip_safe=False,
 )
