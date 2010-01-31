@@ -83,7 +83,7 @@ INSTALLED_APPS = (
   'honeypot',
   'sugar',
   'quoteme',
-  'mingus',
+  'mingus.core',
   'debug_toolbar',
   
   'django_twitter',
