@@ -8,13 +8,53 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-01 19:32+0200\n"
+"POT-Creation-Date: 2010-02-01 20:52-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: core/templatetags/tagging_related.py:21
+#, python-format
+msgid "tagged_get_related tag was given an invalid input: %s"
+msgstr ""
+
+#: core/templatetags/tagging_related.py:35
+#, python-format
+msgid "%s tag requires either five or seven arguments"
+msgstr ""
+
+#: core/templatetags/tagging_related.py:37
+#, python-format
+msgid "second argument to %s tag must be 'in'"
+msgstr ""
+
+#: core/templatetags/tagging_related.py:39
+#, python-format
+msgid "fourth argument to %s tag must be 'as'"
+msgstr ""
+
+#: core/templatetags/tagging_related.py:42
+#, python-format
+msgid "if given, fourth argument to %s tag must be 'with'"
+msgstr ""
+
+#: core/templatetags/tagging_related.py:49
+#, python-format
+msgid "%(tag)s tag's '%(option)s' option was not a valid integer: '%(value)s'"
+msgstr ""
+
+#: core/templatetags/tagging_related.py:55
+#, python-format
+msgid "%(tag)s tag was given an invalid option: '%(option)s'"
+msgstr ""
+
+#: core/templatetags/tagging_related.py:60
+#, python-format
+msgid "%(tag)s tag was given a badly formatted option: '%(option)s'"
+msgstr ""
 
 #: templates/base.html:87
 msgid "About"
@@ -153,44 +193,4 @@ msgstr ""
 
 #: templates/quotes/quote_list.html:4 templates/quotes/quote_list.html.py:8
 msgid "Quotes"
-msgstr ""
-
-#: templatetags/tagging_related.py:21
-#, python-format
-msgid "tagged_get_related tag was given an invalid input: %s"
-msgstr ""
-
-#: templatetags/tagging_related.py:35
-#, python-format
-msgid "%s tag requires either five or seven arguments"
-msgstr ""
-
-#: templatetags/tagging_related.py:37
-#, python-format
-msgid "second argument to %s tag must be 'in'"
-msgstr ""
-
-#: templatetags/tagging_related.py:39
-#, python-format
-msgid "fourth argument to %s tag must be 'as'"
-msgstr ""
-
-#: templatetags/tagging_related.py:42
-#, python-format
-msgid "if given, fourth argument to %s tag must be 'with'"
-msgstr ""
-
-#: templatetags/tagging_related.py:49
-#, python-format
-msgid "%(tag)s tag's '%(option)s' option was not a valid integer: '%(value)s'"
-msgstr ""
-
-#: templatetags/tagging_related.py:55
-#, python-format
-msgid "%(tag)s tag was given an invalid option: '%(option)s'"
-msgstr ""
-
-#: templatetags/tagging_related.py:60
-#, python-format
-msgid "%(tag)s tag was given a badly formatted option: '%(option)s'"
 msgstr ""
