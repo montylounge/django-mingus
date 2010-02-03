@@ -6,12 +6,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Mingus\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-02-01 20:52-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2010-02-02 23:18+0100\n"
+"Last-Translator: Florent Messa <florent.messa@gmail.com>\n"
+"Language-Team: French <http://django-fr.org, http://apluggedinlife.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,94 +19,94 @@ msgstr ""
 #: core/templatetags/tagging_related.py:21
 #, python-format
 msgid "tagged_get_related tag was given an invalid input: %s"
-msgstr ""
+msgstr "le format d'entrée donné à tagged_get_related n'est pas correct : %s"
 
 #: core/templatetags/tagging_related.py:35
 #, python-format
 msgid "%s tag requires either five or seven arguments"
-msgstr ""
+msgstr "le tag %s nécessite soit cinq, soit sept arguments"
 
 #: core/templatetags/tagging_related.py:37
 #, python-format
 msgid "second argument to %s tag must be 'in'"
-msgstr ""
+msgstr "le deuxième argument passé au tag %s doit être 'in'"
 
 #: core/templatetags/tagging_related.py:39
 #, python-format
 msgid "fourth argument to %s tag must be 'as'"
-msgstr ""
+msgstr "le quatrième argument passé au tag %s doit être 'as'"
 
 #: core/templatetags/tagging_related.py:42
 #, python-format
 msgid "if given, fourth argument to %s tag must be 'with'"
-msgstr ""
+msgstr "si un quatrième argument est donné au tag %s alors celui-ci doit être 'with'"
 
 #: core/templatetags/tagging_related.py:49
 #, python-format
 msgid "%(tag)s tag's '%(option)s' option was not a valid integer: '%(value)s'"
-msgstr ""
+msgstr "l'option '%(option)s' du tag %(tag)s n'est pas un entier valide : '%(value)s'"
 
 #: core/templatetags/tagging_related.py:55
 #, python-format
 msgid "%(tag)s tag was given an invalid option: '%(option)s'"
-msgstr ""
+msgstr "une mauvaise option '%(option)s' à été transmise au tag %(tag)s"
 
 #: core/templatetags/tagging_related.py:60
 #, python-format
 msgid "%(tag)s tag was given a badly formatted option: '%(option)s'"
-msgstr ""
+msgstr "l'option '%(option)s' transmise au tag %(tag)s est mal formatée"
 
 #: templates/base.html:87
 msgid "About"
-msgstr ""
+msgstr "A propos"
 
 #: templates/base.html:105
 msgid "Elsewhere"
-msgstr ""
+msgstr "Ailleurs"
 
 #: templates/base.html:117
 msgid "Categories"
-msgstr ""
+msgstr "Catégories"
 
 #: templates/base.html:129 templates/contact_form/contact_form_sent.html:13
 msgid "Recent Posts"
-msgstr ""
+msgstr "Articles récents"
 
 #: templates/base.html:140
 msgid "Archive"
-msgstr ""
+msgstr "Archive"
 
 #: templates/base.html:151
 msgid "BlogRoll"
-msgstr ""
+msgstr "BlogRoll"
 
 #: templates/base.html:163
 msgid "Popular Posts"
-msgstr ""
+msgstr "Articles les plus populaires"
 
 #: templates/base.html:175
 msgid "Django Popular"
-msgstr ""
+msgstr "Liens Django les plus populaires"
 
 #: templates/admin/base_site.html:4
 msgid "Mingus site admin"
-msgstr ""
+msgstr "Interface d'administration de Mingus"
 
 #: templates/admin/base_site.html:16
 msgid "Mingus Blog Engine"
-msgstr ""
+msgstr "Moteur de Blog Mingus"
 
 #: templates/admin/login.html:19
 msgid "Username:"
-msgstr ""
+msgstr "Nom d'utilisateur :"
 
 #: templates/admin/login.html:22
 msgid "Password:"
-msgstr ""
+msgstr "Mot de passe :"
 
 #: templates/admin/login.html:27
 msgid "Log in"
-msgstr ""
+msgstr "S'identifier"
 
 #: templates/blog/category_detail.html:5
 #: templates/blog/category_detail.html:11
@@ -114,83 +114,85 @@ msgstr ""
 #: templates/blog/post_archive_month.html:9
 #: templates/blog/post_archive_year.html:9 templates/blog/tag_detail.html:4
 msgid "Posts for"
-msgstr ""
+msgstr "Articles pour"
 
 #: templates/blog/category_list.html:9
 msgid "Post categories"
-msgstr ""
+msgstr "Catégories des articles"
 
 #: templates/blog/post_detail.html:72
 msgid "Twitter this"
-msgstr ""
+msgstr "Publier sur Twitter"
 
 #: templates/blog/post_detail.html:75
 msgid "Reddit this"
-msgstr ""
+msgstr "Publier sur Reddit"
 
 #: templates/blog/post_detail.html:76
 msgid "Add to Delicious"
-msgstr ""
+msgstr "Ajouter sur Delicious"
 
 #: templates/blog/post_detail.html:78
 msgid "Subscribe RSS"
-msgstr ""
+msgstr "Souscrire au flux RSS"
 
 #: templates/blog/post_search.html:5 templates/blog/post_search.html.py:10
 msgid "Search results for:"
-msgstr ""
+msgstr "Résultats de la recherche pour :"
 
 #: templates/blog/tag_detail.html:10
 msgid "Posts tagged:"
-msgstr ""
+msgstr "Articles tagués"
 
 #: templates/contact_form/contact_form.html:4
 msgid "Contact"
-msgstr ""
+msgstr "Contact"
 
 #: templates/contact_form/contact_form.html:10
 #: templates/contact_form/contact_form_sent.html:8
 msgid "Contact me"
-msgstr ""
+msgstr "Me contacter"
 
 #: templates/contact_form/contact_form.html:12
 msgid "Get in touch."
-msgstr ""
+msgstr "Entrer en contact."
 
 #: templates/contact_form/contact_form.html:18
 msgid "Woops, looks like you forgot some information."
-msgstr ""
+msgstr "Oups, on dirait que vous avez oublié certaines informations."
 
 #: templates/contact_form/contact_form.html:28
 msgid "Your name"
-msgstr ""
+msgstr "Votre nom"
 
 #: templates/contact_form/contact_form.html:33
 msgid "Your email"
-msgstr ""
+msgstr "Votre adresse e-mail"
 
 #: templates/contact_form/contact_form.html:38
 msgid "Your message"
-msgstr ""
+msgstr "Votre message"
 
 #: templates/contact_form/contact_form_sent.html:10
 msgid ""
 "Thanks! I'll make sure to respond shortly. In the meantime, check out some "
 "of my latest and greatest posts."
 msgstr ""
+"Merci ! Je vais faire en sorte de vous répondre rapidement. En attendant, vous pouvez lire quelques uns"
+"de mes derniers articles."
 
 #: templates/proxy/proxy_search.html:27
 msgid "No results found"
-msgstr ""
+msgstr "Aucun résultats n'a été trouvé"
 
 #: templates/proxy/tag_detail.html:4
 msgid "Entries for"
-msgstr ""
+msgstr "Elements pour"
 
 #: templates/proxy/tag_detail.html:10
 msgid "Entries tagged:"
-msgstr ""
+msgstr "Elements tagués:"
 
 #: templates/quotes/quote_list.html:4 templates/quotes/quote_list.html.py:8
 msgid "Quotes"
-msgstr ""
+msgstr "Citations"

@@ -17,7 +17,7 @@ setup(
     packages=[
         'mingus',
         'mingus.core',
-        'mingus.templatetags'
+        'mingus.core.templatetags',
     ],
     classifiers=[
         'Development Status :: 4 - Beta',

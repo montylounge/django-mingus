@@ -29,7 +29,7 @@
     {% tags_for_object object as tag_list %}
     {% if tag_list %}
     <div class="tags">
-        <strong>Tags:</strong>
+        <strong>{% trans "Tags" %}:</strong>
         <ul class="tag inline">
             {% for tag in tag_list %}
             <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
@@ -43,7 +43,7 @@
     {% tagged_get_related object in quoteme.Quote as quote_list with num=3 %}
     {% if quote_list %}
     <div class="related">
-        <strong>Related quotes:</strong>
+        <strong>{% trans "Related quotes" %}:</strong>
         <ol class="quote inline">
             {% for quote in quote_list %}
             <li><a href="{{ quote.get_absolute_url }}">{{ quote.title }}</a></li>

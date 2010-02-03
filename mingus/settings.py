@@ -4,10 +4,10 @@ import os
 PROJECT_ROOT = os.path.dirname(__file__)
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
-ADMIN_MEDIA_PREFIX = '/static/admin/'
+ADMIN_MEDIA_PREFIX = '/admin_media/'
 
 #staticfiles app values
-STATIC_URL = '/media/'
+STATIC_URL = '/media/mingus/'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'media')
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'media', 'mingus'),

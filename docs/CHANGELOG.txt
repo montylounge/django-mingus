@@ -1,6 +1,21 @@
 
 Note: I neglected to keep a CHANGELOG until 0.9 release which is noted below.
 
+2.2.10
+------
+* updated MANIFEST
+* updated settings organization
+* Some i18n fixes 
+* Spanish translation added.
+* Remove stray </u> 
+* French translation added.
+
+2.1.10
+------
+* ran makemessages after alup merge applied to regen .po files
+* merged transifex(alup) code, added base locale dirs
+
+
 1.30.10
 -------
 * added django-memcached-status

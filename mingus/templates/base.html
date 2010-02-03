@@ -65,7 +65,7 @@
       {% cache 3600 "base.navbars" %}
       {% navbars %}
       {% endcache %}
-      <form action="/search/" method="GET"><input type="text" name="q" value="{{ search_term }}"><input type="submit" class="button" value="Search"></form>
+      <form action="/search/" method="GET"><input type="text" name="q" value="{{ search_term }}"><input type="submit" class="button" value="{% trans "Search" %}"></form>
     </div>
     <!-- /nav -->
 
@@ -89,14 +89,12 @@
 
           <h4>Subscribe</h4>
           <ul>
-          {% if BLOG_SETTINGS.twitter_url %}<li><a href="{{ BLOG_SETTINGS.twitter_url }}" title="Follow me on Twitter">Twitter</a></li>{% endif %}
-          {% if BLOG_SETTINGS.rss_url %}<li><a href="{{ BLOG_SETTINGS.rss_url }}" title"Subscribe via RSS">RSS</a></li>{% endif %}
-          {% if BLOG_SETTINGS.email_subscribe_url %}<li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title="Subscribe via Email">Email</a></li>{% endif %}
+          {% if BLOG_SETTINGS.twitter_url %}<li><a href="{{ BLOG_SETTINGS.twitter_url }}" title="{% trans "Follow me on Twitter" %}">{% trans "Twitter" %}</a></li>{% endif %}
+          {% if BLOG_SETTINGS.rss_url %}<li><a href="{{ BLOG_SETTINGS.rss_url }}" title"{% trans "Subscribe via RSS" %}">RSS</a></li>{% endif %}
+          {% if BLOG_SETTINGS.email_subscribe_url %}<li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title="{% trans "Subscribe via Email" %}">Email</a></li>{% endif %}
 
-      {% if category %}<li><a href="/feeds/categories/{{ category.title|lower }}" title"Subscribe via RSS">RSS - {{ category }}</a></li>{% endif %}
-        {% if BLOG_SETTINGS_email_subscribe_url %}<li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title="Subscribe via Email">Email</a></li>{% endif %}
-       </ul>
-
+      {% if category %}<li><a href="/feeds/categories/{{ category.title|lower }}" title"{% trans "Subscribe via RSS" %}">RSS - {{ category }}</a></li>{% endif %}
+        {% if BLOG_SETTINGS_email_subscribe_url %}<li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title="{% trans "Subscribe via Email" %}">{% trans "Email" %}</a></li>{% endif %}
           </ul>
 
           {% cache 3600 "base.profiles" %}
