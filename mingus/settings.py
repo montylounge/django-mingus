@@ -96,8 +96,8 @@ INSTALLED_APPS = (
   'memcache_status',
 )
 
-TINYMCE_JS_ROOT = STATIC_ROOT + '/mingus/js/tiny_mce/'
-TINYMCE_COMPRESSOR = True
+
+TINYMCE_JS_URL = STATIC_URL + 'js/tiny_mce/tiny_mce.js'
 TINYMCE_DEFAULT_CONFIG = {
     'theme': "advanced",
     'cleanup_on_startup': True,
@@ -105,7 +105,7 @@ TINYMCE_DEFAULT_CONFIG = {
     'theme_advanced_toolbar_location': "top",
 }
 
-DJANGO_WYSIWYG_MEDIA_URL = STATIC_URL + "mingus/js/ckeditor/"
+DJANGO_WYSIWYG_MEDIA_URL = STATIC_URL + "js/ckeditor/"
 DJANGO_WYSIWYG_FLAVOR = "ckeditor"
 
 try:
