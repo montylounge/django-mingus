@@ -34,7 +34,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'djangodblog.DBLogMiddleware',
     'slimmer.middleware.CompressHtmlMiddleware',
-    'request.middleware.RequestMiddleware',
+#    'request.middleware.RequestMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
@@ -91,7 +91,7 @@ INSTALLED_APPS = (
   'staticfiles',
   'tinymce',
   'django_wysiwyg',
-  'request',
+#  'request',
   'cropper',
   'memcache_status',
 )

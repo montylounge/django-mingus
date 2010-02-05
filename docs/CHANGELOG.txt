@@ -1,6 +1,10 @@
 
 Note: I neglected to keep a CHANGELOG until 0.9 release which is noted below.
 
+2.5.10
+------
+* commented out django-request in middleware, and installed_apps. It has a 
+Firefox bug. Once that's resolved I'll add it back in with an update.
 
 2.4.10
 ------
