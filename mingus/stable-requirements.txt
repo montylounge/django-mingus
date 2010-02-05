@@ -14,7 +14,7 @@ django-markup==0.3
 django-memcache-status==1.0.1
 	
 -e git://github.com/django-extensions/django-extensions.git@459276ded0edf1d1cf6d94b4865891a281445b95#egg=django_extensions-0.4.2_pre-py2.5-dev
--e git://github.com/montylounge/django-basic-apps.git@e3c8c261bb2e6232122114a625e2ccb0d6224e44#egg=django_basic_apps-0.6-py2.5-dev
+-e git://github.com/montylounge/django-basic-apps.git@72ad0a50a464d3dd296a566f749e86b1f9080bac#egg=django_basic_apps-0.6-py2.5-dev
 -e hg+http://bitbucket.org/discovery/django-bitly/@6c6b6fe662cbe48325b902775fcf1eaacfd08181#egg=django_bitly-tip
 -e git://github.com/mintchaos/django_compressor.git@7f314c513410a5be6379edf1abfc4f1730a36d09#egg=django_compressor-0.5.1-py2.5-dev
 -e hg+https://bitbucket.org/ubernostrum/django-contact-form/@1d3791fa4dfbb2375ba0d27e62283380c0ec74e6#egg=django_contact_form-tip

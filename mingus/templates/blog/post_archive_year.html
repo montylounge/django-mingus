@@ -8,7 +8,7 @@
 
 <h1 class="filter-title">{% trans "Posts for" %} {{ year }}</h1>
 
-{% get_post_archive_months as months %}
+{% get_post_archive as months %}
 <ul class="archive">
     {% for date in months %}
     <li><a href="{% url blog_archive_month date|date:"Y", date|date:"m" %}" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
