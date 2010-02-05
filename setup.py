@@ -6,7 +6,7 @@ def read(fname):
 
 setup(
     name='django-mingus',
-    version='0.9.1',
+    version='0.9.2',
     description='A django blog engine.',
     long_description=read('README.textile'),
     author='Kevin Fricovsky',

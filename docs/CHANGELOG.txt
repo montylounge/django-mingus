@@ -1,6 +1,18 @@
 
 Note: I neglected to keep a CHANGELOG until 0.9 release which is noted below.
 
+
+2.4.10
+------
+* bumped the version of basic-blog Mingus uses to grab new post to twitter signal
+* fixed a bug in /templates/blog/post_archive_year.html
+* bumped to 0.9.2
+
+2.3.10
+------
+* fixed default wysiwyg paths, bumped version 
+* bumped to 0.9.1
+
 2.2.10
 ------
 * updated MANIFEST
