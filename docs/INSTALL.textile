@@ -1,7 +1,9 @@
 
 h2. Quick Start
 
-The quick start assumes basic familiarity with vitualenv, virtualenv wrapper.
+The quick start assumes basic familiarity with "vitualenv":http://virtualenv.openplans.org/, "virtualenv wrapper":http://www.doughellmann.com/projects/virtualenvwrapper/.
+
+It also assumes you have both subversion, mecurial, and git clients locally.
 
 * mkvirtualenv myblog --no-site-packages
 * workon myblog

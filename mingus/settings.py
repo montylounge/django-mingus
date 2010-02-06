@@ -30,10 +30,11 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.doc.XViewMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
-    'sugar.middleware.debugging.UserBasedExceptionMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
-    'djangodblog.DBLogMiddleware',
     'slimmer.middleware.CompressHtmlMiddleware',
+    'sugar.middleware.debugging.UserBasedExceptionMiddleware',
+    'request.middleware.RequestMiddleware',
+    'djangodblog.DBLogMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
@@ -92,6 +93,7 @@ INSTALLED_APPS = (
   'django_wysiwyg',
   'cropper',
   'memcache_status',
+  'request',
 )
 
 

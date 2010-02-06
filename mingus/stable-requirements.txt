@@ -38,6 +38,8 @@ django-memcache-status==1.0.1
 -e hg+https://sorl-thumbnail.googlecode.com/hg/@caf69b5206329d89282b4b8246a72e5aa77cb578#egg=sorl_thumbnail-tip
 -e svn+http://django-template-utils.googlecode.com/svn/trunk@109#egg=template_utils-0.4p2-py2.5-dev_r109
 -e git://github.com/montylounge/django_cropper.git@194e3c94b0abcb5ec2a9788ff1fe474779b3f67d#egg=django-cropper-0.1.5a-py2.5-dev
+-e git://github.com/kylef/django-request.git@be9eacf3dae0fd2380421a9974aff8eadfe2ec8b#egg=django_request-0.21-py2.5-dev
+
 
 
 
