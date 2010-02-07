@@ -1,7 +1,11 @@
 
 Note: I neglected to keep a CHANGELOG until 0.9 release which is noted below.
 
-2.6.20
+2.7.10
+------
+* added new SQL file to handle migration of django-request bug fix
+
+2.6.10
 ------
 * added django-request back to the installed_apps and middleware.
 * added SQL/20100206.sql to handle potsgres migration for those users using
