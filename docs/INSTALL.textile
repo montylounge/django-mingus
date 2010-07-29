@@ -14,7 +14,7 @@ It also assumes you have both subversion, mecurial, and git clients locally.
 * ... wait a bit
 * mv local_settings.py.template local_settings.py
 * ./manage.py syncdb
-* .manage.py loaddata test_data.json
+* ./manage.py loaddata test_data.json
 * ./manage.py runserver
 
 By default the theme is set to the Basic theme.
