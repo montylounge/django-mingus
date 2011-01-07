@@ -21,7 +21,7 @@ To see it live in action, view:
 "http://libby.tuzig.com/":http://libby.tuzig.com/
 "http://oswco.org/":http://oswco.org/
 "http://serotoninstorm.com/blog/":http://serotoninstorm.com/blog/
-
+"http://apluggedinlife.com/":http://apluggedinlife.com/
 
 h2. Getting Started
 
