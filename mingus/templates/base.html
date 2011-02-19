@@ -18,11 +18,9 @@
      <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon"/>
 
     {% block rss %}
-    <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} main rss feed" href="{{ BLOG_SETTINGS.rss_url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} all entries feed" href="/feeds/all/">
-    <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} all posts feed" href="/feeds/latest/">
-
-  {% if category %}<link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} - {{ category }} posts" href="/feeds/categories/{{ category.title|lower }}">{% endif %}
+        <link rel="alternate" type="application/rss+xml" title="{% blocktrans with BLOG_SETTINGS.site_name as site_name %}{{ site_name }} main rss feed{% endblocktrans %}" href="{{ BLOG_SETTINGS.rss_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{% blocktrans with BLOG_SETTINGS.site_name as site_name %}{{ site_name }} all entries feed{% endblocktrans %}" href="{% url all_entries_feed  %}">
+    <link rel="alternate" type="application/rss+xml" title=""{% blocktrans with BLOG_SETTINGS.site_name as site_name %}{{ site_name }} all posts feed{% endblocktrans %} href="{% url latest_feed  %}">
     {% endblock %}
 
     {% compress css %}

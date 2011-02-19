@@ -21,7 +21,7 @@ USE_I18N = False
 HONEYPOT_FIELD_NAME = 'fonzie_kungfu'
 
 TEMPLATE_DIRS = (
-  os.path.join(PROJECT_ROOT, "templates"),
+    os.path.join(PROJECT_ROOT, "templates"),
 )
 
 MIDDLEWARE_CLASSES = (
@@ -34,7 +34,6 @@ MIDDLEWARE_CLASSES = (
     'slimmer.middleware.CompressHtmlMiddleware',
     'sugar.middleware.debugging.UserBasedExceptionMiddleware',
     'request.middleware.RequestMiddleware',
-    'djangodblog.DBLogMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
@@ -49,51 +48,57 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 INSTALLED_APPS = (
-  'django.contrib.auth',
-  'django.contrib.contenttypes',
-  'django.contrib.sessions',
-  'django.contrib.sites',
-  'django.contrib.admin',
-  'django.contrib.sitemaps',
-  'django.contrib.flatpages',
-  'django.contrib.redirects',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    'django.contrib.admin',
+    'django.contrib.sitemaps',
+    'django.contrib.flatpages',
+    'django.contrib.redirects',
 
-  'django_extensions',
-  'tagging',
-  'djangodblog',
-  'disqus',
-  'basic.inlines',
-  'basic.blog',
-  'basic.bookmarks',
-  'basic.media',
-  'oembed',
-  'flatblocks',
-  'dbtemplates',
-  'navbar',
-  'sorl.thumbnail',
-  'template_utils',
-  'django_proxy',
+    'django_extensions',
+    'tagging',
 
-  'django_markup',
-  'google_analytics',
-  'robots',
-  'basic.elsewhere',
-  'compressor',
-  'contact_form',
-  'honeypot',
-  'sugar',
-  'quoteme',
-  'mingus.core',
-  'debug_toolbar',
-  
-  'django_twitter',
-  'django_bitly',
-  'staticfiles',
-  'tinymce',
-  'django_wysiwyg',
-  'cropper',
-  'memcache_status',
-  'request',
+    # sentry requirements
+    'indexer',
+    'paging',
+    'sentry',
+    'sentry.client',
+
+    'disqus',
+    'basic.inlines',
+    'basic.blog',
+    'basic.bookmarks',
+    'basic.media',
+    'oembed',
+    'flatblocks',
+    'dbtemplates',
+    'navbar',
+    'sorl.thumbnail',
+    'template_utils',
+    'django_proxy',
+
+    'django_markup',
+    'google_analytics',
+    'robots',
+    'basic.elsewhere',
+    'compressor',
+    'contact_form',
+    'honeypot',
+    'sugar',
+    'quoteme',
+    'mingus.core',
+    'debug_toolbar',
+
+    'django_twitter',
+    'django_bitly',
+    'staticfiles',
+    'tinymce',
+    'django_wysiwyg',
+    'cropper',
+    'memcache_status',
+    'request',
 )
 
 
@@ -109,6 +114,6 @@ DJANGO_WYSIWYG_MEDIA_URL = STATIC_URL + "js/ckeditor/"
 DJANGO_WYSIWYG_FLAVOR = "ckeditor"
 
 try:
-   from local_settings import *
+    from local_settings import *
 except ImportError:
-   pass
+    pass

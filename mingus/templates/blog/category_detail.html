@@ -7,7 +7,6 @@
 {% block body_id %}category_{{ category.id }}{% endblock %}
 
 {% block content %}
-
 <h2 class="filter-title">{% trans "Posts for" %} {{ category.title }}</h2>
 
   <div class="post_list">
@@ -21,6 +20,5 @@
 
 {% block rss %}
   {{ block.super }}
-  <link rel="alternate" type="application/rss+xml"title="{{ category.title }} posts feed" 
-    href="/feeds/categories/{{ category.slug }}" />
+  <link rel="alternate" type="application/rss+xml"title="{{ category.title }} posts feed" href="{% url category_feed slug=category.slug  %}" />
 {% endblock %}

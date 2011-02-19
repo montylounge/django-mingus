@@ -53,10 +53,10 @@ DEBUG_TOOLBAR_PANELS = (
 
 ### django-markup
 MARKUP_CHOICES = (
-	'none',	
-	'markdown',
-	'textile',
-	'restructuredtext',
+    'none', 
+    'markdown',
+    'textile',
+    'restructuredtext',
 )
 
 #django-bitly
@@ -69,6 +69,5 @@ REQUEST_IGNORE_PATHS = (
         r'^media/(.*)',
         r'^favicon\.ico|favicon\.ico/$',
         r'^__debug__/',
-		r'^tinymce/(.*)',
+        r'^tinymce/(.*)',
 )
-

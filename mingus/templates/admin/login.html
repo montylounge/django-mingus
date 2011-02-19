@@ -15,6 +15,7 @@
 {% endif %}
 <div id="content-main">
 <form action="{{ app_path }}" method="post" id="login-form">
+    {% csrf_token %}
   <div class="form-row">
     <label for="id_username">{% trans 'Username:' %}</label> <input type="text" name="username" id="id_username" />
   </div>
