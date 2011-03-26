@@ -16,10 +16,16 @@ h2. Real World Examples
 To see it live in action, view:
 
 "http://blog.montylounge.com":http://blog.montylounge.com
+"http://apluggedinlife.com/fr/":http://apluggedinlife.com/fr/
+"http://blog.roseman.org.uk/":http://blog.roseman.org.uk/
+"http://codysoyland.com/":http://codysoyland.com/
+"http://www.ofbrooklyn.com/":http://www.ofbrooklyn.com/
+"http://hotsyk.com/":http://hotsyk.com/
+"http://stfnkhlr.de/":http://stfnkhlr.de/
 "http://mathematism.com/":http://mathematism.com/
 "http://baratrion.org/":http://baratrion.org/
 "http://libby.tuzig.com/":http://libby.tuzig.com/
-"http://oswco.org/":http://oswco.org/
+"http://oswco.com/":http://oswco.com/
 "http://serotoninstorm.com/blog/":http://serotoninstorm.com/blog/
 
 
