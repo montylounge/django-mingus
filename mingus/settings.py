@@ -30,12 +30,12 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.doc.XViewMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
-    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'slimmer.middleware.CompressHtmlMiddleware',
     'sugar.middleware.debugging.UserBasedExceptionMiddleware',
     'request.middleware.RequestMiddleware',
     'djangodblog.DBLogMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
