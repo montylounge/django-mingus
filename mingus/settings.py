@@ -86,8 +86,6 @@ INSTALLED_APPS = (
   'mingus.core',
   'debug_toolbar',
   
-  'django_twitter',
-  'django_bitly',
   'staticfiles',
   'tinymce',
   'django_wysiwyg',
