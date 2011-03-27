@@ -59,10 +59,6 @@ MARKUP_CHOICES = (
 	'restructuredtext',
 )
 
-#django-bitly
-BITLY_LOGIN = 'USERNAME'
-BITLY_API_KEY = 'APIKEYHERE'
-
 #django-request
 REQUEST_IGNORE_PATHS = (
         r'^admin/(.*)',
