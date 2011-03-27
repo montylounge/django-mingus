@@ -37,7 +37,7 @@ django-memcache-status==1.0.1
 
 -e git://github.com/jezdez/django-staticfiles.git@bb936df3fbbc6d59bd3ec50f08f1ab9fc79ea44b#egg=django_staticfiles-0.3.4-py2.5-dev
 -e git://github.com/sorl/sorl-thumbnail.git@ff9ffe29831d7767c720f544ff0d3b672ee0f307#egg=sorl_thumbnail-3.2.5-py2.5-dev
--e git://github.com/montylounge/django-basic-apps.git@981ac4eeacdd700867b87403d7bc9af385c8130c#egg=django_basic_apps-0.6-py2.5-dev
+-e git://github.com/montylounge/django-basic-apps.git@3e88fab6cef3524d9e8d84dbb17dfb5906c82ed5#egg=django_basic_apps-0.6-py2.5-dev
 
 
 
