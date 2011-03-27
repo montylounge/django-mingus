@@ -30,13 +30,12 @@ django-memcache-status==1.0.1
 -e hg+https://bitbucket.org/kmike/django-view-cache-utils/@4408ad8f1751ee2fccb441d2a342c4ed710467a0#egg=django_view_cache_utils-tip
 -e git://github.com/pydanny/django-wysiwyg.git@b280e1b75326363dfe746d8c36425cfbed53b4ec#egg=django_wysiwyg-0.1.0-py2.5-dev
 -e git://github.com/montylounge/django-google-analytics.git@6b7aa6dba851dd59dca0a20bc7eefe70754384e4#egg=google_analytics-0.1-py2.5-dev
--e hg+https://python-twitter.googlecode.com/hg/@7e5cb2db67352ac1fd7b40a3ec54fdef352f802f#egg=python_twitter-0.7_devel-py2.5-default
 -e svn+http://django-template-utils.googlecode.com/svn/trunk@109#egg=template_utils-0.4p2-py2.5-dev_r109
 -e git://github.com/montylounge/django_cropper.git@194e3c94b0abcb5ec2a9788ff1fe474779b3f67d#egg=django-cropper-0.1.5a-py2.5-dev
 -e git://github.com/kylef/django-request.git@84cfef56f6eea281a9c382859fb29ef570c7295d#egg=django_request-0.21-py2.5-dev
 
--e git://github.com/jezdez/django-staticfiles.git@bb936df3fbbc6d59bd3ec50f08f1ab9fc79ea44b#egg=django_staticfiles-0.3.4-py2.5-dev
--e git://github.com/sorl/sorl-thumbnail.git@ff9ffe29831d7767c720f544ff0d3b672ee0f307#egg=sorl_thumbnail-3.2.5-py2.5-dev
+-e git://github.com/jezdez/django-staticfiles.git@bb936df3fbbc6d59bd3ec50f08f1ab9fc79ea44b#egg=django_staticfiles-0.2.0-py2.5-dev
+-e git://github.com/sorl/sorl-thumbnail.git@827d1f2b04ef02f62301bc6968d21879b77adbf3#egg=sorl_thumbnail-10.12-py2.5-dev
 -e git://github.com/montylounge/django-basic-apps.git@3e88fab6cef3524d9e8d84dbb17dfb5906c82ed5#egg=django_basic_apps-0.6-py2.5-dev
 
 
