@@ -20,7 +20,13 @@ class TaggedGetRelatedNode(Node):
         if param is None:
             raise TemplateSyntaxError(_('tagged_get_related tag was given an invalid input: %s') % self.queryset_or_model)
 
-        context[self.context_var] = TaggedItem.objects.get_related(self.obj.resolve(context), param, **self.kwargs)
+        objs = list(TaggedItem.objects.get_related(self.obj.resolve(context), param, **self.kwargs))
+        for obj in objs:
+            if hasattr(obj, 'status'):
+                if obj.status != 2:
+                    objs.remove(obj)
+        
+        context[self.context_var] = objs
         return ''
 
 
