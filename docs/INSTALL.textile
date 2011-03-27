@@ -3,6 +3,8 @@ h2. Quick Start
 
 The quick start assumes basic familiarity with "vitualenv":http://virtualenv.openplans.org/, "virtualenv wrapper":http://www.doughellmann.com/projects/virtualenvwrapper/.
 
+Tested with pip version 0.8.3.
+
 It also assumes you have both subversion, mecurial, and git clients locally.
 
 * mkvirtualenv myblog --no-site-packages
