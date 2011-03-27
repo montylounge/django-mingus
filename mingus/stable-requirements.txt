@@ -14,7 +14,6 @@ django-markup==0.3
 django-memcache-status==1.0.1
 	
 -e git://github.com/django-extensions/django-extensions.git@459276ded0edf1d1cf6d94b4865891a281445b95#egg=django_extensions-0.4.2_pre-py2.5-dev
--e hg+http://bitbucket.org/discovery/django-bitly/@6c6b6fe662cbe48325b902775fcf1eaacfd08181#egg=django_bitly-tip
 -e git://github.com/mintchaos/django_compressor.git@7f314c513410a5be6379edf1abfc4f1730a36d09#egg=django_compressor-0.5.1-py2.5-dev
 -e hg+https://bitbucket.org/ubernostrum/django-contact-form/@1d3791fa4dfbb2375ba0d27e62283380c0ec74e6#egg=django_contact_form-tip
 -e svn+http://django-db-log.googlecode.com/svn/trunk@13#egg=django_db_log-1.0.1-py2.5-dev_r13
@@ -28,7 +27,6 @@ django-memcache-status==1.0.1
 -e git://github.com/hbussell/django-slimmer.git@61deecdbc7650664c2a23f36ed806c043c70d65e#egg=django_slimmer-0.0.1-py2.5-dev
 -e git://github.com/montylounge/django-sugar.git@fad43351d848da815159837d0a5f548b1fd2ef0f#egg=django_sugar-0.2-py2.5-dev
 -e svn+http://django-tinymce.googlecode.com/svn/trunk@96#egg=django_tinymce-trunk-py2.5-dev_r96
--e git://github.com/skevy/django-twitter.git@887a017e0436b5e03aab96e5ba650696ab2d9b58#egg=django_twitter-0.1-py2.5-dev
 -e hg+https://bitbucket.org/kmike/django-view-cache-utils/@4408ad8f1751ee2fccb441d2a342c4ed710467a0#egg=django_view_cache_utils-tip
 -e git://github.com/pydanny/django-wysiwyg.git@b280e1b75326363dfe746d8c36425cfbed53b4ec#egg=django_wysiwyg-0.1.0-py2.5-dev
 -e git://github.com/montylounge/django-google-analytics.git@6b7aa6dba851dd59dca0a20bc7eefe70754384e4#egg=google_analytics-0.1-py2.5-dev
