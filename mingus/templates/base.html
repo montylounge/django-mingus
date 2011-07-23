@@ -1,4 +1,4 @@
-{% load disqus_tags flatblock_tags cache navbar generic_content blog compress analytics elsewhere feeds i18n archive %}
+{% load disqus_tags tagging_tags flatblock_tags cache navbar generic_content blog compress analytics elsewhere feeds i18n archive %}
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
   "http://www.w3.org/TR/html4/strict.dtd">
@@ -87,7 +87,7 @@
           <h4>{% trans "About" %}</h4>
           <p>{{ BLOG_SETTINGS.about|safe }}</p>
 
-          <h4>Subscribe</h4>
+          <h4>{% trans "Subscribe" %}</h4>
           <ul>
           {% if BLOG_SETTINGS.twitter_url %}<li><a href="{{ BLOG_SETTINGS.twitter_url }}" title="{% trans "Follow me on Twitter" %}">{% trans "Twitter" %}</a></li>{% endif %}
           {% if BLOG_SETTINGS.rss_url %}<li><a href="{{ BLOG_SETTINGS.rss_url }}" title"{% trans "Subscribe via RSS" %}">RSS</a></li>{% endif %}
@@ -120,7 +120,17 @@
           </ul>
           {% endif %}
           {% endcache %}
-
+          
+          {% cache 3600 "base.tagcloud" %}
+          <h4>{% trans "Tags" %}</h4>
+          <div class="tagcloud">
+          {% tag_cloud_for_model blog.Post as cloudtags with steps=6 min_count=1 distribution=log %}
+          {% for cloudtag in cloudtags %}
+            <a href="{% url blog_tag_detail cloudtag %}" style="font-size:{{ cloudtag.font_size|add:8 }}px">{{ cloudtag }}({{ cloudtag.count }})</a>&nbsp;
+          {% endfor %}
+          </div>
+          {% endcache %}
+          
           {% cache 3600 "base.post_list" %}
           {% get_latest_posts 10 as post_list %}
           {% if post_list %}
