@@ -21,8 +21,7 @@
     <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} main rss feed" href="{{ BLOG_SETTINGS.rss_url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} all entries feed" href="/feeds/all/">
     <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} all posts feed" href="/feeds/latest/">
-
-  {% if category %}<link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} - {{ category }} posts" href="/feeds/categories/{{ category.title|lower }}">{% endif %}
+    {% if category %}<link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} - {{ category }} posts" href="/feeds/categories/{{ category.title|lower }}">{% endif %}
     {% endblock %}
 
     {% compress css %}
@@ -33,17 +32,17 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/themes/basic.css" type="text/css" media="all" charset="utf-8">
    {% endcompress %}
 
-   <!--[if IE 6]>
-   <script src="{{ STATIC_URL }}js/DD_belatedPNG_0.0.7a-min.js"></script>
-   <script>
-   DD_belatedPNG.fix('#bleeder, .logo');
-   </script>
-   <style>
-       #bleeder{ display: none;}
-       #form-search{ width: auto; display: block; float: right; clear: both;}
-       .navbar-one{ float: right; clear: both;}
-   </style>
-   <![endif]-->
+    <!--[if IE 6]>
+    <script src="{{ STATIC_URL }}js/DD_belatedPNG_0.0.7a-min.js"></script>
+    <script>
+      DD_belatedPNG.fix('#bleeder, .logo');
+    </script>
+    <style>
+      #bleeder{ display: none;}
+      #form-search{ width: auto; display: block; float: right; clear: both;}
+      .navbar-one{ float: right; clear: both;}
+    </style>
+    <![endif]-->
 
     {% disqus_dev %}
     {% block extra_head %}{% endblock %}
@@ -202,14 +201,14 @@
     {% analytics %}
     {% endcache %}
     {% block extra_body %}
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-        <script type="text/javascript" charset="utf-8">
-        jQuery(function($) {
-            $.getScript('{{ STATIC_URL }}js/prettify.js', function(){
-                prettyPrint();
-            });
-        });
-        </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+    jQuery(function($) {
+      $.getScript('{{ STATIC_URL }}js/prettify.js', function(){
+        prettyPrint();
+      });
+    });
+    </script>
     {% endblock %}
   </body>
 </html>
