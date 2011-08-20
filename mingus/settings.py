@@ -10,7 +10,8 @@ ADMIN_MEDIA_PREFIX = '/admin_media/'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static', 'mingus')
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'media', 'mingus'),
+    os.path.join(PROJECT_ROOT, 'static', 'betweenconcepts'),
+    os.path.join(PROJECT_ROOT, 'static', 'mingus'),
 )
 
 # Login paths

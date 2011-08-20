@@ -14,8 +14,8 @@
     <meta name="author" content="{{ BLOG_SETTINGS.author_name }}">
     {% endblock %}
 
-     <meta name="copyright" content="{{ BLOG_SETTINGS.copyright }}" />
-     <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon"/>
+    <meta name="copyright" content="{{ BLOG_SETTINGS.copyright }}" />
+    <link rel="shortcut icon" href="{{ STATIC_URL }}img/brackets.ico" type="image/x-icon"/>
 
     {% block rss %}
     <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} main rss feed" href="{{ BLOG_SETTINGS.rss_url }}">
@@ -29,8 +29,10 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/prettify.css" type="text/css" media="all" charset="utf-8">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/pygments.css" type="text/css" media="all" charset="utf-8">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" media="all" charset="utf-8">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/themes/basic.css" type="text/css" media="all" charset="utf-8">
-   {% endcompress %}
+    <!-- between concepts -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/themes/betweenconcepts.css" type="text/css" media="all" charset="utf-8">
+    <style type="text/css">#logo a {background-image: url('{{ STATIC_URL }}img/logo.png');}</style>
+    {% endcompress %}
 
     <!--[if IE 6]>
     <script src="{{ STATIC_URL }}js/DD_belatedPNG_0.0.7a-min.js"></script>
@@ -56,15 +58,18 @@
 
   <div id="header" class="clearfix">
     <div id="logo">
-      <h1><a href="/" title="{{ BLOG_SETTINGS.site_name }}">{{ BLOG_SETTINGS.site_name }}</a></h1>
+      <h1><a href="/" title="{{ BLOG_SETTINGS.site_name }}">&nbsp;</a></h1>
     </div>
     <!-- /logo -->
 
     <div id="nav">
+      <form action="/search/" method="GET">
+        <span class="left-search"><input type="text" name="q" value="{{ search_term }}"></span>
+        <span class="right-search"><input type="submit" class="button" value="{% trans "Search" %}"></span>
+      </form>
       {% cache 3600 "base.navbars" %}
       {% navbars %}
       {% endcache %}
-      <form action="/search/" method="GET"><input type="text" name="q" value="{{ search_term }}"><input type="submit" class="button" value="{% trans "Search" %}"></form>
     </div>
     <!-- /nav -->
 
