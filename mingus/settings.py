@@ -7,11 +7,14 @@ MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = '/admin_media/'
 
 #staticfiles app values
-STATIC_URL = '/media/mingus/'
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static', 'mingus')
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'media', 'mingus'),
 )
+
+# Login paths
+LOGIN_REDIRECT_URL = '/admin/'
 
 SITE_ID = 1
 ROOT_URLCONF = 'mingus.urls'
