@@ -171,18 +171,6 @@
           {% endif %}
           {% endcache %}
 
-          {% cache 3600 "delicious.popular" %}
-          {% parse_feed 'http://feeds.delicious.com/v2/rss/tag/django?count=15' as items %}
-          {% if items %}
-          <h4>{% trans "Django Popular" %}</h4>
-          <ul class="recent-posts">
-            {% for item in items.entries %}
-            <li><a href="{{ item.link }}" title="{{ item.title }}">{{ item.title }}</a></li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-          {% endcache %}
-
         </div>
         <!-- /grid_6 -->
       </div>
