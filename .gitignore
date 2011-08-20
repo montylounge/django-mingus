@@ -2,9 +2,5 @@
 *.bak
 *.db
 local_settings.py
-mingus/media/CACHE
 pip-log.txt
-mingus/media/uploads/
-mingus/media/photos/
 django_mingus.egg-info
-mingus/media/CACHE/
