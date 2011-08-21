@@ -8,7 +8,6 @@ ADMIN_MEDIA_PREFIX = '/admin_media/'
 
 #staticfiles app values
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static', 'mingus')
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static', 'betweenconcepts'),
     os.path.join(PROJECT_ROOT, 'static', 'mingus'),
@@ -47,9 +46,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
+    "django.core.context_processors.static",
     "basic.blog.context_processors.blog_settings",
     "navbar.context_processors.navbars",
-    "staticfiles.context_processors.static_url",
 )
 
 INSTALLED_APPS = (
@@ -61,6 +60,7 @@ INSTALLED_APPS = (
   'django.contrib.sitemaps',
   'django.contrib.flatpages',
   'django.contrib.redirects',
+  'django.contrib.staticfiles',
 
   'django_extensions',
   'tagging',
@@ -90,7 +90,6 @@ INSTALLED_APPS = (
   'mingus.core',
   'debug_toolbar',
   
-  'staticfiles',
   'tinymce',
   'django_wysiwyg',
   'cropper',
