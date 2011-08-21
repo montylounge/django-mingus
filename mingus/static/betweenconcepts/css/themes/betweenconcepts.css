@@ -139,7 +139,15 @@ ul.navbar-one li {
   padding-left: 15px;
   padding-bottom: 10px;
 }
+.post .body img.feature {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: solid 10px #e0e4e8;
+}
 
+.container_16 .grid_9 {
+}
 .container_16 .grid_6 {
 }
 
@@ -164,6 +172,14 @@ h2 a:hover { color: #333;}
 }
 #right-rail a:active, #right-rail a:hover {
   color: #000;
+}
+
+/* Blog */
+.feature {
+  float: right;
+}
+.feature img {
+  display: inline;
 }
 
 /* DJDT */
