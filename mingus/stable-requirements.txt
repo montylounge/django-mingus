@@ -34,7 +34,6 @@ django-memcache-status==1.0.1
 -e git://github.com/montylounge/django_cropper.git@194e3c94b0abcb5ec2a9788ff1fe474779b3f67d#egg=django-cropper-0.1.5a-py2.5-dev
 -e git://github.com/kylef/django-request.git@84cfef56f6eea281a9c382859fb29ef570c7295d#egg=django_request-0.21-py2.5-dev
 
--e git://github.com/jezdez/django-staticfiles.git@bb936df3fbbc6d59bd3ec50f08f1ab9fc79ea44b#egg=django_staticfiles-0.2.0-py2.5-dev
 -e git://github.com/sorl/sorl-thumbnail.git@827d1f2b04ef02f62301bc6968d21879b77adbf3#egg=sorl_thumbnail-10.12-py2.5-dev
 -e git://github.com/montylounge/django-basic-apps.git@3e88fab6cef3524d9e8d84dbb17dfb5906c82ed5#egg=django_basic_apps-0.6-py2.5-dev
 
