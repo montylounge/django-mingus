@@ -1,6 +1,8 @@
 *.pyc
 *.bak
 *.db
+*.sqlite
 local_settings.py
 pip-log.txt
 django_mingus.egg-info
+*~
