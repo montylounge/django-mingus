@@ -88,3 +88,7 @@
 #portfolio-projects .slide-show img {
   width: 300px;
 }
+
+#portfolio-projects .description li {
+  list-style-type: disc;
+}
