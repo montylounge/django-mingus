@@ -41,6 +41,7 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('',
     (r'^tinymce/', include('tinymce.urls')),
+    (r'^portfolio/', include('portfolio.urls')),
     url(r'^oops/$', 'mingus.core.views.oops', name='raise_exception'),
     url(r'^quotes/$', 'mingus.core.views.quote_list', name='quote_list'),
     url(r'^quotes/(?P<slug>[-\w]+)/$', 'mingus.core.views.quote_detail', name='quote_detail'),
@@ -50,7 +51,7 @@ urlpatterns += patterns('',
     (r'^api/springsteen/posts/$', springsteen_results),
     (r'^api/springsteen/firehose/$', springsteen_firehose),
     (r'^api/springsteen/category/(?P<slug>[-\w]+)/$', springsteen_category),
-
+    
     url(r'^contact/$',
         contact_form,
         name='contact_form'),

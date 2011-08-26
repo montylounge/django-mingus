@@ -96,6 +96,8 @@ INSTALLED_APPS = (
   'cropper',
   'memcache_status',
   'request',
+  
+  'portfolio',
 )
 
 

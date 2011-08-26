@@ -8,6 +8,12 @@ body {
   padding-top: 0;
 }
 
+.inner-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 #header {
   background-image: none;
   background-color: #4d4d4d;

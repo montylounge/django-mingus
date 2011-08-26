@@ -1,0 +1,90 @@
+#portfolio-nav {
+}
+
+#portfolio-nav li.selected a {
+  color: #000;
+  text-shadow: 1px 1px 1px #ccc;
+}
+
+#portfolio-projects .project-list {
+  margin-left: 0;
+}
+
+#portfolio-projects .project {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+
+  padding: 5px 15px;
+  margin-bottom: 30px;
+
+  background-color: #f0f0f0;
+  border-top: solid 4px #e0e4e8;
+  border-bottom: solid 4px #e0e4e8;
+}
+
+#portfolio-projects .project h2 {
+  margin-bottom: 0.5em;
+  font-size: 22pt;
+}
+
+#portfolio-projects .dates {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-style: italic;
+  font-size: 10pt;
+  color: #666;
+}
+
+#portfolio-projects ul.skills {
+  position: absolute;
+  top: 1.2em;
+  right: 0;
+}
+#portfolio-projects ul.skills li {
+  display: inline;
+  margin-left: 1em;
+}
+#portfolio-projects ul.skills li a {
+  font-weight: normal;
+}
+
+#portfolio-projects .description {
+  min-height: 120px;
+}
+
+#portfolio-projects img.project-image {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: solid 5px #e0e4e8;
+
+  float: left;
+  height: 100px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#portfolio-projects .slide-show {
+  position: relative;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: solid 5px #e0e4e8;
+  background-color: #e0e4e8;
+  padding-top: 20px;
+
+  float: right;
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+}
+#portfolio-projects .slide-show .counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#portfolio-projects .slide-show img {
+  width: 300px;
+}
