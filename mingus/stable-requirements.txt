@@ -10,7 +10,7 @@ Pygments==1.1.1
 -e svn+http://django-db-log.googlecode.com/svn/trunk@13#egg=django_db_log-1.0.1-py2.7-dev_r13
 django-dbtemplates==0.6.1
 django-debug-toolbar==0.8.5
--e git://github.com/montylounge/django-disqus.git@35a022f28c50b9f7cdfcdd5deb4ae6f9150f4358#egg=django_disqus-dev
+-e git://github.com/ktonon/django-disqus.git@2e940ae7d0470f75321ca3ea802c2cb556ee0da9#egg=django_disqus-dev
 -e git://github.com/django-extensions/django-extensions.git@459276ded0edf1d1cf6d94b4865891a281445b95#egg=django_extensions-dev
 -e git://github.com/zerok/django-flatblocks.git@77c310727d5ec5a0f69cdeda2b71bea8613503f0#egg=django_flatblocks-dev
 -e git://github.com/sunlightlabs/django-honeypot.git@76f57f487f68825fb302269516bb2b3284b81801#egg=django_honeypot-dev
