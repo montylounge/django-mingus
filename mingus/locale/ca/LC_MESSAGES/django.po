@@ -1,0 +1,197 @@
+# django-mingus Catalan translation
+# Copyright (C) 2010
+# This file is distributed under the same license as the django-mingus package.
+# Joan Roig-Arderiu <roigarderiu@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.7.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-07-01 03:12+0200\n"
+"PO-Revision-Date: 2011-07-01 03:12+0200\n"
+"Last-Translator: Joan Roig-Arderiu <roigarderiu@gmail.com>\n"
+"Language-Team: Catalan <CA@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: core/templatetags/tagging_related.py:21
+#, python-format
+msgid "tagged_get_related tag was given an invalid input: %s"
+msgstr "l'etiqueta tagged_get_related ha rebut una entrada invàlida: %s"
+
+#: core/templatetags/tagging_related.py:35
+#, python-format
+msgid "%s tag requires either five or seven arguments"
+msgstr "l'etiqueta %s requereix cinc o set arguments"
+
+#: core/templatetags/tagging_related.py:37
+#, python-format
+msgid "second argument to %s tag must be 'in'"
+msgstr "el segon argument per l'etiqueta %s ha de ser 'in'"
+
+#: core/templatetags/tagging_related.py:39
+#, python-format
+msgid "fourth argument to %s tag must be 'as'"
+msgstr "el quart argument per l'etiqueta %s ha de ser 'as'"
+
+#: core/templatetags/tagging_related.py:42
+#, python-format
+msgid "if given, fourth argument to %s tag must be 'with'"
+msgstr "si és donat, el quart argument per l'etiqueta %s ha de ser 'with'"
+
+#: core/templatetags/tagging_related.py:49
+#, python-format
+msgid "%(tag)s tag's '%(option)s' option was not a valid integer: '%(value)s'"
+msgstr "l'opció '%(option)s' de l'etiqueta %(tag)s no és un enter vàlid: '%(value)s'"
+
+#: core/templatetags/tagging_related.py:55
+#, python-format
+msgid "%(tag)s tag was given an invalid option: '%(option)s'"
+msgstr "l'etiqueta %(tag)s ha rebut una opción invàlida: '%(option)s'"
+
+#: core/templatetags/tagging_related.py:60
+#, python-format
+msgid "%(tag)s tag was given a badly formatted option: '%(option)s'"
+msgstr "l'etiqueta %(tag)s ha rebut una opció mal formatejada: '%(option)s'"
+
+#: templates/base.html:87
+msgid "About"
+msgstr "Quant a"
+
+#: templates/base.html:105
+msgid "Elsewhere"
+msgstr "En altres llocs"
+
+#: templates/base.html:117
+msgid "Categories"
+msgstr "Categories"
+
+#: templates/base.html:129 templates/contact_form/contact_form_sent.html:13
+msgid "Recent Posts"
+msgstr "Entrades Recents"
+
+#: templates/base.html:140
+msgid "Archive"
+msgstr "Arxiu"
+
+#: templates/base.html:151
+msgid "BlogRoll"
+msgstr "BlogRoll"
+
+#: templates/base.html:163
+msgid "Popular Posts"
+msgstr "Entrades Populars"
+
+#: templates/base.html:175
+msgid "Django Popular"
+msgstr "Django Popular"
+
+#: templates/admin/base_site.html:4
+msgid "Mingus site admin"
+msgstr "Administració del lloc Mingus"
+
+#: templates/admin/base_site.html:16
+msgid "Mingus Blog Engine"
+msgstr "Motor del Blog Mingus"
+
+#: templates/admin/login.html:19
+msgid "Username:"
+msgstr "Usuari:"
+
+#: templates/admin/login.html:22
+msgid "Password:"
+msgstr "Contrasenya:"
+
+#: templates/admin/login.html:27
+msgid "Log in"
+msgstr "Entrar"
+
+#: templates/blog/category_detail.html:5
+#: templates/blog/category_detail.html:11
+#: templates/blog/post_archive_day.html:9
+#: templates/blog/post_archive_month.html:9
+#: templates/blog/post_archive_year.html:9 templates/blog/tag_detail.html:4
+msgid "Posts for"
+msgstr "Entrades per"
+
+#: templates/blog/category_list.html:9
+msgid "Post categories"
+msgstr "Categories d'entrades"
+
+#: templates/blog/post_detail.html:72
+msgid "Twitter this"
+msgstr "Twitteja-ho"
+
+#: templates/blog/post_detail.html:75
+msgid "Reddit this"
+msgstr "Reedita-ho"
+
+#: templates/blog/post_detail.html:76
+msgid "Add to Delicious"
+msgstr "Afegir a Delicious"
+
+#: templates/blog/post_detail.html:78
+msgid "Subscribe RSS"
+msgstr "Subscriure al RSS"
+
+#: templates/blog/post_search.html:5 templates/blog/post_search.html.py:10
+msgid "Search results for:"
+msgstr "Resultats de cerca per a:"
+
+#: templates/blog/tag_detail.html:10
+msgid "Posts tagged:"
+msgstr "Entrades etiquetades:"
+
+#: templates/contact_form/contact_form.html:4
+msgid "Contact"
+msgstr "Contactar"
+
+#: templates/contact_form/contact_form.html:10
+#: templates/contact_form/contact_form_sent.html:8
+msgid "Contact me"
+msgstr "Contacta'm"
+
+#: templates/contact_form/contact_form.html:12
+msgid "Get in touch."
+msgstr "Contacta a l'autor"
+
+#: templates/contact_form/contact_form.html:18
+msgid "Woops, looks like you forgot some information."
+msgstr "Oops, sembla que has oblidat alguna dada."
+
+#: templates/contact_form/contact_form.html:28
+msgid "Your name"
+msgstr "El teu nom"
+
+#: templates/contact_form/contact_form.html:33
+msgid "Your email"
+msgstr "El teu email"
+
+#: templates/contact_form/contact_form.html:38
+msgid "Your message"
+msgstr "El teu missatge"
+
+#: templates/contact_form/contact_form_sent.html:10
+msgid ""
+"Thanks! I'll make sure to respond shortly. In the meantime, check out some "
+"of my latest and greatest posts."
+msgstr ""
+"Gràcies! M'asseguraré de respondre en breu. Mentrestant, pots fer "
+"un cop d'ull a algunes de les meves últimes entrades."
+
+#: templates/proxy/proxy_search.html:27
+msgid "No results found"
+msgstr "No s'han trobat resultats"
+
+#: templates/proxy/tag_detail.html:4
+msgid "Entries for"
+msgstr "Entrades per a"
+
+#: templates/proxy/tag_detail.html:10
+msgid "Entries tagged:"
+msgstr "Entrades etiquetades:"
+
+#: templates/quotes/quote_list.html:4 templates/quotes/quote_list.html.py:8
+msgid "Quotes"
+msgstr "Frases"
