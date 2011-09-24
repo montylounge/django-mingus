@@ -1,0 +1,195 @@
+
+body {
+    color: #333940;
+    background: #f4f4f4;
+}
+
+#body-container {
+  padding-top: 0;
+}
+
+.inner-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#header {
+  background-image: none;
+  background-color: #4d4d4d;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.1, #4d4d4d), color-stop(0.9, #333333));
+  background-image: -moz-linear-gradient(center bottom, #333333 10%, #4d4d4d 90%);
+  -moz-box-shadow: 0px 0px 5px #333333;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  /* For IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+  /* For IE 5.5 - 7 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+  
+  margin-left: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 80px;
+  width: 100%;
+}
+
+#logo a {
+  display: block;
+  height: 43px;
+  width: 350px;
+}
+
+/* LAYOUT */
+#nav {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  text-align: right;
+}
+ul.navbar-one {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+ul.navbar-one li {
+  margin-right: 0;
+  margin-left: 20px;
+}
+#nav .navbar-one a {
+  color: #999;
+  font-size: 18px;
+  text-shadow: -1px -1px 1px #000;
+}
+#nav .navbar-one a:hover, #nav .navbar-one a:active {
+  color: #ff8000;
+}
+#nav .navbar-one a.selected {
+  color: #ffffff;
+}
+#nav input {
+  border: none;
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px;
+  background-color: transparent;
+  color: #999;
+}
+#nav .right-search input {
+  color: #ff8000;
+  cursor: pointer;
+}
+#nav .left-search {
+  border-bottom-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-top-left-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+
+  padding: 2px 5px;
+  margin-right: 1px;
+  background: #333;
+  border: solid 1px #999;
+}
+#nav .right-search {
+  border-bottom-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-top-right-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+	
+  padding: 2px 5px;
+  background: #804000;
+  border: solid 1px #ff8000;
+}
+
+.post .date, .quote .date, .bookmark .date {
+	float: left;
+	padding: .3em .4em .3em 1.2em;
+	background: #004080;
+	margin: 0.3em 0  0 -6.0em;
+	width: 3.8em;
+	
+	border-bottom-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-top-right-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+}
+
+.post > h2 {
+  border-top-right-radius: 20px;
+  -webkit-border-top-right-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  border-top-left-radius: 20px;
+  -webkit-border-top-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  
+  background-color: #f0f0f0;
+  border-top: solid 4px #e0e4e8;
+  margin-bottom: 0;
+  padding-top: 5px;
+  padding-left: 15px;
+}
+.post .teaser{
+  border-bottom-right-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  -moz-border-radius-bottomright: 20px;
+  border-bottom-left-radius: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  -moz-border-radius-bottomleft: 20px;
+
+  background-color: #f0f0f0;
+  border-bottom: solid 4px #e0e4e8;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+.post .body img.feature {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: solid 10px #e0e4e8;
+}
+
+.container_16 .grid_9 {
+}
+.container_16 .grid_6 {
+}
+
+/* TYPE */
+h4{
+  color: #666;
+}
+#right-rail p, #right-rail ul{ color: #333940;}
+
+/* LINKS */
+a:link, a:visited {
+    color: #004080;
+}
+a:hover { color: #333; }
+h2 a:link, h2 a:visited{
+  color: #004080;
+}
+h2 a:hover { color: #333;}
+
+#right-rail a:link, #right-rail a:visited {
+  color: #999;
+}
+#right-rail a:active, #right-rail a:hover {
+  color: #000;
+}
+
+/* Blog */
+.feature {
+  float: right;
+}
+.feature img {
+  display: inline;
+}
+
+/* DJDT */
+#djDebug #djDebugToolbarHandle {
+  top: 60px;
+}

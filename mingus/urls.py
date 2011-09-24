@@ -1,5 +1,6 @@
 from django.conf.urls.defaults import *
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic.simple import direct_to_template
 from django.conf import settings
 from basic.blog import views as blog_views
@@ -40,6 +41,7 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('',
     (r'^tinymce/', include('tinymce.urls')),
+    (r'^portfolio/', include('portfolio.urls')),
     url(r'^oops/$', 'mingus.core.views.oops', name='raise_exception'),
     url(r'^quotes/$', 'mingus.core.views.quote_list', name='quote_list'),
     url(r'^quotes/(?P<slug>[-\w]+)/$', 'mingus.core.views.quote_detail', name='quote_detail'),
@@ -49,7 +51,7 @@ urlpatterns += patterns('',
     (r'^api/springsteen/posts/$', springsteen_results),
     (r'^api/springsteen/firehose/$', springsteen_firehose),
     (r'^api/springsteen/category/(?P<slug>[-\w]+)/$', springsteen_category),
-
+    
     url(r'^contact/$',
         contact_form,
         name='contact_form'),
@@ -77,10 +79,9 @@ urlpatterns += patterns('',
     (r'', include('basic.blog.urls')),
 )
 
-
 from django.conf import settings
 if settings.DEBUG:
-    urlpatterns += patterns('', 
-        (r'', include('staticfiles.urls')),
+    urlpatterns += staticfiles_urlpatterns()
+    urlpatterns += patterns('django.views.static',
+        (r'^media/(?P<path>.*)$', 'serve', {'document_root': settings.MEDIA_ROOT}),
     )
-

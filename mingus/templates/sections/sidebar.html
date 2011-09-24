@@ -1,0 +1,84 @@
+{% load archive blog flatblock_tags cache elsewhere i18n %}
+<h4>{% trans "About" %}</h4>
+<p>{{ BLOG_SETTINGS.about|safe }}</p>
+
+{% flatblock "twitter_feed" 3600 "flatblocks/bare.html" %}
+
+<h4>Subscribe</h4>
+<ul>
+  {% if BLOG_SETTINGS.twitter_url %}<li><a href="{{ BLOG_SETTINGS.twitter_url }}" title="{% trans "Follow me on Twitter" %}">{% trans "Twitter" %}</a></li>{% endif %}
+  {% if BLOG_SETTINGS.rss_url %}<li><a href="{{ BLOG_SETTINGS.rss_url }}" title"{% trans "Subscribe via RSS" %}">RSS</a></li>{% endif %}
+  {% if BLOG_SETTINGS.email_subscribe_url %}<li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title="{% trans "Subscribe via Email" %}">Email</a></li>{% endif %}
+  {% if category %}<li><a href="/feeds/categories/{{ category.title|lower }}" title"{% trans "Subscribe via RSS" %}">RSS - {{ category }}</a></li>{% endif %}
+  {% if BLOG_SETTINGS_email_subscribe_url %}<li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title="{% trans "Subscribe via Email" %}">{% trans "Email" %}</a></li>{% endif %}
+</ul>
+
+{% cache 3600 "base.profiles" %}
+{% get_elsewhere_profiles as profiles %}
+{% if profiles %}
+<h4>{% trans "Elsewhere" %}</h4>
+<ul>
+  {% for item in profiles %}
+  <li><a href="{{ item.url }}" rel="me" title="{{ item.name }}">{{ item.name }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endcache %}
+
+{% cache 3600 "base.category_list" %}
+{% get_blog_categories as category_list %}
+{% if category_list %}
+<h4>{% trans "Categories" %}</h4>
+<ul>
+  {% for category in category_list %}
+  <li><a href="{% url basic.blog.views.category_detail category.slug %}" title="{{ category.title }}">{{ category.title }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endcache %}
+
+{% cache 3600 "base.post_list" %}
+{% get_latest_posts 10 as post_list %}
+{% if post_list %}
+<h4>{% trans "Recent Posts" %}</h4>
+<ul class="recent-posts">
+  {% for post in post_list %}
+  <li><a href="{{ post.get_absolute_url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endcache %}
+
+{% cache 7200 "base.archive" %}
+{% get_post_archive as dates %}
+<h4>{% trans "Archive" %}</h4>
+<ul class="archive">
+  {% for date in dates %}
+  <li><a href="{% url blog_archive_month date|date:"Y", date|date:"m" %}" title="{{ date|date:"F Y" }}">{{ date|date:"F Y" }}</a></li>
+  {% endfor %}
+</ul>
+{% endcache %}
+
+{% cache 3600 "base.blogroll" %}
+{% get_blogroll 10 as blogroll %}
+{% if blogroll %}
+<h4>{% trans "BlogRoll" %}</h4>
+<ul class="recent-posts">
+  {% for item in blogroll %}
+  <li><a href="{{ item.get_absolute_url }}" title="{{ item.name }}">{{ item.name }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endcache %}
+
+{% cache 3600 "bas.popular-posts" %}
+{% get_popular_posts 10 as popular_post_list %}
+{% if popular_post_list %}
+<h4>{% trans "Popular Posts" %}</h4>
+<ul class="recent-posts">
+  {% for item in popular_post_list %}
+  <li><a href="{{ item.get_absolute_url }}" title="{{ item.title }}">{{ item.title }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endcache %}
