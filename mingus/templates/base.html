@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/pygments.css" type="text/css" media="all" charset="utf-8">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" media="all" charset="utf-8">
     <!-- between concepts -->
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/themes/betweenconcepts.css" type="text/css" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/themes/basic.css" type="text/css" media="all" charset="utf-8">
     <style type="text/css">#logo a {background-image: url('{{ STATIC_URL }}img/logo.png');}</style>
     {% endcompress %}
 
@@ -54,7 +54,7 @@
 
       <div id="header" class="clearfix">
         <div id="logo">
-          <h1><a href="/" title="{{ BLOG_SETTINGS.site_name }}">&nbsp;</a></h1>
+           <h1><a href="/" title="{{ BLOG_SETTINGS.site_name }}">{{ BLOG_SETTINGS.site_name }}</a></h1>
         </div>
         <!-- /logo -->
 
