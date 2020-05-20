@@ -31,7 +31,7 @@ django-tagging==0.3
 -e git://github.com/pydanny/django-wysiwyg.git@b280e1b75326363dfe746d8c36425cfbed53b4ec#egg=django_wysiwyg-dev
 feedparser==4.1
 -e git://github.com/montylounge/django-google-analytics.git@6b7aa6dba851dd59dca0a20bc7eefe70754384e4#egg=google_analytics-dev
-httplib2==0.7.1
+httplib2==0.18.0
 oauth2==1.5.170
 python-dateutil==1.4.1
 -e hg+https://python-twitter.googlecode.com/hg/@263fe2a0db8be23347e92b81d6ab3c33b4ef292f#egg=python_twitter-dev
