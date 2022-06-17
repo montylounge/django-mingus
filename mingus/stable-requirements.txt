@@ -29,7 +29,7 @@ django-tagging==0.3
 -e svn+http://django-tinymce.googlecode.com/svn/trunk@96#egg=django_tinymce-trunk-py2.7-dev_r96
 -e hg+https://bitbucket.org/kmike/django-view-cache-utils/@4408ad8f1751ee2fccb441d2a342c4ed710467a0#egg=django_view_cache_utils-dev
 -e git://github.com/pydanny/django-wysiwyg.git@b280e1b75326363dfe746d8c36425cfbed53b4ec#egg=django_wysiwyg-dev
-feedparser==4.1
+feedparser==5.1.2
 -e git://github.com/montylounge/django-google-analytics.git@6b7aa6dba851dd59dca0a20bc7eefe70754384e4#egg=google_analytics-dev
 httplib2==0.7.1
 oauth2==1.5.170
